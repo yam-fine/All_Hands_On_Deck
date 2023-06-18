@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="432740c6-62fd-487d-a52e-d58e25c23c4b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../Plugins/FMOD/platforms/mac/lib/fmodstudio.bundle/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../Plugins/FMOD/platforms/mac/lib/fmodstudioL.bundle/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../Plugins/FMOD/platforms/mac/lib/resonanceaudio.bundle/Contents/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ready Player Me/Resources/Settings/AvatarLoaderSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Ready Player Me/Resources/Settings/AvatarLoaderSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ready Player Me/Resources/Settings/AvatarLoaderSettings.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Ready Player Me/Resources/Settings/AvatarLoaderSettings.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ready Player Me/Resources/Settings/CoreSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Ready Player Me/Resources/Settings/CoreSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XR/Settings/Open XR Package Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../XR/Settings/Open XR Package Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XRIT/BNG Framework/Integrations/Asmdef Files/asfmdef-export.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XRIT/BNG Framework/Integrations/Curved UI/CurvedUI.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XRIT/BNG Framework/Integrations/Emerald AI/EmeraldAIIntegration.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XRIT/BNG Framework/Integrations/FinalIK/FinalIK.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XRIT/BNG Framework/Integrations/Oculus Integration/OculusIntegration.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XRIT/BNG Framework/Integrations/PUN/PUN.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XRIT/BNG Framework/Integrations/Pico/Pico.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XRIT/BNG Framework/Integrations/SteamVR/SteamVR.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XRIT/BNG Framework/Integrations/UniversalAI/UniversalAI.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XRIT/BNG Framework/Integrations/VR Builder/VRIF-Integration_1.0.0.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XRIT/BNG Framework/Integrations/WebXR/webxr.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/../../UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2RLZru5f8GK88oW1eVNyfJlFSFV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="432740c6-62fd-487d-a52e-d58e25c23c4b" name="Changes" comment="" />
+      <created>1687031525945</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687031525945</updated>
+      <workItem from="1687031529495" duration="7000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
