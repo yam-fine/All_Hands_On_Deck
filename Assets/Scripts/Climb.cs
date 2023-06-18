@@ -6,7 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Climb : MonoBehaviour
 {
-    Rigidbody rb;
+    //Rigidbody rb;
+    CharacterController cc;
     LocomotionSystem ls;
     public static ActionBasedController climbingHand;
 
@@ -15,7 +16,8 @@ public class Climb : MonoBehaviour
     private Vector3 velocity;
 
     private void Start() {
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
+        cc = GetComponent<CharacterController>();
         ls = GetComponent<LocomotionSystem>();
     }
 
@@ -47,17 +49,24 @@ public class Climb : MonoBehaviour
         }
         else {
             ls.enabled = true;
+            ApplyGravity();
+            previousHand = null;
         }
     }
 
 
     private void Character_Climb() {
         Debug.Log("climb climb");
-        //InputDevices.GetDeviceAtXRNode(climbingHand.).TryGetFeatureValue(CommonUsages.deviceVelocity, out Vector3 velocity);
+        //InputDevices.GetDeviceAtXRNode(climbingHand).TryGetFeatureValue(CommonUsages.deviceVelocity, out Vector3 velocity);
         //Debug.Log(velocity);
-        var velocity = (climbingHand.positionAction.action.ReadValue<Vector3>() - previousPos) / Time.deltaTime;
-        Debug.Log(velocity);
-        rb.AddForce(transform.rotation * -velocity * Time.fixedDeltaTime * 500);
+        Vector3 velocity = (climbingHand.positionAction.action.ReadValue<Vector3>() - previousPos) / Time.deltaTime;
+        cc.Move(transform.rotation * -velocity * Time.fixedDeltaTime);
         previousPos = climbingHand.positionAction.action.ReadValue<Vector3>();
+    }
+
+    private void ApplyGravity() {
+        if (!cc.isGrounded) {
+            cc.Move(Vector3.down * 5 * Time.deltaTime);
+        }
     }
 }
