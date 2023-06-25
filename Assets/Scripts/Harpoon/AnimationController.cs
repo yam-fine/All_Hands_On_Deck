@@ -9,23 +9,14 @@ public class AnimationController : XRBaseInteractable
     public Animator animator;
     public Rigidbody rb;
 
-    [System.Obsolete]
-    protected override void OnSelectEntered(SelectEnterEventArgs args) {
-        Debug.Log("ENTERED");
-        rb.freezeRotation = false;
-        XRBaseInteractor interactor = args.interactor;
-        base.OnSelectEntered(args);
+    // protected override void OnSelectEntered(SelectEnterEventArgs args) {
+        
+    //     XRBaseInteractor interactor = args.interactor;
+    //     base.OnSelectEntered(args);
 
-        if (interactor is XRDirectInteractor) {
-            //Climb.climbingHand = interactor.GetComponent<ActionBasedController>()
-            animator.SetBool("Holding", true);
-        }
-    }
-
-    // protected override void OnSelectExited(SelectExitEventArgs args) {
-    //     Debug.Log("EXITED");
-    //     rb.freezeRotation = true;
-    //     //rb.velocity = Vector3.zero;
+    //     if (interactor is XRDirectInteractor) {
+    //         animator.SetBool("Holding", true);
+    //     }
     // }
 
     // Start is called before the first frame update
@@ -34,9 +25,18 @@ public class AnimationController : XRBaseInteractable
         rb = GetComponent<Rigidbody>();
     }
 
+    public void Holding() {
+        Debug.Log("Holding");
+        // animator.SetBool("Holding", true);
+    }
+    
+    public void Fire() {
+        Debug.Log("Fire");
+        // animator.SetBool("Fire", true);
+    }
+
     public void ResetVelocity(){
         rb.angularVelocity = Vector3.zero;
-        //rb.velocity = 0;
     }
 
 
