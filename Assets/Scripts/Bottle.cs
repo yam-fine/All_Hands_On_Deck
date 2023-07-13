@@ -6,14 +6,17 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Bottle : MonoBehaviour
 {
     private bool _open;
-    [SerializeField] private XRGrabInteractable capInteractable;
-    [SerializeField] private GameObject cap;
+    [SerializeField] private XRGrabInteractable cap;
 
     void Start()
     {
+<<<<<<< Updated upstream
+        cap.enabled = false;
+=======
         capInteractable = cap.GetComponent<XRGrabInteractable>();
-        capInteractable.enabled = false;
+        capInteractable.enabled = true;
         cap.GetComponent<Rigidbody>().isKinematic = true;
+>>>>>>> Stashed changes
     }
 
     void Update()
@@ -39,26 +42,45 @@ public class Bottle : MonoBehaviour
     {
         if (IsOpen())
             return;
-        capInteractable.enabled = true;
+<<<<<<< Updated upstream
+        cap.enabled = true;
+=======
+        //capInteractable.enabled = true;
+>>>>>>> Stashed changes
     }
 
     public void OnBottleRelease(SelectExitEventArgs args)
     {
         if (IsOpen())
             return;
-        capInteractable.enabled = false;
+<<<<<<< Updated upstream
+        cap.enabled = false;
+=======
+        //capInteractable.enabled = false;
+>>>>>>> Stashed changes
     }
 
     public void OnBottleOpen(SelectExitEventArgs args)
     {
         Debug.Log("Open");
+
         Open();
+<<<<<<< Updated upstream
+    }
+    public void OnBottleClose(SelectEnterEventArgs args)
+    {
+        //Debug.Log("Close");
+        //Close();
+=======
         cap.GetComponent<Rigidbody>().isKinematic = false;
+        //cap.transform.parent = null;
     }
     public void OnBottleClose(SelectEnterEventArgs args)
     {
         Debug.Log("Close");
         Close();
         cap.GetComponent<Rigidbody>().isKinematic = true;
+        //cap.transform.parent = transform;
+>>>>>>> Stashed changes
     }
 }
