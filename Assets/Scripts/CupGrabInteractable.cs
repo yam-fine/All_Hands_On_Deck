@@ -15,12 +15,12 @@ public class CupGrabInteractable : XRGrabInteractable
         }
     }
 
-    protected override void OnSelectEntered(SelectEnterEventArgs args)
+    protected override void OnSelectEntering(SelectEnterEventArgs args)
     {
         if (bottle != null && bottle.isSelected)
         {
             // Allow detachment if the bottle is being held
-            base.OnSelectEntered(args);
+            base.OnSelectEntering(args);
         }
     }
 }
