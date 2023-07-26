@@ -5,19 +5,25 @@ using UnityEngine;
 public class StateController : MonoBehaviour
 {
     IsState currentState;
+
     public WaterPickup waterPickup = new WaterPickup();
     public Room1Roam room1Roam = new Room1Roam();
+
+    public GameObject player;
+    public GameObject captain;
 
     private void Start() {
         ChangeState(waterPickup);
     }
 
     private void Update() {
-        currentState.UpdateState(this);
+        if (currentState != null)
+            currentState.UpdateState(this);
     }
 
     public void ChangeState(IsState newState) {
-        currentState.OnExit(this);
+        if (currentState != null)
+            currentState.OnExit(this);
         currentState = newState;
         currentState.OnEnter(this);
     }

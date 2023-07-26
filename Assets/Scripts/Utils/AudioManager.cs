@@ -17,8 +17,9 @@ public class AudioManager : Singleton<AudioManager>
         // Add name of events here such as :
         // FALL
         // TELEPORT etc etc
-        
-        
+        ay_cap,
+        avast,
+        pfft
     }
 
     protected override void Awake()
