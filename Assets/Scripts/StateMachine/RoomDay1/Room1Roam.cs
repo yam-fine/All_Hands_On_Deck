@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Room1Roam : IsState {
     public void OnEnter(StateController sc) {
-        throw new System.NotImplementedException();
+        // dialouge 
+        AudioManager am = AudioManager.Instance;
+        am.PlayOneShotAttach(AudioManager.Sounds.ay_cap, sc.player);
     }
 
     public void OnExit(StateController sc) {
@@ -12,6 +14,6 @@ public class Room1Roam : IsState {
     }
 
     public void UpdateState(StateController sc) {
-        throw new System.NotImplementedException();
+        // if door handle gets pulled then load next scene
     }
 }

@@ -491,8 +491,8 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   switchSettingsMigration: 1
-  HasSourceProject: 0
-  HasPlatforms: 0
+  HasSourceProject: 1
+  HasPlatforms: 1
   sourceProjectPath: C:/Users/Yam/Documents/FMOD Studio/all hands on deck/all hands
     on deck.fspro
   sourceBankPath: C:/Users/Yam/Documents/FMOD Studio/all hands on deck/Build
