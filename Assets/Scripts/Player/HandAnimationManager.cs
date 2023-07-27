@@ -29,7 +29,6 @@ public class HandAnimationManager : MonoBehaviour
 
 
     private void Update() {
-        Debug.Log("READING: " + activateAction.ReadValue<float>());
         animator.SetFloat("Activate", activateAction.ReadValue<float>());
         animator.SetFloat("Select", selectAction.ReadValue<float>());
     }

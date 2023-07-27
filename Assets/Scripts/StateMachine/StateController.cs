@@ -9,10 +9,20 @@ public class StateController : MonoBehaviour
     public WaterPickup waterPickup = new WaterPickup();
     public Room1Roam room1Roam = new Room1Roam();
 
+    [HideInInspector] public Dialogue roamDialogue;
+
     public GameObject player;
     public GameObject captain;
 
     private void Start() {
+        GameObject dialogueObject = new GameObject("DialogueObject");
+        roamDialogue = dialogueObject.AddComponent<Dialogue>();
+        roamDialogue.dialogueEvents = new List<DialogueEvents>{
+            new DialogueEvents(AudioManager.Sounds.ay_cap, player),
+            new DialogueEvents(AudioManager.Sounds.avast, captain),
+            new DialogueEvents(AudioManager.Sounds.pfft, player)
+        };
+
         ChangeState(waterPickup);
     }
 
@@ -27,10 +37,4 @@ public class StateController : MonoBehaviour
         currentState = newState;
         currentState.OnEnter(this);
     }
-}
-
-public interface IsState {
-    public void OnEnter(StateController sc);
-    public void UpdateState(StateController sc);
-    public void OnExit(StateController sc);
 }

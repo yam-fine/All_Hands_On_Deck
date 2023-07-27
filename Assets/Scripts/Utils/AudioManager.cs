@@ -45,6 +45,12 @@ public class AudioManager : Singleton<AudioManager>
         return _eventInstances[(int)sound];
     }
 
+    public EventInstance PlaySound(Sounds sound, GameObject obj) {
+        _eventInstances[(int)sound].start();
+        _eventInstances[(int)sound].set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(obj.transform));
+        return _eventInstances[(int)sound];
+    }
+
 
     public void StopSound(Sounds sound)
     {
@@ -67,12 +73,22 @@ public class AudioManager : Singleton<AudioManager>
     public EventInstance PlayOneShotAttach(Sounds sound, GameObject attach)
     {
         FMODUnity.RuntimeManager.PlayOneShotAttached(eventReferences[(int)sound], attach);
+        Debug.Log(_eventInstances[0]);
+        Debug.Log(_eventInstances[1]);
+        Debug.Log(_eventInstances[2]);
         return _eventInstances[(int)sound];
     }
 
     public bool IsPlaying(FMOD.Studio.EventInstance instance)
     {
         FMOD.Studio.PLAYBACK_STATE state;
+        instance.getPlaybackState(out state);
+        return state != FMOD.Studio.PLAYBACK_STATE.STOPPED;
+    }
+
+    public bool IsPlaying(Sounds sound) {
+        FMOD.Studio.PLAYBACK_STATE state;
+        FMOD.Studio.EventInstance instance = GetSoundEventInstance(sound);
         instance.getPlaybackState(out state);
         return state != FMOD.Studio.PLAYBACK_STATE.STOPPED;
     }
