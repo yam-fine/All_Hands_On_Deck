@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DataFile" id="{a67baed5-275c-4c8e-9b56-08032f462e5e}">
+		<property name="assetPath">
+			<value>ay_cap.wav</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3af3d919-2592-47e1-a18d-aff6fa8e5001}</destination>
+		</relationship>
+	</object>
+</objects>
