@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{fdc75443-fd64-4fd2-ba7c-2172c9782be2}">
+		<property name="assetPath">
+			<value>PSE_GGV1_FX_One_Shot_Ambience_NYC_Battery_Park_Seagulls.5 Sea birds.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.25</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f9a746ba-a362-41d5-b472-62e4042e3019}</destination>
+		</relationship>
+	</object>
+</objects>
