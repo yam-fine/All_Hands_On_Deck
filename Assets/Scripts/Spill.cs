@@ -6,6 +6,7 @@ public class Spill : MonoBehaviour
 {
     ParticleSystem _spill;
     [SerializeField] private Bottle bottle;
+    [SerializeField] private int angleToStartSpilling = 135;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,7 @@ public class Spill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Angle(Vector3.down, transform.forward) <= 135 && bottle.IsOpen() )
+        if(Vector3.Angle(Vector3.down, transform.forward) <= angleToStartSpilling && bottle.IsOpen() )
         {
             _spill.Play();
         }

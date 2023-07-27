@@ -17,7 +17,7 @@ public class BlockCupHolding : MonoBehaviour
 
     public void OnBottleHold(SelectEnterEventArgs args)
     {
-        hand.interactionLayers = InteractionLayerMask.GetMask("Everything");
+        hand.interactionLayers = ~0;
     }
 
     public void OnBottleRelease(SelectExitEventArgs args)
