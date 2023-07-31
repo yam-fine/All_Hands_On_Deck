@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 1020867110}
   - component: {fileID: 1465775225}
   - component: {fileID: 1465775226}
-  - component: {fileID: 1465775227}
+  - component: {fileID: 1064993005788378314}
   m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &1465775227
+--- !u!114 &1064993005788378314
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4233822541685510070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79596a4bd50763f4198c55b0e01e5ab9, type: 3}
+  m_Script: {fileID: 11500000, guid: 04be550fac10f344ab73d05fd537303e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4623997586726843358

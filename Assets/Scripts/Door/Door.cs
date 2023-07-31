@@ -31,8 +31,8 @@ public class Door : MonoBehaviour
         }
     }
 
-    private void Action()
+    public virtual void Action()
     {
-        Debug.Log("The door's lever has been pulled");
+        throw new System.NotImplementedException();
     }
 }
