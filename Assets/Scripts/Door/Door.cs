@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    HingeJoint hinge;
     Transform tform;
 
     bool fireEvent = true;
 
     public void Awake()
     {
-        hinge = GetComponent<HingeJoint>();
         tform = GetComponent<Transform>();
     }
 
