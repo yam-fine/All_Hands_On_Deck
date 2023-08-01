@@ -6,6 +6,9 @@ public class Spill : MonoBehaviour
 {
     ParticleSystem _spill;
     [SerializeField] private Bottle bottle;
+    [SerializeField] private int angleToStartSpilling = 135;
+
+    private List<ParticleCollisionEvent> CollisionEvents;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,13 +18,24 @@ public class Spill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Angle(Vector3.down, transform.forward) <= 135 && bottle.IsOpen() )
+        if (Vector3.Angle(Vector3.down, transform.forward) <= angleToStartSpilling && bottle.IsOpen())
         {
             _spill.Play();
         }
         else
         {
             _spill.Stop();
+        }
+    }
+
+    public void OnParticleCollision(GameObject other)
+    {
+        ParticlePhysicsExtensions.GetCollisionEvents(_spill, other, CollisionEvents);
+
+        for (int i = 0; i < CollisionEvents.Count; i++)
+        {
+            // If head - Drink.
+            // If anything else - stop at that position - Splash
         }
     }
 }
