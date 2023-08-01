@@ -6,14 +6,13 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Bottle : MonoBehaviour
 {
     private bool _open;
-    [SerializeField] private XRGrabInteractable capInteractable;
     [SerializeField] private GameObject cap;
+
+    [SerializeField] private Rigidbody _capRigidBody;
 
     void Start()
     {
-        capInteractable = cap.GetComponent<XRGrabInteractable>();
-        capInteractable.enabled = false;
-        cap.GetComponent<Rigidbody>().isKinematic = true;
+        _capRigidBody.isKinematic = true;
     }
 
     void Update()
@@ -39,26 +38,28 @@ public class Bottle : MonoBehaviour
     {
         if (IsOpen())
             return;
-        capInteractable.enabled = true;
+        //capInteractable.enabled = true;
     }
 
     public void OnBottleRelease(SelectExitEventArgs args)
     {
         if (IsOpen())
             return;
-        capInteractable.enabled = false;
+        //capInteractable.enabled = false;
     }
 
     public void OnBottleOpen(SelectExitEventArgs args)
     {
         Debug.Log("Open");
+        cap.transform.SetParent(null, worldPositionStays: true);
+        _capRigidBody.isKinematic = false;
         Open();
-        cap.GetComponent<Rigidbody>().isKinematic = false;
     }
     public void OnBottleClose(SelectEnterEventArgs args)
     {
         Debug.Log("Close");
         Close();
         cap.GetComponent<Rigidbody>().isKinematic = true;
+        cap.transform.SetParent(transform, worldPositionStays: true);
     }
 }
