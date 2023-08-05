@@ -8,7 +8,7 @@ public class Spill : MonoBehaviour
     [SerializeField] private Bottle bottle;
     [SerializeField] private int angleToStartSpilling = 135;
 
-    private List<ParticleCollisionEvent> CollisionEvents;
+    private List<ParticleCollisionEvent> CollisionEvents = new List<ParticleCollisionEvent>();
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +36,7 @@ public class Spill : MonoBehaviour
         {
             // If head - Drink.
             // If anything else - stop at that position - Splash
+            Debug.Log(other.name);
         }
     }
 }
