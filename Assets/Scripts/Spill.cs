@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,9 +35,14 @@ public class Spill : MonoBehaviour
 
         for (int i = 0; i < CollisionEvents.Count; i++)
         {
-            // If head - Drink.
+            if (other.name.Contains("Head"))
+            {
+                bottle.Drink();
+            }
             // If anything else - stop at that position - Splash
             Debug.Log(other.name);
         }
     }
+
+   
 }

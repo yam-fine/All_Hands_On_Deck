@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,9 @@ public class Bottle : MonoBehaviour
 
     [SerializeField] private Transform _rightGrab;
     [SerializeField] private Transform _leftGrab;
+
+    public event Action PlayerDrank;
+
 
     void Start()
     {
@@ -70,5 +74,10 @@ public class Bottle : MonoBehaviour
         Close();
         cap.GetComponent<Rigidbody>().isKinematic = true;
         cap.transform.SetParent(transform, worldPositionStays: true);
+    }
+
+    public void Drink()
+    {
+        PlayerDrank?.Invoke();
     }
 }

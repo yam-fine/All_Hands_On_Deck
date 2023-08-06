@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.XR;
 using UnityEngine;
 
 public class StateController : MonoBehaviour
@@ -13,7 +14,26 @@ public class StateController : MonoBehaviour
 
     public GameObject player;
     public GameObject captain;
+    public Bottle bottle;
 
+    private bool _playerDrank;
+    public bool PlayerDrank { get { return _playerDrank; } }
+
+    public void OnEnable()
+    {
+        bottle.PlayerDrank += OnPlayerDrank;
+    }
+
+    public void OnDisable()
+    {
+        bottle.PlayerDrank -= OnPlayerDrank;
+    }
+
+    public void OnPlayerDrank()
+    {
+        _playerDrank = true;
+        bottle.PlayerDrank -= OnPlayerDrank; // no need to detect anymore
+    }
     private void Start() {
         GameObject dialogueObject = new GameObject("DialogueObject");
         roamDialogue = dialogueObject.AddComponent<Dialogue>();
