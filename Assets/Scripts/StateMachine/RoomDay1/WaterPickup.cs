@@ -8,7 +8,7 @@ public class WaterPickup : IsState
         // character sits on bed
 
         //temp
-        sc.ChangeState(sc.room1Roam);
+        //sc.ChangeState(sc.room1Roam);
     }
 
     public void OnExit(StateController sc) {
@@ -16,7 +16,11 @@ public class WaterPickup : IsState
     }
 
     public void UpdateState(StateController sc) {
-        // if drank water successfully
+        if (sc.PlayerDrank)
+        {
+            sc.ChangeState(sc.room1Roam);
+
+        }
         // change state
     }
 }
