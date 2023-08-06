@@ -32,7 +32,7 @@ public class StateController : MonoBehaviour
     public void OnPlayerDrank()
     {
         _playerDrank = true;
-        bottle.PlayerDrank -= OnPlayerDrank;
+        bottle.PlayerDrank -= OnPlayerDrank; // no need to detect anymore
     }
     private void Start() {
         GameObject dialogueObject = new GameObject("DialogueObject");
