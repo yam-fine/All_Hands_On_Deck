@@ -12,7 +12,9 @@ public class WaterPickup : IsState
     }
 
     public void OnExit(StateController sc) {
-        // allow character to walk
+        sc.actionMoveProvider.enabled = true;
+        sc.actionTurnProvider.enabled = true;
+        sc.avatarAnimator.SetBool("drankWater", true);
     }
 
     public void UpdateState(StateController sc) {

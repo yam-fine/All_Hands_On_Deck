@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.XR;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class StateController : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class StateController : MonoBehaviour
 
     public WaterPickup waterPickup = new WaterPickup();
     public Room1Roam room1Roam = new Room1Roam();
+    
+    public ActionBasedContinuousMoveProvider actionMoveProvider;
+    public ActionBasedContinuousTurnProvider actionTurnProvider;
+    public Animator avatarAnimator;
+    
 
     [HideInInspector] public Dialogue roamDialogue;
 
