@@ -35,6 +35,7 @@ public class Climb : MonoBehaviour
     void Update() {
 
         if (climbingHand) {
+            cc.enabled = true;
             if (previousHand == null) {
                 previousHand = climbingHand;
                 previousPos = climbingHand.positionAction.action.ReadValue<Vector3>();
@@ -51,14 +52,12 @@ public class Climb : MonoBehaviour
             ls.enabled = true;
             ApplyGravity();
             previousHand = null;
+            cc.enabled = false;
         }
     }
 
 
     private void Character_Climb() {
-        Debug.Log("climb climb");
-        //InputDevices.GetDeviceAtXRNode(climbingHand).TryGetFeatureValue(CommonUsages.deviceVelocity, out Vector3 velocity);
-        //Debug.Log(velocity);
         Vector3 velocity = (climbingHand.positionAction.action.ReadValue<Vector3>() - previousPos) / Time.deltaTime;
         cc.Move(transform.rotation * -velocity * Time.fixedDeltaTime);
         previousPos = climbingHand.positionAction.action.ReadValue<Vector3>();
