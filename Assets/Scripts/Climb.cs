@@ -35,7 +35,7 @@ public class Climb : MonoBehaviour
     void Update() {
 
         if (climbingHand) {
-            cc.enabled = true;
+            //cc.enabled = true;
             if (previousHand == null) {
                 previousHand = climbingHand;
                 previousPos = climbingHand.positionAction.action.ReadValue<Vector3>();
@@ -52,7 +52,7 @@ public class Climb : MonoBehaviour
             ls.enabled = true;
             ApplyGravity();
             previousHand = null;
-            cc.enabled = false;
+            //cc.enabled = false;
         }
     }
 
