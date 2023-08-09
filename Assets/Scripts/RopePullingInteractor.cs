@@ -38,6 +38,16 @@ public class RopePullingInteractor : MonoBehaviour
     private bool isReturning = false;
     [SerializeField] private XRGrabInteractable activeGrabbingPoint = null;
     private float currentLength;
+    private Coroutine release;
+
+    private Vector3 previousPosition;
+    private Vector3 releaseVelocity = Vector3.zero;
+    [SerializeField] private float velocityDampMultiplier = 0.5f;
+    [SerializeField] private float velocityDecayRate = 30f;
+    [SerializeField] private float returningSpeed = 4.0f;
+    [SerializeField] private Animator sailAnimator;
+    [SerializeField] private float sailOpenPoint;
+
 
     private void Start()
     {
@@ -71,21 +81,50 @@ public class RopePullingInteractor : MonoBehaviour
                 if (activeGrabbingPoint != grabbingPoints[i])
                     grabbingPoints[i].transform.position = new Vector3(startPositions[i].x, Mathf.Min(startPositions[i].y, startPositions[i].y + scaleChange), startPositions[i].z);
             }
+            // Calculate the velocity based on the change in position
+            releaseVelocity = (activeGrabbingPoint.transform.position - previousPosition) / Time.deltaTime;
+            previousPosition = activeGrabbingPoint.transform.position;
         }
         else if (!isReturning)
         {
             // Start returning the pole to its original position
-            StartCoroutine(ReturnPoleToOriginalPosition());
+            release = StartCoroutine(ReturnPoleToOriginalPosition());
         }
+
+        // Calculate the percentage of how much the pole has been pulled down
+        float pulledPercentage = (pole.transform.localScale.y - baseLength) / sailOpenPoint;
+        Debug.Log(1f - pulledPercentage);
+
+        // Invert the percentage since the animation starts opened
+        float invertedPercentage = 1f - pulledPercentage;
+
+        // Set the sail's animation parameter
+        sailAnimator.SetFloat("SailOpenAmount", invertedPercentage);
+        sailAnimator.Play("SailClose", 0, sailAnimator.GetFloat("SailOpenAmount"));
+
     }
 
     private IEnumerator ReturnPoleToOriginalPosition()
     {
         isReturning = true;
+        Debug.Log(releaseVelocity.y);
+        while (releaseVelocity.y < -0.01f)
+        {
+            float distanceToMove = -(releaseVelocity.y*velocityDampMultiplier) * Time.deltaTime;
+            pole.transform.localScale += new Vector3(0, distanceToMove, 0);
 
+            for (int i = 0; i < grabbingPoints.Length; i++)
+            {
+                grabbingPoints[i].transform.position += new Vector3(0, -distanceToMove, 0);
+            }
+
+            releaseVelocity.y += velocityDecayRate * Time.deltaTime;
+
+            yield return null;
+        }
         while (Mathf.Abs(pole.transform.localScale.y - baseLength) > 0.01f) // Use a small threshold to prevent infinite loops
         {
-            float distanceToMove = 0.5f * Time.deltaTime;
+            float distanceToMove = returningSpeed * Time.deltaTime;
             if (pole.transform.localScale.y > baseLength)
             {
                 pole.transform.localScale -= new Vector3(0, distanceToMove, 0);
@@ -120,7 +159,8 @@ public class RopePullingInteractor : MonoBehaviour
         activeGrabbingPoint = args.interactableObject as XRGrabInteractable;
         if (isReturning)
         {
-            StopCoroutine(ReturnPoleToOriginalPosition()); // Stop the coroutine if it's running
+            previousPosition = activeGrabbingPoint.transform.position;
+            StopCoroutine(release); // Stop the coroutine if it's running
             isReturning = false;
         }
     }
@@ -129,10 +169,7 @@ public class RopePullingInteractor : MonoBehaviour
     private void OnGrabbingPointReleased(SelectExitEventArgs args)
     {
         if (activeGrabbingPoint == (args.interactableObject as XRGrabInteractable))
-        {
-            Rigidbody rb = activeGrabbingPoint.GetComponent<Rigidbody>();
-            Vector3 currentVelocity = rb.velocity;
-            Debug.Log(currentVelocity);
+        {        
             activeGrabbingPoint = null;
         }
     }
