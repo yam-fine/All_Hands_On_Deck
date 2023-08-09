@@ -1,5 +1,204 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7213423290089749971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cae96c4b3ef46947a21c9615a74e6e4, type: 3}
+  m_Name: Volumetric Cloud Module
+  m_EditorClassIdentifier: 
+  showModuleInspector: 0
+  showSaveLoad: 0
+  active: 1
+  settingsLayer1:
+    cloudsWindDirectionXModifier: 1
+    cloudsWindDirectionYModifier: 1
+    windSpeedModifier: 0.005
+    windUpwards: 0.02
+    coverage: -0.1
+    worleyFreq2: 1
+    worleyFreq1: 4
+    dilateCoverage: 1
+    dilateType: 1
+    cloudsTypeModifier: 1
+    locationOffset: {x: 0.1, y: 0}
+    bottomCloudsHeight: 2000
+    topCloudsHeight: 8000
+    density: 0.399
+    scatteringIntensity: 1
+    silverLiningSpread: 0.8
+    powderIntensity: 0.7
+    curlIntensity: 0.2
+    lightStepModifier: 0.075
+    lightAbsorbtion: 0.559
+    multiScatteringA: 0.4
+    multiScatteringB: 0.083
+    multiScatteringC: 1
+    baseNoiseUV: 6
+    detailNoiseUV: 28
+    baseErosionIntensity: 0
+    detailErosionIntensity: 0.25
+    anvilBias: 0
+  settingsLayer2:
+    cloudsWindDirectionXModifier: -1
+    cloudsWindDirectionYModifier: -1
+    windSpeedModifier: 0.005
+    windUpwards: 0.02
+    coverage: 0.037
+    worleyFreq2: 2
+    worleyFreq1: 10
+    dilateCoverage: 1
+    dilateType: 1
+    cloudsTypeModifier: 1
+    locationOffset: {x: 0, y: 0}
+    bottomCloudsHeight: 8000
+    topCloudsHeight: 12000
+    density: 0.12
+    scatteringIntensity: 1.2
+    silverLiningSpread: 0.8
+    powderIntensity: 0.891
+    curlIntensity: 0.15
+    lightStepModifier: 0.05
+    lightAbsorbtion: 0.301
+    multiScatteringA: 0.534
+    multiScatteringB: 0.145
+    multiScatteringC: 0.072
+    baseNoiseUV: 6
+    detailNoiseUV: 34
+    baseErosionIntensity: 0
+    detailErosionIntensity: 0.3
+    anvilBias: 0.198
+  settingsGlobal:
+    dualLayer: 0
+    floatingPointOriginMod: {x: 0, y: 0, z: 0}
+    sunLightColorGradient:
+      serializedVersion: 2
+      key0: {r: 0, g: 0, b: 0, a: 1}
+      key1: {r: 0, g: 0, b: 0, a: 1}
+      key2: {r: 1, g: 0.18127085, b: 0, a: 0}
+      key3: {r: 0.91764706, g: 0.78431374, b: 0.6431373, a: 0}
+      key4: {r: 1, g: 0.78234506, b: 0.5518868, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 29696
+      ctime2: 31641
+      ctime3: 36700
+      ctime4: 65535
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 5
+      m_NumAlphaKeys: 2
+    moonLightColorGradient:
+      serializedVersion: 2
+      key0: {r: 0, g: 0, b: 0, a: 1}
+      key1: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 1}
+      key2: {r: 0.17488432, g: 0.19651124, b: 0.2830189, a: 0}
+      key3: {r: 0.066082254, g: 0.07146038, b: 0.084905684, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 27563
+      ctime2: 65535
+      ctime3: 65535
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 3
+      m_NumAlphaKeys: 2
+    ambientColorGradient:
+      serializedVersion: 2
+      key0: {r: 0, g: 0, b: 0, a: 1}
+      key1: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 1}
+      key2: {r: 0.17319329, g: 0.2085657, b: 0.26415092, a: 0}
+      key3: {r: 0.6637148, g: 0.7245256, b: 0.8962264, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 29491
+      ctime2: 33539
+      ctime3: 65535
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 4
+      m_NumAlphaKeys: 2
+    sunLightColor: {r: 0, g: 0, b: 0, a: 0}
+    moonLightColor: {r: 0, g: 0, b: 0, a: 0}
+    ambientColor: {r: 0, g: 0, b: 0, a: 0}
+    depthBlending: 1
+    noise: {fileID: 11700000, guid: c901165679d774b46bb79227f2dfa3fa, type: 2}
+    detailNoise: {fileID: 11700000, guid: ade9bb66636d08a428cb5d6009b0ff5d, type: 2}
+    curlTex: {fileID: 2800000, guid: b7acf882b3b0d6c4a9d1a04c10fe146a, type: 3}
+    blueNoise: {fileID: 2800000, guid: 3f714f8f28ab17e499e2e6c690af70cc, type: 3}
+    cloudsWorldScale: 5000000
+    atmosphereColorSaturateDistance: 25000
+    ambientLighIntensity: 1
+    cloudShadows: 0
+    cloudShadowsIntensity: 2
+    cloudsTravelSpeed: 0.25
+  settingsQuality:
+    volumetricClouds: 1
+    downsampling: 2
+    stepsLayer1: 128
+    stepsLayer2: 64
+    blueNoiseIntensity: 2
+    reprojectionBlendTime: 2
+    lodDistance: 0.7
+  preset: {fileID: 11400000, guid: 4b3879673bba3ff488a4b539b4de69b7, type: 2}
+  showGlobalControls: 0
+  showLayer1Controls: 0
+  showLayer2Controls: 0
+  showCoverageControls: 0
+  showLightingControls: 0
+  showDensityControls: 0
+  showTextureControls: 0
+  showWindControls: 0
+  cloudAnimLayer1: {x: 0.5218009, y: -0.5218009, z: -0.16615662}
+  cloudAnimLayer2: {x: 0, y: 0, z: 0}
+  cloudAnimNonScaledLayer1: {x: 0.026090154, y: -0.026090154, z: -5.2180142}
+  cloudAnimNonScaledLayer2: {x: -0.026090154, y: 0.026090154, z: -5.2180142}
+  weatherMap: {fileID: 0}
 --- !u!114 &-6458479593538681866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,7 +251,7 @@ MonoBehaviour:
   showSaveLoad: 0
   active: 1
   Settings:
-    moonMode: 0
+    moonMode: 2
     frontColorGradient0:
       serializedVersion: 2
       key0: {r: 0, g: 0, b: 0, a: 1}
@@ -493,10 +692,10 @@ MonoBehaviour:
     sunTex: {fileID: 2800000, guid: c95bed5306e94f24ba5802d841607ac7, type: 3}
     moonTex: {fileID: 2800000, guid: c6fd9f694390e0245b6dca5812065950, type: 3}
     moonGlowTex: {fileID: 2800000, guid: 6838e0810da4e49488b5d9a6ee76eb07, type: 3}
-    distribution0: -0.071
-    distribution1: 0.067
-    distribution2: 0.381
-    distribution3: 0.779
+    distribution0: 0.578
+    distribution1: 0.092
+    distribution2: 0.249
+    distribution3: 0.503
     mieScatteringIntensityCurve:
       serializedVersion: 2
       m_Curve:
@@ -671,10 +870,10 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    intensity: 0.5
+    intensity: 1
     sunScale: 7
     moonScale: 7
-    moonPhase: -1.6322253
+    moonPhase: -1.632223
     skyExposureHDRP:
       serializedVersion: 2
       m_Curve:
@@ -717,7 +916,6 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    skyAmbientModeHDRP: 1
   preset: {fileID: 11400000, guid: 44f43418b8d8b8142863e38d1e49e174, type: 2}
   showSkyControls: 0
   showSkySunControls: 0
@@ -882,7 +1080,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    temperature: 8.22722
+    temperature: 5.079086
     temperatureWeatherMod: 0
     temperatureCustomMod: 0
     temperatureChangingSpeed: 0.1
@@ -1417,7 +1615,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    directLightIntensityModifier: 1
+    directLightIntensityModifier: 0.59
     setAmbientLighting: 1
     ambientMode: 0
     ambientSkyColorGradient:
@@ -1531,7 +1729,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    ambientIntensityModifier: 1
+    ambientIntensityModifier: 0.66
     ambientSkyboxUpdateIntervall: 9.47
     updateReflectionProbe: 1
     globalReflectionCustomRendering: 1
@@ -1550,16 +1748,12 @@ MonoBehaviour:
     updateDefaultEnvironmentReflections: 1
     defaultSkyReflectionTex: {fileID: 0}
   preset: {fileID: 11400000, guid: 81d8b109102443243bcb0894975c0718, type: 2}
-  lastReflectionUpdate: 12.025
-  lastReflectionUpdatePos: {x: 50.3, y: 189, z: -93.04}
-  showDirectLightingControls: 0
+  lastReflectionUpdate: 0.025
+  lastReflectionUpdatePos: {x: -29.48, y: -48.019997, z: -13.57}
+  showDirectLightingControls: 1
   showAmbientLightingControls: 0
   showReflectionControls: 0
-  directionalLightHDRP: {fileID: 0}
-  additionalLightHDRP: {fileID: 0}
-  exposureHDRP: {fileID: 0}
-  indirectLightingHDRP: {fileID: 2642261307547123297, guid: 52f158144a28a9e4c9a02b7856139c21, type: 2}
---- !u!114 &-1908510324810229307
+--- !u!114 &-845313529948089101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1568,80 +1762,58 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cae96c4b3ef46947a21c9615a74e6e4, type: 3}
-  m_Name: Volumetric Cloud Module
+  m_Script: {fileID: 11500000, guid: b982c9fba9faf3a43bf4a9e7ced867d7, type: 3}
+  m_Name: Flat Clouds Module
   m_EditorClassIdentifier: 
   showModuleInspector: 0
   showSaveLoad: 0
   active: 1
-  settingsLayer1:
-    cloudsWindDirectionXModifier: 1
-    cloudsWindDirectionYModifier: 1
-    windSpeedModifier: 0.005
-    windUpwards: 0.02
-    coverage: -0.1
-    worleyFreq2: 1
-    worleyFreq1: 4
-    dilateCoverage: 1
-    dilateType: 1
-    cloudsTypeModifier: 1
-    locationOffset: {x: 0.1, y: 0}
-    bottomCloudsHeight: 2000
-    topCloudsHeight: 8000
-    density: 0.3
-    scatteringIntensity: 1
-    silverLiningSpread: 0.8
-    powderIntensity: 0.7
-    curlIntensity: 0.2
-    lightStepModifier: 0.075
-    lightAbsorbtion: 0.559
-    multiScatteringA: 0.4
-    multiScatteringB: 0.083
-    multiScatteringC: 1
-    baseNoiseUV: 6
-    detailNoiseUV: 28
-    baseErosionIntensity: 0
-    detailErosionIntensity: 0.25
-    anvilBias: 0
-  settingsLayer2:
-    cloudsWindDirectionXModifier: -1
-    cloudsWindDirectionYModifier: -1
-    windSpeedModifier: 0.005
-    windUpwards: 0.02
-    coverage: 0.037
-    worleyFreq2: 2
-    worleyFreq1: 10
-    dilateCoverage: 1
-    dilateType: 1
-    cloudsTypeModifier: 1
-    locationOffset: {x: 0, y: 0}
-    bottomCloudsHeight: 8000
-    topCloudsHeight: 12000
-    density: 0.12
-    scatteringIntensity: 1.2
-    silverLiningSpread: 0.8
-    powderIntensity: 0.891
-    curlIntensity: 0.15
-    lightStepModifier: 0.05
-    lightAbsorbtion: 0.301
-    multiScatteringA: 0.534
-    multiScatteringB: 0.145
-    multiScatteringC: 0.072
-    baseNoiseUV: 6
-    detailNoiseUV: 34
-    baseErosionIntensity: 0
-    detailErosionIntensity: 0.3
-    anvilBias: 0.198
-  settingsGlobal:
-    dualLayer: 0
-    floatingPointOriginMod: {x: 0, y: 0, z: 0}
-    sunLightColorGradient:
+  settings:
+    useCirrusClouds: 1
+    cirrusCloudsTex: {fileID: 2800000, guid: 75c66597a85001644b2de40147b8d196, type: 3}
+    cirrusCloudsAlpha: 0.575
+    cirrusCloudsColorPower: 1.309
+    cirrusCloudsCoverage: 0.5
+    cirrusCloudsColor:
       serializedVersion: 2
       key0: {r: 0, g: 0, b: 0, a: 1}
       key1: {r: 0, g: 0, b: 0, a: 1}
+      key2: {r: 1, g: 0.18127085, b: 0, a: 0.9843137}
+      key3: {r: 0.91764706, g: 0.78431374, b: 0.6431373, a: 0.9843137}
+      key4: {r: 0.91764706, g: 0.8627451, b: 0.80784315, a: 0.9843137}
+      key5: {r: 0.4627451, g: 0.9843137, b: 0.83137256, a: 0.9843137}
+      key6: {r: 0.4627451, g: 0.9843137, b: 0.83137256, a: 0.9843137}
+      key7: {r: 0.4627451, g: 0.9843137, b: 0.83137256, a: 0.9843137}
+      ctime0: 0
+      ctime1: 29696
+      ctime2: 31641
+      ctime3: 36700
+      ctime4: 65535
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 5
+      m_NumAlphaKeys: 2
+    cirrusCloudsWindIntensity: 0.5
+    useFlatClouds: 0
+    flatCloudsBaseTex: {fileID: 2800000, guid: d178a8cc601a00f48914c0bfd42c77d5, type: 3}
+    flatCloudsDetailTex: {fileID: 2800000, guid: 2e0e351a1a0d49545a3dd0264e7ac2d9, type: 3}
+    flatCloudsLightColor:
+      serializedVersion: 2
+      key0: {r: 0, g: 0, b: 0, a: 1}
+      key1: {r: 0.12615699, g: 0.13726778, b: 0.1981132, a: 1}
       key2: {r: 1, g: 0.18127085, b: 0, a: 0}
       key3: {r: 0.91764706, g: 0.78431374, b: 0.6431373, a: 0}
-      key4: {r: 1, g: 0.78234506, b: 0.5518868, a: 0}
+      key4: {r: 0.91764706, g: 0.8627451, b: 0.80784315, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
@@ -1664,41 +1836,12 @@ MonoBehaviour:
       m_Mode: 0
       m_NumColorKeys: 5
       m_NumAlphaKeys: 2
-    moonLightColorGradient:
+    flatCloudsAmbientColor:
       serializedVersion: 2
       key0: {r: 0, g: 0, b: 0, a: 1}
-      key1: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 1}
-      key2: {r: 0.17488432, g: 0.19651124, b: 0.2830189, a: 0}
-      key3: {r: 0.066082254, g: 0.07146038, b: 0.084905684, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
-      key6: {r: 0, g: 0, b: 0, a: 0}
-      key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 27563
-      ctime2: 65535
-      ctime3: 65535
-      ctime4: 0
-      ctime5: 0
-      ctime6: 0
-      ctime7: 0
-      atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
-      atime4: 0
-      atime5: 0
-      atime6: 0
-      atime7: 0
-      m_Mode: 0
-      m_NumColorKeys: 3
-      m_NumAlphaKeys: 2
-    ambientColorGradient:
-      serializedVersion: 2
-      key0: {r: 0, g: 0, b: 0, a: 1}
-      key1: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 1}
+      key1: {r: 0.06781771, g: 0.07401677, b: 0.11320752, a: 1}
       key2: {r: 0.17319329, g: 0.2085657, b: 0.26415092, a: 0}
-      key3: {r: 0.6637148, g: 0.7245256, b: 0.8962264, a: 0}
+      key3: {r: 0.23535956, g: 0.28180525, b: 0.4056604, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
@@ -1722,42 +1865,24 @@ MonoBehaviour:
       m_Mode: 0
       m_NumColorKeys: 4
       m_NumAlphaKeys: 2
-    sunLightColor: {r: 0, g: 0, b: 0, a: 0}
-    moonLightColor: {r: 0, g: 0, b: 0, a: 0}
-    ambientColor: {r: 0, g: 0, b: 0, a: 0}
-    depthBlending: 0
-    noise: {fileID: 11700000, guid: c901165679d774b46bb79227f2dfa3fa, type: 2}
-    detailNoise: {fileID: 11700000, guid: ade9bb66636d08a428cb5d6009b0ff5d, type: 2}
-    curlTex: {fileID: 2800000, guid: b7acf882b3b0d6c4a9d1a04c10fe146a, type: 3}
-    blueNoise: {fileID: 2800000, guid: 3f714f8f28ab17e499e2e6c690af70cc, type: 3}
-    cloudsWorldScale: 5000000
-    atmosphereColorSaturateDistance: 25000
-    ambientLighIntensity: 1
-    cloudShadows: 0
-    cloudShadowsIntensity: 2
-    cloudsTravelSpeed: 0.25
-  settingsQuality:
-    volumetricClouds: 1
-    downsampling: 2
-    stepsLayer1: 128
-    stepsLayer2: 64
-    blueNoiseIntensity: 2
-    reprojectionBlendTime: 2
-    lodDistance: 0.7
-  preset: {fileID: 11400000, guid: 4b3879673bba3ff488a4b539b4de69b7, type: 2}
-  showGlobalControls: 1
-  showLayer1Controls: 1
-  showLayer2Controls: 0
-  showCoverageControls: 1
-  showLightingControls: 0
-  showDensityControls: 0
-  showTextureControls: 0
-  showWindControls: 0
-  cloudAnimLayer1: {x: -0.34436208, y: -0.26813197, z: -0.49322698}
-  cloudAnimLayer2: {x: 0.34090048, y: -0.6529711, z: 0.7734718}
-  cloudAnimNonScaledLayer1: {x: -1.113105, y: 1.3123127, z: -56.012234}
-  cloudAnimNonScaledLayer2: {x: -0.12370815, y: 0.26579013, z: -53.67351}
-  weatherMap: {fileID: 0}
+    flatCloudsLightIntensity: 1.014
+    flatCloudsAmbientIntensity: 1.05
+    flatCloudsAbsorbtion: 1.814
+    flatCloudsHGPhase: 0.8
+    flatCloudsCoverage: 1.287
+    flatCloudsDensity: 1
+    flatCloudsAltitude: 1
+    flatCloudsTonemapping: 0
+    flatCloudsBaseTiling: 1
+    flatCloudsDetailTiling: 10
+    flatCloudsWindIntensity: 1
+    flatCloudsDetailWindIntensity: 0.5
+  preset: {fileID: 11400000, guid: 0fcdd472bd6a8ec429fc1e9bc978c4fa, type: 2}
+  showCirrusCloudsControls: 0
+  show2DCloudsControls: 0
+  cloudFlatBaseAnim: {x: -0.5250594, y: 0.5250594}
+  cloudFlatDetailAnim: {x: -0.6255643, y: 0.6255643}
+  cirrusAnim: {x: 0.7381168, y: -0.7381168}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1773,9 +1898,9 @@ MonoBehaviour:
   timeModule: {fileID: 7641771290446614687}
   lightingModule: {fileID: -2917269256795556972}
   Sky: {fileID: -6309341873459469002}
-  fogModule: {fileID: 7640441264838873762}
-  volumetricCloudModule: {fileID: -1908510324810229307}
-  flatCloudModule: {fileID: 5146867784816170477}
+  fogModule: {fileID: 0}
+  volumetricCloudModule: {fileID: -7213423290089749971}
+  flatCloudModule: {fileID: -845313529948089101}
   Weather: {fileID: -6458479593538681866}
   Aurora: {fileID: 7758816196944666623}
   Audio: {fileID: 4306403753115784765}
@@ -2092,136 +2217,6 @@ MonoBehaviour:
   showWeatherSetupControls: 0
   showThunderSetupControls: 0
   showAudioControls: 1
---- !u!114 &5146867784816170477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b982c9fba9faf3a43bf4a9e7ced867d7, type: 3}
-  m_Name: Flat Clouds Module
-  m_EditorClassIdentifier: 
-  showModuleInspector: 0
-  showSaveLoad: 0
-  active: 1
-  settings:
-    useCirrusClouds: 1
-    cirrusCloudsTex: {fileID: 2800000, guid: 75c66597a85001644b2de40147b8d196, type: 3}
-    cirrusCloudsAlpha: 0.575
-    cirrusCloudsColorPower: 1.309
-    cirrusCloudsCoverage: 0.5
-    cirrusCloudsColor:
-      serializedVersion: 2
-      key0: {r: 0, g: 0, b: 0, a: 1}
-      key1: {r: 0, g: 0, b: 0, a: 1}
-      key2: {r: 1, g: 0.18127085, b: 0, a: 0.9843137}
-      key3: {r: 0.91764706, g: 0.78431374, b: 0.6431373, a: 0.9843137}
-      key4: {r: 0.91764706, g: 0.8627451, b: 0.80784315, a: 0.9843137}
-      key5: {r: 0.4627451, g: 0.9843137, b: 0.83137256, a: 0.9843137}
-      key6: {r: 0.4627451, g: 0.9843137, b: 0.83137256, a: 0.9843137}
-      key7: {r: 0.4627451, g: 0.9843137, b: 0.83137256, a: 0.9843137}
-      ctime0: 0
-      ctime1: 29696
-      ctime2: 31641
-      ctime3: 36700
-      ctime4: 65535
-      ctime5: 0
-      ctime6: 0
-      ctime7: 0
-      atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
-      atime4: 0
-      atime5: 0
-      atime6: 0
-      atime7: 0
-      m_Mode: 0
-      m_NumColorKeys: 5
-      m_NumAlphaKeys: 2
-    cirrusCloudsWindIntensity: 0.5
-    useFlatClouds: 0
-    flatCloudsBaseTex: {fileID: 2800000, guid: d178a8cc601a00f48914c0bfd42c77d5, type: 3}
-    flatCloudsDetailTex: {fileID: 2800000, guid: 2e0e351a1a0d49545a3dd0264e7ac2d9, type: 3}
-    flatCloudsLightColor:
-      serializedVersion: 2
-      key0: {r: 0, g: 0, b: 0, a: 1}
-      key1: {r: 0.12615699, g: 0.13726778, b: 0.1981132, a: 1}
-      key2: {r: 1, g: 0.18127085, b: 0, a: 0}
-      key3: {r: 0.91764706, g: 0.78431374, b: 0.6431373, a: 0}
-      key4: {r: 0.91764706, g: 0.8627451, b: 0.80784315, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
-      key6: {r: 0, g: 0, b: 0, a: 0}
-      key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 29696
-      ctime2: 31641
-      ctime3: 36700
-      ctime4: 65535
-      ctime5: 0
-      ctime6: 0
-      ctime7: 0
-      atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
-      atime4: 0
-      atime5: 0
-      atime6: 0
-      atime7: 0
-      m_Mode: 0
-      m_NumColorKeys: 5
-      m_NumAlphaKeys: 2
-    flatCloudsAmbientColor:
-      serializedVersion: 2
-      key0: {r: 0, g: 0, b: 0, a: 1}
-      key1: {r: 0.06781771, g: 0.07401677, b: 0.11320752, a: 1}
-      key2: {r: 0.17319329, g: 0.2085657, b: 0.26415092, a: 0}
-      key3: {r: 0.23535956, g: 0.28180525, b: 0.4056604, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
-      key6: {r: 0, g: 0, b: 0, a: 0}
-      key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 29491
-      ctime2: 33539
-      ctime3: 65535
-      ctime4: 0
-      ctime5: 0
-      ctime6: 0
-      ctime7: 0
-      atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
-      atime4: 0
-      atime5: 0
-      atime6: 0
-      atime7: 0
-      m_Mode: 0
-      m_NumColorKeys: 4
-      m_NumAlphaKeys: 2
-    flatCloudsLightIntensity: 1.014
-    flatCloudsAmbientIntensity: 1.05
-    flatCloudsAbsorbtion: 1.814
-    flatCloudsHGPhase: 0.8
-    flatCloudsCoverage: 1.287
-    flatCloudsDensity: 1
-    flatCloudsAltitude: 1
-    flatCloudsTonemapping: 0
-    flatCloudsBaseTiling: 1
-    flatCloudsDetailTiling: 10
-    flatCloudsWindIntensity: 1
-    flatCloudsDetailWindIntensity: 0.5
-  preset: {fileID: 11400000, guid: 0fcdd472bd6a8ec429fc1e9bc978c4fa, type: 2}
-  showCirrusCloudsControls: 0
-  show2DCloudsControls: 0
-  cloudFlatBaseAnim: {x: -0.24375622, y: -0.5127841}
-  cloudFlatDetailAnim: {x: -0.6682908, y: -0.1596725}
-  cirrusAnim: {x: 0.28595775, y: 0.43175808}
 --- !u!114 &7156465347053547397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2264,274 +2259,6 @@ MonoBehaviour:
         m_Calls: []
   preset: {fileID: 11400000, guid: f264806d641cc9a4fac93b4721310370, type: 2}
   showEventsControls: 1
---- !u!114 &7640441264838873762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eacb969ef7bfec4ba69d66b0a873f2f, type: 3}
-  m_Name: Fog Module
-  m_EditorClassIdentifier: 
-  showModuleInspector: 0
-  showSaveLoad: 0
-  active: 1
-  Settings:
-    volumetrics: 1
-    steps: 32
-    quality: 1
-    scattering: 0.5
-    extinction: 0.08
-    anistropy: 0.5
-    maxRange: 1000
-    maxRangePointSpot: 100
-    noiseIntensity: 0
-    noiseScale: 0
-    windDirection: {x: 3.9, y: 0, z: 0}
-    noise: {fileID: 0}
-    ditheringTex: {fileID: 2800000, guid: 711e788cbc742bb439b3c7cad60651e3, type: 3}
-    fog: 1
-    fogDensity: 0.081
-    fogHeightFalloff: 0.0091
-    fogHeight: 0
-    fogDensity2: 0.088
-    fogHeightFalloff2: 0.009
-    fogHeight2: 0
-    fogMaxOpacity: 1
-    startDistance: 0
-    fogColorBlend: 0.75
-    ambientColorGradient:
-      serializedVersion: 2
-      key0: {r: 0, g: 0, b: 0, a: 1}
-      key1: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 1}
-      key2: {r: 0.46471164, g: 0.5037812, b: 0.5566038, a: 0}
-      key3: {r: 2.5796902, g: 2.651018, b: 2.8293376, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
-      key6: {r: 0, g: 0, b: 0, a: 0}
-      key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 29491
-      ctime2: 33539
-      ctime3: 65535
-      ctime4: 0
-      ctime5: 0
-      ctime6: 0
-      ctime7: 0
-      atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
-      atime4: 0
-      atime5: 0
-      atime6: 0
-      atime7: 0
-      m_Mode: 0
-      m_NumColorKeys: 4
-      m_NumAlphaKeys: 2
-    controlHDRPFog: 0
-    fogAttenuationDistance: 400
-    baseHeight: 0
-    maxHeight: 250
-    fogColorTint:
-      serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
-      key6: {r: 0, g: 0, b: 0, a: 0}
-      key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 65535
-      ctime2: 0
-      ctime3: 0
-      ctime4: 0
-      ctime5: 0
-      ctime6: 0
-      ctime7: 0
-      atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
-      atime4: 0
-      atime5: 0
-      atime6: 0
-      atime7: 0
-      m_Mode: 0
-      m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
-    controlHDRPVolumetrics: 0
-    volumetricsColorTint:
-      serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
-      key5: {r: 0, g: 0, b: 0, a: 0}
-      key6: {r: 0, g: 0, b: 0, a: 0}
-      key7: {r: 0, g: 0, b: 0, a: 0}
-      ctime0: 0
-      ctime1: 65535
-      ctime2: 0
-      ctime3: 0
-      ctime4: 0
-      ctime5: 0
-      ctime6: 0
-      ctime7: 0
-      atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
-      atime4: 0
-      atime5: 0
-      atime6: 0
-      atime7: 0
-      m_Mode: 0
-      m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
-    ambientDimmer: 1
-    directLightMultiplier: 1
-    directLightShadowdimmer: 1
-  preset: {fileID: 11400000, guid: 6625884995235d049bd7f2f1de182577, type: 2}
-  showFogControls: 0
-  showVolumetricsControls: 0
-  showHDRPFogControls: 0
-  fogLights:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  fogMat: {fileID: 0}
-  volumetricsMat: {fileID: 0}
-  blurMat: {fileID: 0}
-  volumetricsRenderTexture: {fileID: 0}
-  fogHDRP: {fileID: 3994963388396277213, guid: 52f158144a28a9e4c9a02b7856139c21, type: 2}
 --- !u!114 &7641771290446614687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2544,18 +2271,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0081d4f9e5d6e0a4d9fe8e7a8d7256b6, type: 3}
   m_Name: Time Module
   m_EditorClassIdentifier: 
-  showModuleInspector: 0
+  showModuleInspector: 1
   showSaveLoad: 0
   active: 1
   Settings:
     simulate: 0
     secSerial: 0
     minSerial: 0
-    hourSerial: 12
-    daySerial: 14
+    hourSerial: 0
+    daySerial: 19
     monthSerial: 3
     yearSerial: 2021
-    timeOfDay: 12
+    timeOfDay: 0
     latitude: 24
     longitude: 67
     utcOffset: 5
@@ -2563,7 +2290,7 @@ MonoBehaviour:
     dayLengthModifier: 1
     nightLengthModifier: 1
   preset: {fileID: 11400000, guid: 82acdd278499d74498ad37dd931734d1, type: 2}
-  showTimeControls: 0
+  showTimeControls: 1
   showLocationControls: 0
 --- !u!114 &7758816196944666623
 MonoBehaviour:
