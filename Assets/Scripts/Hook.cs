@@ -9,14 +9,17 @@ public class Hook : MonoBehaviour
     InputAction activateAction;
     public Transform playerHand; // Assign the player's hand transform here
     public float retrievalSpeed = 5f; // Speed at which the hook returns to the player's hand
-    private bool isRetrieving = false;
+    public bool isRetrieving = false;
 
-    public void Start() {
-        activateAction = _actionAsset.FindActionMap("XRI RightHand").FindAction("Activate");
-
-    }
+    //public void Start() {
+    //    activateAction = _actionAsset.FindActionMap("XRI RightHand").FindAction("Activate");
+    //    activateAction.Enable();
+    //    activateAction.started += OnActivateStarted;
+    //    activateAction.canceled += OnActivateCanceled;
+    //}
 
     private void OnEnable() {
+        activateAction = _actionAsset.FindActionMap("XRI RightHand").FindAction("Activate");
         activateAction.Enable();
         activateAction.started += OnActivateStarted;
         activateAction.canceled += OnActivateCanceled;
