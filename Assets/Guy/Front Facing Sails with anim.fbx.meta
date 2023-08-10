@@ -1,74 +1,9 @@
 fileFormatVersion: 2
-guid: 28b4dc4e061d32d47abcb86f639ab762
+guid: 4895bd22eab30894f8fda79d9279df0e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_Catherine
-    second: {fileID: 2100000, guid: e043da272e2bffb4bb0a20631342ef17, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_Glass
-    second: {fileID: 2100000, guid: 5831b59f71129204aae32b3bee6b083c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_ManilaRope
-    second: {fileID: 2100000, guid: 678c17fe2fe82ba4b9af2850784418d9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_Metal_01
-    second: {fileID: 2100000, guid: 7e47c9a90d415d9499d36549ebcab61c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_Metal_02
-    second: {fileID: 2100000, guid: eead29066b0178c47bb3521738372fb4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_Wood-Floor
-    second: {fileID: 2100000, guid: c1a111fa8657d6f4b80346d66adf0a65, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_WoodCeiling
-    second: {fileID: 2100000, guid: 5d99d9eba6828d945bdc17101566d735, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_WoodPainted-Black
-    second: {fileID: 2100000, guid: d0ee904599ce7ee49ab683e31ad5d248, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_WoodPainted-Red
-    second: {fileID: 2100000, guid: e4bab50d762b11644a3db17dd0e14396, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_WoodPainted-White
-    second: {fileID: 2100000, guid: 070274bb9e5ec3446aa14a6e51d096d7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_WoodPainted-Yellow
-    second: {fileID: 2100000, guid: 3a1ae16ed33da0d468659f1c4da7f0b2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_Wood_01
-    second: {fileID: 2100000, guid: aedb36c02e728684a86a064c294fd555, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: M_Wood_02
-    second: {fileID: 2100000, guid: 574e2f594486c8d409820e94819701af, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

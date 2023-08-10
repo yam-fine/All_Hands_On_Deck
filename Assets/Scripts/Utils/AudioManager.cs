@@ -19,7 +19,7 @@ public class AudioManager : Singleton<AudioManager>
         // TELEPORT etc etc
         ay_cap,
         avast,
-        pfft
+        pfft,
     }
 
     protected override void Awake()
