@@ -22,6 +22,7 @@ public class RopePullingInteractor : MonoBehaviour
 
     private Vector3 previousPosition;
     private Vector3 releaseVelocity = Vector3.zero;
+    private bool stop;
     [SerializeField] private float velocityDampMultiplier = 0.5f;
     [SerializeField] private float velocityDecayRate = 30f;
     [SerializeField] private float returningSpeed = 4.0f;
@@ -75,6 +76,8 @@ public class RopePullingInteractor : MonoBehaviour
 
     void Update()
     {
+        if (stop)
+            return;
         if (activeGrabbingPoint != null)
         {
             // Scale the pole based on the active grabbing point's position
@@ -106,13 +109,17 @@ public class RopePullingInteractor : MonoBehaviour
         // Set the sail's animation parameter
         sailAnimator.SetFloat("SailOpenAmount", invertedPercentage);
         sailAnimator.Play("SailClose", 0, sailAnimator.GetFloat("SailOpenAmount"));
+        Debug.Log(invertedPercentage);
+        if (sailAnimator.GetFloat("SailOpenAmount") <= 0)
+        {
+            stop = true;
+        }
 
     }
 
     private IEnumerator ReturnPoleToOriginalPosition()
     {
         isReturning = true;
-        Debug.Log(releaseVelocity.y);
         while (releaseVelocity.y < -0.01f)
         {
             float distanceToMove = -(releaseVelocity.y*velocityDampMultiplier) * Time.deltaTime;
