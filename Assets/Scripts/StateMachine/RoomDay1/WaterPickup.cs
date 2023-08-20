@@ -12,12 +12,20 @@ public class WaterPickup : IsState
     }
 
     public void OnExit(StateController sc) {
+        InnerOnExit((RoomDay1StateController)sc);
+    }
+
+    public void UpdateState(StateController sc) {
+        InnerUpdateState((RoomDay1StateController)sc);
+    }
+
+    void InnerOnExit(RoomDay1StateController sc) {
         sc.actionMoveProvider.enabled = true;
         sc.actionTurnProvider.enabled = true;
         sc.avatarAnimator.SetBool("drankWater", true);
     }
 
-    public void UpdateState(StateController sc) {
+    void InnerUpdateState(RoomDay1StateController sc) {
         if (sc.PlayerDrank)
         {
             sc.ChangeState(sc.room1Roam);

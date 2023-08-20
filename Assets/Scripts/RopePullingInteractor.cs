@@ -22,7 +22,7 @@ public class RopePullingInteractor : MonoBehaviour
 
     private Vector3 previousPosition;
     private Vector3 releaseVelocity = Vector3.zero;
-    private bool stop;
+    public static bool stop;
     [SerializeField] private float velocityDampMultiplier = 0.5f;
     [SerializeField] private float velocityDecayRate = 30f;
     [SerializeField] private float returningSpeed = 4.0f;
@@ -48,6 +48,10 @@ public class RopePullingInteractor : MonoBehaviour
         grabbingPoint.selectEntered.RemoveListener(OnGrabbingPointGrabbed);
         grabbingPoint.selectExited.RemoveListener(OnGrabbingPointReleased);
 
+    }
+
+    private void Awake() {
+        stop = false;
     }
     private void Start()
     {
