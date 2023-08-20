@@ -758,6 +758,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Move1",
+                    "type": "Value",
+                    "id": "980d21ec-71ef-467b-8509-5277247da91b",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -1121,6 +1130,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Velocity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "64a1b11f-e2d3-473b-89b8-86b29cfa464c",
+                    "path": "<XRController>{RightHand}/primary2DAxis",
+                    "interactions": "",
+                    "processors": "StickDeadzone",
+                    "groups": "Continuous Move",
+                    "action": "Move1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
