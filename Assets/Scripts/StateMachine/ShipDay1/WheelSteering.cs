@@ -19,7 +19,7 @@ public class WheelSteering : IsState
     }
 
     void InnerUpdateState(ShipDay1StateController sc) {
-        if (Mathf.Abs(sc.ship.transform.rotation.y - sc.desiredRotation) <= rotationThreshold {
+        if (Mathf.Abs(sc.ship.transform.rotation.y - sc.desiredRotation) <= rotationThreshold) {
             sc.ChangeState(sc.ladder_climb);
         }
     }
