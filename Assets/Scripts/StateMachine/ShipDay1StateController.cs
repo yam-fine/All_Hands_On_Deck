@@ -5,6 +5,8 @@ using UnityEngine;
 public class ShipDay1StateController : StateController
 {
     public GameObject player;
+    public GameObject ship;
+    public float desiredRotation = 25;
     public SailFurling sails = new SailFurling();
     public WheelSteering wheel_steering = new WheelSteering();
     public LadderClimbing ladder_climb = new LadderClimbing();
