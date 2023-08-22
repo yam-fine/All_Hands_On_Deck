@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Enviro;
 
 public class ShipDay1StateController : StateController
 {
     public GameObject player;
     public GameObject ship;
+    public LadderDetection ld;
+    public EnviroManager enviro;
     public float desiredRotation = 25;
     public SailFurling sails = new SailFurling();
     public WheelSteering wheel_steering = new WheelSteering();

@@ -10,9 +10,7 @@ public class ClimbInteractor : XRBaseInteractable
         XRBaseInteractor interactor = args.interactor;
         base.OnSelectEntered(args);
         if (interactor is XRDirectInteractor) {
-            Debug.Log("HELLO");
             Climb.climbingHand = interactor.GetComponent<ActionBasedController>();
-            Debug.Log(Climb.climbingHand);
         }
     }
 

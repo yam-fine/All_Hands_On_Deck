@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LadderClimbing : IsState
 {
+    bool playerClimbed = false;
+
     public void OnEnter(StateController sc) {
         throw new System.NotImplementedException();
     }
@@ -13,6 +15,18 @@ public class LadderClimbing : IsState
     }
 
     public void UpdateState(StateController sc) {
-        throw new System.NotImplementedException();
+        InnerUpdateState((ShipDay1StateController)sc);
+    }
+
+    void InnerUpdateState(ShipDay1StateController sc) {
+        if (sc.ld.playerReached && !playerClimbed) {
+            playerClimbed = true;
+
+            //weather change
+            sc.enviro.Weather.ChangeWeather("Snow");
+
+            //teleport to hull
+            //sc.ChangeState(sc.hull_n_whale);
+        }
     }
 }

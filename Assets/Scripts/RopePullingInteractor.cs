@@ -113,7 +113,6 @@ public class RopePullingInteractor : MonoBehaviour
         // Set the sail's animation parameter
         sailAnimator.SetFloat("SailOpenAmount", invertedPercentage);
         sailAnimator.Play("SailClose", 0, sailAnimator.GetFloat("SailOpenAmount"));
-        Debug.Log(invertedPercentage);
         if (sailAnimator.GetFloat("SailOpenAmount") <= 0)
         {
             stop = true;
