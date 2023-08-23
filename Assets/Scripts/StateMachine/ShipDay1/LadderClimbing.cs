@@ -26,9 +26,8 @@ public class LadderClimbing : IsState
             sc.enviro.Weather.ChangeWeather("Snow");
 
             //teleport to hull
-            sc.TeleportWithFade();
+            sc.TeleportWithFade(sc.ChangeState, sc.hull);
             sc.actionMoveProvider.enabled = false;
-            sc.ChangeState(sc.hull);
         }
     }
 }

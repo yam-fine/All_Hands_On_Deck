@@ -17,6 +17,7 @@ public class ShipDay1StateController : StateController
     public Image fadeImage;
     public EventReachedDetection whale_desired_position;
     public ActionBasedContinuousMoveProvider actionMoveProvider;
+    public FadeScreen fade;
 
     public FollowThePath killerWhalePath;
 
@@ -34,46 +35,21 @@ public class ShipDay1StateController : StateController
         ChangeState(sails);
     }
 
-    public void TeleportWithFade() {
-        StartCoroutine(TeleportAndFadeCoroutine());
+    public void TeleportWithFade(System.Action<IsState> funcToExecute, IsState state) {
+        StartCoroutine(TeleportAndFadeCoroutine(funcToExecute, state));
     }
 
-    private IEnumerator TeleportAndFadeCoroutine() {
-        // Fade out
-        yield return StartCoroutine(FadeOut());
+    private IEnumerator TeleportAndFadeCoroutine(System.Action<IsState> funcToExecute, IsState state) {
+        // Fade in
+        fade.FadeIn();
+        yield return new WaitForSeconds(fade.fadeDur);
 
         // Teleport the player
         player.transform.position = hull_teleport.position;
+        if (funcToExecute != null)
+            funcToExecute.Invoke(state);
 
-        // Fade in
-        yield return StartCoroutine(FadeIn());
-    }
-
-    private IEnumerator FadeOut() {
-        float elapsedTime = 0;
-        Color startColor = fadeImage.color;
-        Color targetColor = new Color(0, 0, 0, 1); // Black color
-
-        while (elapsedTime < fadeDuration) {
-            fadeImage.color = Color.Lerp(startColor, targetColor, elapsedTime / fadeDuration);
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
-        fadeImage.color = targetColor;
-    }
-
-    private IEnumerator FadeIn() {
-        float elapsedTime = 0;
-        Color startColor = fadeImage.color;
-        Color targetColor = new Color(0, 0, 0, 0); // Transparent color
-
-        while (elapsedTime < fadeDuration) {
-            fadeImage.color = Color.Lerp(startColor, targetColor, elapsedTime / fadeDuration);
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
-        fadeImage.color = targetColor;
+        // Fade out
+        fade.FadeOut();
     }
 }
