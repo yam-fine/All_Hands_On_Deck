@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HullDayOne : MonoBehaviour
+public class HullDayOne : IsState
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public void OnEnter(StateController sc) {
+        //dialogue
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void OnExit(StateController sc) {
+        throw new System.NotImplementedException();
+    }
+
+    public void UpdateState(StateController sc) {
+        throw new System.NotImplementedException();
     }
 }
