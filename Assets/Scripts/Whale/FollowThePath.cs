@@ -19,6 +19,8 @@ public class FollowThePath : MonoBehaviour {
     // to the next one
     private int waypointIndex = 0;
 
+    public bool colidedTarget = false;
+
 	// Use this for initialization
 	private void Start () {
 
@@ -73,5 +75,6 @@ public class FollowThePath : MonoBehaviour {
 
     public void Attack() {
         shouldColide = true;
+        moveSpeed*=2;
     }
 }

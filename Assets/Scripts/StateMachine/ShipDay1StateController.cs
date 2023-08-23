@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Enviro;
 using UnityEngine.XR.Interaction.Toolkit;
-
+using UnityEngine.SceneManagement;
 
 public class ShipDay1StateController : StateController
 {
@@ -14,6 +14,7 @@ public class ShipDay1StateController : StateController
     public Transform hull_teleport;
     public float desiredRotation = 25;
     public EventReachedDetection whale_desired_position;
+    public WhaleEventReachedDetection whaleShipColided;
     public ActionBasedContinuousMoveProvider actionMoveProvider;
     public FadeScreen fade;
     public GameObject whale;
@@ -54,5 +55,15 @@ public class ShipDay1StateController : StateController
 
         // Fade out
         fade.FadeOut();
+    }
+
+    public void LoadScene() {
+        StartCoroutine(LoadSceneIEnum());
+    }
+
+    IEnumerator LoadSceneIEnum() {
+        yield return new WaitForSeconds(this.fade.fadeDur);
+        SceneManager.UnloadSceneAsync("DeckDay1");
+        SceneManager.LoadScene("RoomDay2");
     }
 }

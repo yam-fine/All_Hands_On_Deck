@@ -33,7 +33,9 @@ public class TalkingWillStateControl : MonoBehaviour
     }
 
     public void StartGettingCPR() {
+        animator.SetBool(isTalkingHash, false);
         animator.SetBool(isGettingCPRHash, true);
+        
         float yRotation = 180f;
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation, transform.eulerAngles.z);
         transform.position = new Vector3(cpredBy.position.x+0.3f, cpredBy.position.y+0.1f, cpredBy.position.z-0.5f);

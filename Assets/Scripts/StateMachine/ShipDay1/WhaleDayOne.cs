@@ -9,14 +9,11 @@ public class WhaleDayOne : IsState
     private ShipDay1StateController state;
 
     public void OnEnter(StateController sc) {
-        Debug.Log("ENTER-WHALE");
         state = (ShipDay1StateController)sc;
         state.killerWhalePath.Attack();
     }
 
     public void OnExit(StateController sc) {
-        SceneManager.UnloadSceneAsync("DeckDay1");
-        SceneManager.LoadScene("RoomDay2");
     }
 
     public void UpdateState(StateController sc) {
@@ -24,7 +21,9 @@ public class WhaleDayOne : IsState
     }
 
     void InnerUpdateState(ShipDay1StateController sc) {
-        
+        if(sc.whaleShipColided.shipReached) {
+            sc.ChangeState(sc.finish);
+        }
         
     }
 }
