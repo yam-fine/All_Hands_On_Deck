@@ -20,19 +20,22 @@ public class ShipDay1StateController : StateController
     public Material waterMat;
 
     public FollowThePath killerWhalePath;
+    public PirateManStateControl givingCPR;
+    public TalkingWillStateControl takingCPR;
 
     public SailFurling sails = new SailFurling();
     public WheelSteering wheel_steering = new WheelSteering();
     public LadderClimbing ladder_climb = new LadderClimbing();
     public HullDayOne hull = new HullDayOne();
-    public WhaleDayOne whaleScene = new WhaleDayOne();
+    public WhaleDayOne whaleState = new WhaleDayOne();
+    public FinishDayOne finish = new FinishDayOne();
 
     float fadeDuration = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        ChangeState(ladder_climb);
+        ChangeState(hull);
     }
 
     public void TeleportWithFade(System.Action<IsState> funcToExecute, IsState state) {

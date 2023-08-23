@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class WhaleDayOne : IsState
 {
 
     private ShipDay1StateController state;
 
     public void OnEnter(StateController sc) {
+        Debug.Log("ENTER-WHALE");
         state = (ShipDay1StateController)sc;
         state.killerWhalePath.Attack();
     }
@@ -22,6 +24,7 @@ public class WhaleDayOne : IsState
     }
 
     void InnerUpdateState(ShipDay1StateController sc) {
+        
         
     }
 }

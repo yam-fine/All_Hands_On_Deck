@@ -13,10 +13,11 @@ public class HullDayOne : IsState
     void InnerOnEnter(ShipDay1StateController sc) {
         //dialogue
         sc.actionMoveProvider.enabled = true;
+        sc.givingCPR.StartCPR();
+        sc.takingCPR.StartGettingCPR();
     }
 
     public void OnExit(StateController sc) {
-        throw new System.NotImplementedException();
     }
 
     public void UpdateState(StateController sc) {
@@ -26,7 +27,8 @@ public class HullDayOne : IsState
     void InnerUpdateState(ShipDay1StateController sc) {
         if (sc.whale_desired_position.playerReached && !event_reached) {
             event_reached = true;
-            sc.ChangeState(sc.whaleScene);
+            Debug.Log("STATE-TRANSITION");
+            sc.ChangeState(sc.whaleState);
         }
     }
 }
