@@ -9,11 +9,14 @@ public class ShipDay1StateController : StateController
     public GameObject ship;
     public LadderDetection ld;
     public EnviroManager enviro;
+    public Transform hull_teleport;
     public float desiredRotation = 25;
+
     public SailFurling sails = new SailFurling();
     public WheelSteering wheel_steering = new WheelSteering();
     public LadderClimbing ladder_climb = new LadderClimbing();
-    public HullAndWhale hull_n_whale = new HullAndWhale();
+    public HullDayOne hull = new HullDayOne();
+    public WhaleDayOne whale = new WhaleDayOne();
 
     // Start is called before the first frame update
     void Start()
