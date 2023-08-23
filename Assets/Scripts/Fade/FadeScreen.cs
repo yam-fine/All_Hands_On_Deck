@@ -13,6 +13,7 @@ public class FadeScreen : MonoBehaviour
     void Start()
     {
         rend = GetComponent<Renderer>();
+        FadeIn();
     }
 
     public void FadeIn() {
