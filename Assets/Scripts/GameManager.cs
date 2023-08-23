@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.XR.CoreUtils;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -9,12 +11,16 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class GameManager : Singleton<GameManager>
 {
-    [SerializeField] private GameObject player;
-    [SerializeField] private Transform MainMenuStartPoistion;
-    [SerializeField] private Transform roomSpawnPoint;
-    [SerializeField] private Transform deckSpawnPoint;
-    [SerializeField] private XRDirectInteractor LeftHand;
-    [SerializeField] private XRDirectInteractor RightHand;
+    public GameObject Player;
+    public XROrigin PlayerXrOrigin;
+    public Transform MainMenuStartPoistion;
+    public Transform RoomSpawnPoint;
+    public Transform DeckSpawnPoint;
+    public XRDirectInteractor LeftHand;
+    public XRDirectInteractor RightHand;
+
+    [SerializeField] private AnimatorController DeckAnimatorController;
+    [SerializeField] private AnimatorController RoomAnimatorController;
 
     [SerializeField] private InputActionAsset _actionAsset;
 
@@ -34,7 +40,7 @@ public class GameManager : Singleton<GameManager>
     protected override void Awake()
     {
         base.Awake();
-        SceneManager.sceneLoaded += OnMainSceneLoaded;
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
     void Start()
     {
@@ -47,13 +53,54 @@ public class GameManager : Singleton<GameManager>
         _thumbstick.Enable();
     }
 
-    void OnMainSceneLoaded(Scene scene, LoadSceneMode mode)
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == "MAIN")
         {
             LoadScene(Scenes.MainMenu);
         }
+        if(scene.name == Scenes.MainMenu.ToString())
+        {
+            MainMenuInitialize();
+        }
+        if (scene.name == Scenes.RoomDay1.ToString())
+        {
+            RoomDayOneInitialize();
+        }
+        if (scene.name == Scenes.DeckDay1.ToString())
+        {
+            DeckDayOneInitialize();
+        }
         Invoke("StupidThing", 2);
+    }
+
+    private void MainMenuInitialize()
+    {
+        // Play sound
+        Player.transform.position = MainMenuStartPoistion.position;
+        PlayerXrOrigin.GetComponent<ActionBasedContinuousMoveProvider>().enabled = false;
+        PlayerXrOrigin.GetComponent<ActionBasedContinuousTurnProvider>().enabled = false;
+    }
+
+    private void DeckDayOneInitialize()
+    {
+        // Play Sound
+        Player.transform.position = DeckSpawnPoint.transform.position;
+        Player.transform.rotation = DeckSpawnPoint.transform.rotation;
+        PlayerXrOrigin.GetComponent<CharacterController>().enabled = false;
+        Player.transform.Find("Avatar").GetComponent<Animator>().runtimeAnimatorController = DeckAnimatorController;
+
+    }
+
+    private void RoomDayOneInitialize()
+    {
+        // Play Sound
+        Player.transform.position = RoomSpawnPoint.transform.position;
+        Player.transform.rotation = RoomSpawnPoint.transform.rotation;
+        PlayerXrOrigin.GetComponent<ActionBasedContinuousMoveProvider>().enabled = false;
+        PlayerXrOrigin.GetComponent<ActionBasedContinuousTurnProvider>().enabled = false;
+        PlayerXrOrigin.GetComponent<CharacterController>().enabled = false;
+        Player.transform.Find("Avatar").GetComponent<Animator>().runtimeAnimatorController = RoomAnimatorController;
     }
 
     private void OnActivatePress(InputAction.CallbackContext context)
@@ -71,21 +118,17 @@ public class GameManager : Singleton<GameManager>
         SceneManager.LoadScene((int)scene);
     }
 
-    public void StartGame()
-    {
-        
-    }
 
     public void StupidThing()
     {
         // You might be asking yourself WHYYYY??! and my answer is -> because it fixes a stupid bug i couldnt fix in any other awy.
         // Every time you load scene we loose all references to the hands, this fixes it.
         
-        RightHand.enabled = false;
-        RightHand.enabled = true;
-        LeftHand.enabled = false;
-        LeftHand.enabled = true;
-        
+        RightHand.gameObject.SetActive(false);
+        RightHand.gameObject.SetActive(true);
+        LeftHand.gameObject.SetActive(false);
+        LeftHand.gameObject.SetActive(true);
+
     }
     
     IEnumerator WaitForSceneLoad(int sceneNumber)

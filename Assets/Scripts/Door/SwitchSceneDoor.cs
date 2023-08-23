@@ -7,6 +7,6 @@ public class SwitchSceneDoor : Door
 {
     public override void Action() 
     {
-        SceneManager.LoadScene("DeckDay1");
+        GameManager.Instance.LoadScene(GameManager.Scenes.DeckDay1);
     }
 }

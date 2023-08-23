@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class ShipDay1StateController : StateController
 {
-    public GameObject player;
     public GameObject ship;
     public EventReachedDetection ld;
     public EnviroManager enviro;
@@ -15,7 +14,7 @@ public class ShipDay1StateController : StateController
     public float desiredRotation = 25;
     public EventReachedDetection whale_desired_position;
     public WhaleEventReachedDetection whaleShipColided;
-    public ActionBasedContinuousMoveProvider actionMoveProvider;
+    [HideInInspector] public ActionBasedContinuousMoveProvider actionMoveProvider;
     public FadeScreen fade;
     public GameObject whale;
     public Material waterMat;
@@ -34,9 +33,11 @@ public class ShipDay1StateController : StateController
     float fadeDuration = 1;
 
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
+        base.Start();
         ChangeState(ladder_climb);
+        actionMoveProvider = GameManager.Instance.PlayerXrOrigin.GetComponent<ActionBasedContinuousMoveProvider>();
     }
 
     public void TeleportWithFade(System.Action<IsState> funcToExecute, IsState state) {
@@ -49,7 +50,7 @@ public class ShipDay1StateController : StateController
         yield return new WaitForSeconds(fade.fadeDur);
 
         // Teleport the player
-        player.transform.position = hull_teleport.position;
+        GameManager.Instance.Player.transform.position = hull_teleport.position;
         if (funcToExecute != null)
             funcToExecute.Invoke(state);
 

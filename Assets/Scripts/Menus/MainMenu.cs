@@ -6,7 +6,7 @@ public class MainMenu : MonoBehaviour {
 
     public void StartGame(bool param) {
         SceneManager.UnloadSceneAsync("MainMenu");
-        SceneManager.LoadScene("RoomDay1");
+        GameManager.Instance.LoadScene(GameManager.Scenes.RoomDay1);
     }
 
     public void ToggleCredits(GameObject go) {

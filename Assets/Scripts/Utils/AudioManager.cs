@@ -73,9 +73,6 @@ public class AudioManager : Singleton<AudioManager>
     public EventInstance PlayOneShotAttach(Sounds sound, GameObject attach)
     {
         FMODUnity.RuntimeManager.PlayOneShotAttached(eventReferences[(int)sound], attach);
-        Debug.Log(_eventInstances[0]);
-        Debug.Log(_eventInstances[1]);
-        Debug.Log(_eventInstances[2]);
         return _eventInstances[(int)sound];
     }
 
