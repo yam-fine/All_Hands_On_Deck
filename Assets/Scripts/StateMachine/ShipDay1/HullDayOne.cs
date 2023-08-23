@@ -26,7 +26,7 @@ public class HullDayOne : IsState
     void InnerUpdateState(ShipDay1StateController sc) {
         if (sc.whale_desired_position.playerReached && !event_reached) {
             event_reached = true;
-            sc.ChangeState(sc.whale);
+            sc.ChangeState(sc.whaleScene);
         }
     }
 }

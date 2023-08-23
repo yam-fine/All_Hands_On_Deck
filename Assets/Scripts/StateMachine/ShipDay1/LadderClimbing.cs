@@ -5,6 +5,8 @@ using UnityEngine;
 public class LadderClimbing : IsState
 {
     bool playerClimbed = false;
+    float stormWaveHeight = 5;
+    float stormWaveFreq = 2;
 
     public void OnEnter(StateController sc) {
         throw new System.NotImplementedException();
@@ -22,12 +24,17 @@ public class LadderClimbing : IsState
         if (sc.ld.playerReached && !playerClimbed) {
             playerClimbed = true;
 
+            sc.whale.SetActive(true);
+            sc.waterMat.SetFloat("_WaveScale", stormWaveHeight);
+            sc.waterMat.SetFloat("_WaveFrequency", stormWaveFreq);
+
             //weather change
             sc.enviro.Weather.ChangeWeather("Snow");
+            
+            sc.actionMoveProvider.enabled = false;
 
             //teleport to hull
             sc.TeleportWithFade(sc.ChangeState, sc.hull);
-            sc.actionMoveProvider.enabled = false;
         }
     }
 }
