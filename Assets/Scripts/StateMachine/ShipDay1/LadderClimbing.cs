@@ -26,7 +26,7 @@ public class LadderClimbing : IsState
             sc.enviro.Weather.ChangeWeather("Snow");
 
             //teleport to hull
-            pla
+            sc.player.transform.position = sc.hull_teleport.position;
             //sc.ChangeState(sc.hull_n_whale);
         }
     }
