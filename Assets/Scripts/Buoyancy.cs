@@ -13,11 +13,12 @@ public class Buoyancy : MonoBehaviour {
         timeCounter = 0f;
     }
 
-    private void Update() {    
-        if (wheel.rotation.x < 0)
-            rotateDir += -1;
-        else if (wheel.rotation.x > 0)
-            rotateDir += 1;
+    private void Update() {
+        Debug.Log(wheel.rotation.x);
+        if (wheel.rotation.x < -.3f)
+            rotateDir += -.1f;
+        else if (wheel.rotation.x > .3f)
+            rotateDir += .1f;
 
         // Calculate the sway angle using a sine wave based on time
         float swayAngle = Mathf.Sin(timeCounter * swayFrequency) * swayAmount;
