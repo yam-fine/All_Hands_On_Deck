@@ -15,6 +15,8 @@ public class ShipDay1StateController : StateController
     public Image fadeImage;
     public EventReachedDetection whale_desired_position;
 
+    public GameObject killerWhale;
+
     public SailFurling sails = new SailFurling();
     public WheelSteering wheel_steering = new WheelSteering();
     public LadderClimbing ladder_climb = new LadderClimbing();
