@@ -65,8 +65,13 @@ public class FollowThePath : MonoBehaviour {
             {
                 waypointIndex += 1;
             }
-        } else {
+        } else if(!shouldColide) {
             waypointIndex=0;
         }
+    }
+
+
+    public void Attack() {
+        shouldColide = true;
     }
 }

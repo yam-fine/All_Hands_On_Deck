@@ -10,6 +10,10 @@ public class TalkingWillStateControl : MonoBehaviour
     int isTalkingHash;
     int isWorkingHash;
     int isLaughingHash;
+    int isGettingCPRHash;
+
+    public Transform cpredBy;
+    public Transform transform;
 
     // Start is called before the first frame update
     void Awake()
@@ -20,13 +24,19 @@ public class TalkingWillStateControl : MonoBehaviour
         isWorkingHash = Animator.StringToHash("IsWorking");
         isLaughingHash = Animator.StringToHash("IsLaughing");
 
+        isGettingCPRHash = Animator.StringToHash("GettingCPR");
+
         animator.SetBool(isTalkingHash, true);
+        
+        // animator.SetBool(isGettingCPRHash, true);
+        // StartGettingCPR();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void StartGettingCPR() {
+        animator.SetBool(isGettingCPRHash, true);
+        float yRotation = 180f;
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation, transform.eulerAngles.z);
+        transform.position = new Vector3(cpredBy.position.x, cpredBy.position.y+0.5f, cpredBy.position.z-1f);
     }
 
 }

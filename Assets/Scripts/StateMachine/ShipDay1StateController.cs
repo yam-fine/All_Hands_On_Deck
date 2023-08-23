@@ -18,7 +18,7 @@ public class ShipDay1StateController : StateController
     public EventReachedDetection whale_desired_position;
     public ActionBasedContinuousMoveProvider actionMoveProvider;
 
-    public GameObject killerWhale;
+    public FollowThePath killerWhalePath;
 
     public SailFurling sails = new SailFurling();
     public WheelSteering wheel_steering = new WheelSteering();

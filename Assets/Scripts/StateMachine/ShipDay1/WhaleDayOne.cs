@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 public class WhaleDayOne : IsState
 {
 
-
+    private ShipDay1StateController state;
 
     public void OnEnter(StateController sc) {
-        // dialogue
+        state = (ShipDay1StateController)sc;
+        state.killerWhalePath.Attack();
     }
 
     public void OnExit(StateController sc) {
