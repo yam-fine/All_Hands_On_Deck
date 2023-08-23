@@ -36,7 +36,7 @@ public class TalkingWillStateControl : MonoBehaviour
         animator.SetBool(isGettingCPRHash, true);
         float yRotation = 180f;
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, yRotation, transform.eulerAngles.z);
-        transform.position = new Vector3(cpredBy.position.x, cpredBy.position.y+0.5f, cpredBy.position.z-1f);
+        transform.position = new Vector3(cpredBy.position.x+0.3f, cpredBy.position.y+0.1, cpredBy.position.z-0.5f);
     }
 
 }
