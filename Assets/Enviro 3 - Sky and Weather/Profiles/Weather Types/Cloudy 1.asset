@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cbac6e678443724c9bd2baf5d564c1d, type: 3}
   m_Name: Cloudy 1
   m_EditorClassIdentifier: 
-  showEditor: 0
+  showEditor: 1
   showEffectControls: 0
   showCloudControls: 1
   showFlatCloudControls: 0
@@ -72,7 +72,7 @@ MonoBehaviour:
     directLightIntensityModifier: 0.59
     ambientIntensityModifier: 0.66
   fogOverride:
-    fogDensity: 0.081
+    fogDensity: 1
     fogHeightFalloff: 0.0091
     fogHeight: 0
     fogDensity2: 0.088
