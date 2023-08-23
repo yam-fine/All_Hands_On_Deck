@@ -27,7 +27,8 @@ public class LadderClimbing : IsState
 
             //teleport to hull
             sc.TeleportWithFade();
-            //sc.ChangeState(sc.hull_n_whale);
+            sc.actionMoveProvider.enabled = false;
+            sc.ChangeState(sc.hull);
         }
     }
 }

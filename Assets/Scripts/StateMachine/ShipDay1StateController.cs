@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Enviro;
+using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class ShipDay1StateController : StateController
 {
@@ -14,6 +16,7 @@ public class ShipDay1StateController : StateController
     public float desiredRotation = 25;
     public Image fadeImage;
     public EventReachedDetection whale_desired_position;
+    public ActionBasedContinuousMoveProvider actionMoveProvider;
 
     public GameObject killerWhale;
 
