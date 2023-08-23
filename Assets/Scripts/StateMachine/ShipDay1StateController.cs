@@ -36,7 +36,7 @@ public class ShipDay1StateController : StateController
     // Start is called before the first frame update
     void Start()
     {
-        ChangeState(hull);
+        ChangeState(ladder_climb);
     }
 
     public void TeleportWithFade(System.Action<IsState> funcToExecute, IsState state) {
