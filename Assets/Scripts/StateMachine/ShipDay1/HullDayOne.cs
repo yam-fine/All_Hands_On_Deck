@@ -7,6 +7,7 @@ public class HullDayOne : IsState
     bool event_reached = false;
 
     public void OnEnter(StateController sc) {
+        Debug.Log("HULL");
         InnerOnEnter((ShipDay1StateController)sc);
     }
 

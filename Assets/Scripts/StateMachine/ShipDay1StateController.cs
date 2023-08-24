@@ -36,7 +36,7 @@ public class ShipDay1StateController : StateController
     // Start is called before the first frame update
     void Start()
     {
-        ChangeState(ladder_climb);
+        ChangeState(sails);
     }
 
     public void TeleportWithFade(System.Action<IsState> funcToExecute, IsState state) {
@@ -45,7 +45,7 @@ public class ShipDay1StateController : StateController
 
     private IEnumerator TeleportAndFadeCoroutine(System.Action<IsState> funcToExecute, IsState state) {
         // Fade in
-        fade.FadeIn();
+        // fade.FadeIn();
         yield return new WaitForSeconds(fade.fadeDur);
 
         // Teleport the player
@@ -54,7 +54,7 @@ public class ShipDay1StateController : StateController
             funcToExecute.Invoke(state);
 
         // Fade out
-        fade.FadeOut();
+        // fade.FadeOut();
     }
 
     public void LoadScene() {

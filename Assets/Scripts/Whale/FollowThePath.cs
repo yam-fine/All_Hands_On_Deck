@@ -20,6 +20,7 @@ public class FollowThePath : MonoBehaviour {
     private int waypointIndex = 0;
 
     public bool colidedTarget = false;
+    private bool attacked = false;
 
 	// Use this for initialization
 	private void Start () {
@@ -67,13 +68,17 @@ public class FollowThePath : MonoBehaviour {
             {
                 waypointIndex += 1;
             }
-        } else if(!shouldColide) {
+            if (shouldColide) {
+                attacked = true;
+            }
+        } else if(!shouldColide || !attacked) {
             waypointIndex=0;
         }
     }
 
 
     public void Attack() {
+        Debug.Log("Attacking");
         shouldColide = true;
         moveSpeed*=2;
     }

@@ -9,6 +9,7 @@ public class WhaleDayOne : IsState
     private ShipDay1StateController state;
 
     public void OnEnter(StateController sc) {
+        Debug.Log("WHALE");
         state = (ShipDay1StateController)sc;
         state.killerWhalePath.Attack();
     }

@@ -9,7 +9,7 @@ public class LadderClimbing : IsState
     float stormWaveFreq = 2;
 
     public void OnEnter(StateController sc) {
-        throw new System.NotImplementedException();
+        // throw new System.NotImplementedException();
     }
 
     public void OnExit(StateController sc) {
