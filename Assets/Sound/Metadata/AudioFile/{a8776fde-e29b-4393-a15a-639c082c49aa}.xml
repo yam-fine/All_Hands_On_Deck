@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{a8776fde-e29b-4393-a15a-639c082c49aa}">
+		<property name="assetPath">
+			<value>All Hands FL SHORT 4.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>9.6595011337868488</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f9a746ba-a362-41d5-b472-62e4042e3019}</destination>
+		</relationship>
+	</object>
+</objects>

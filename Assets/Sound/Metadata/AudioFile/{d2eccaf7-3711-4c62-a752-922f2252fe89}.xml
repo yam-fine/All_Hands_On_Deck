@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{d2eccaf7-3711-4c62-a752-922f2252fe89}">
+		<property name="assetPath">
+			<value>All Hands  Fl THM RND - Trimmed (3).wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.1249886621315195</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f9a746ba-a362-41d5-b472-62e4042e3019}</destination>
+		</relationship>
+	</object>
+</objects>

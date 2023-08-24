@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{84b13c7f-9ba8-496d-82e9-0f197475351a}">
+		<property name="assetPath">
+			<value>All Hands RTHM - Trimmed.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.8308616780045348</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f9a746ba-a362-41d5-b472-62e4042e3019}</destination>
+		</relationship>
+	</object>
+</objects>

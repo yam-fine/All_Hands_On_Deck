@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{0e2d5dca-9760-4523-be8b-dbdf53577bbc}">
+		<property name="assetPath">
+			<value>Inst 13_bip_3.2 All Hands PAD 2 END.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.3810430839002268</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f9a746ba-a362-41d5-b472-62e4042e3019}</destination>
+		</relationship>
+	</object>
+</objects>
