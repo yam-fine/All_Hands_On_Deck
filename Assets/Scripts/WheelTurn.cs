@@ -3,11 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+
 public class WheelTurn : MonoBehaviour
 {
     public List<XRGrabInteractable> handles;
     private XRBaseInteractor holdingHand;
+    private XRGrabInteractable currentHnalde;
     private Vector3 lastPosition;
+    private Coroutine release;
+
+    public Transform Ship;
+
+    [SerializeField] float speed = 50;
+
+
+
+    private bool IsReturning;
 
     private void Awake()
     {
@@ -22,26 +33,54 @@ public class WheelTurn : MonoBehaviour
 
     private void OnGrab(SelectEnterEventArgs args)
     {
-        holdingHand = args.interactorObject as XRBaseInteractor;
-        lastPosition = holdingHand.transform.position;
+        if (IsReturning)
+        {
+            StopCoroutine(release);
+            IsReturning = false;
+
+        }
+        currentHnalde = args.interactableObject as XRGrabInteractable;
+        lastPosition = currentHnalde.transform.position;
     }
 
     private void OnRelease(SelectExitEventArgs args)
     {
-        holdingHand = null;
+        if(currentHnalde == args.interactableObject as XRGrabInteractable)
+        {
+            currentHnalde = null;
+        }
     }
 
     private void Update()
     {
-        if(holdingHand != null)
+        if(currentHnalde != null)
         {
-            var currentHandlePosition = holdingHand.transform.position;
+            var currentHandlePosition = currentHnalde.transform.position;
             var toLastPostion = lastPosition - transform.position; // vector from last position to wheel center
             var toCurrentPosition = currentHandlePosition - transform.position; // vector current position to wheel center 
 
             float angle = Vector3.SignedAngle(toLastPostion, toCurrentPosition, Vector3.right);
 
             transform.Rotate(Vector3.right, angle, Space.World);
+         
+            lastPosition = currentHandlePosition;
         }
+
+        else if (!IsReturning)
+        {
+            release = StartCoroutine(Return());
+        }
+    }
+
+    private IEnumerator Return()
+    {
+        IsReturning = true;
+        while (Mathf.Abs(transform.rotation.x - Quaternion.identity.x) >= 0.1)
+        {
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.identity, Time.deltaTime*speed);
+            Debug.Log(transform.rotation);
+            yield return new WaitForEndOfFrame();
+        }
+        IsReturning = false;
     }
 }
