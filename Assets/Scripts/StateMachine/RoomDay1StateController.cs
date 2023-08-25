@@ -12,7 +12,8 @@ public class RoomDay1StateController : StateController
     public ActionBasedContinuousMoveProvider actionMoveProvider;
     public ActionBasedContinuousTurnProvider actionTurnProvider;
     public Animator avatarAnimator;
-    
+    public Material waterMat;
+
     [HideInInspector] public Dialogue roamDialogue;
 
     public GameObject player;
@@ -38,6 +39,9 @@ public class RoomDay1StateController : StateController
         bottle.PlayerDrank -= OnPlayerDrank; // no need to detect anymore
     }
     private void Start() {
+        waterMat.SetFloat("_WaveScale", 2);
+        waterMat.SetFloat("_WaveFrequency", 1);
+
         GameObject dialogueObject = new GameObject("DialogueObject");
         roamDialogue = dialogueObject.AddComponent<Dialogue>();
         roamDialogue.dialogueEvents = new List<DialogueEvents>{

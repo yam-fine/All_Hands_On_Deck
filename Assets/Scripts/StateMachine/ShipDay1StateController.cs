@@ -31,8 +31,6 @@ public class ShipDay1StateController : StateController
     public WhaleDayOne whaleState = new WhaleDayOne();
     public FinishDayOne finish = new FinishDayOne();
 
-    float fadeDuration = 1;
-
     // Start is called before the first frame update
     void Start()
     {
