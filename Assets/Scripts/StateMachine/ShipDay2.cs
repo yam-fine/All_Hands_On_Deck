@@ -23,12 +23,9 @@ public class ShipDay2 : StateController {
     //public PirateManStateControl givingCPR;
     //public TalkingWillStateControl takingCPR;
 
-    public SailFurling sails = new SailFurling();
-    public WheelSteering wheel_steering = new WheelSteering();
-    public LadderClimbing ladder_climb = new LadderClimbing();
-    public HullDayOne hull = new HullDayOne();
-    public WhaleDayOne whaleState = new WhaleDayOne();
-    public FinishDayOne finish = new FinishDayOne();
+    public Sail2 sails = new Sail2();
+    public Steer2 wheel_steering = new Steer2();
+    public Ladder2 ladder_climb = new Ladder2();
 
     // Start is called before the first frame update
     void Start() {
