@@ -48,7 +48,9 @@ public class WheelTurn : MonoBehaviour
         if(currentHnalde == args.interactableObject as XRGrabInteractable)
         {
             currentHnalde = null;
+            transform.rotation = Quaternion.LookRotation(Ship.forward, Vector3.up);
         }
+        
     }
 
     private void Update()
