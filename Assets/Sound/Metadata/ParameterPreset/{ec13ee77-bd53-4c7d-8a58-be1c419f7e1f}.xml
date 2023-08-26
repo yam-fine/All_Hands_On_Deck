@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{ec13ee77-bd53-4c7d-8a58-be1c419f7e1f}">
+		<property name="name">
+			<value>Hall</value>
+		</property>
+		<relationship name="folder">
+			<destination>{abcc5e25-ad93-4a47-b940-a2dd3755da7b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{e97dc0d2-fe85-4e08-80b4-e64ebe8d8af8}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{e97dc0d2-fe85-4e08-80b4-e64ebe8d8af8}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>False</value>
+			<value>True</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>1.9799998998641968</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{457a8a19-98b4-4381-8d90-2b8639f996e9}">
+		<property name="name">
+			<value>SAIL_UP</value>
+		</property>
+		<relationship name="folder">
+			<destination>{abcc5e25-ad93-4a47-b940-a2dd3755da7b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{e4bb002e-90ea-44bf-a92e-ed0c73996e2e}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{e4bb002e-90ea-44bf-a92e-ed0c73996e2e}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

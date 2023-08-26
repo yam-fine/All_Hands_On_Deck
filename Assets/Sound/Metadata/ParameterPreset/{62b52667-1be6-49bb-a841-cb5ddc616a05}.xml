@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{62b52667-1be6-49bb-a841-cb5ddc616a05}">
+		<property name="name">
+			<value>Deck</value>
+		</property>
+		<relationship name="folder">
+			<destination>{abcc5e25-ad93-4a47-b940-a2dd3755da7b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{fa73aae9-7eeb-4218-a589-e89af7f65a7d}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{fa73aae9-7eeb-4218-a589-e89af7f65a7d}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>20</value>
+		</property>
+	</object>
+</objects>

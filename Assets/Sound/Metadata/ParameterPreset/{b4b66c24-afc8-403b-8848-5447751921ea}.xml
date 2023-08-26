@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{b4b66c24-afc8-403b-8848-5447751921ea}">
+		<property name="name">
+			<value>Storm</value>
+		</property>
+		<relationship name="folder">
+			<destination>{abcc5e25-ad93-4a47-b940-a2dd3755da7b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{ed49180c-f576-4867-a568-9261e5377e5f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{ed49180c-f576-4867-a568-9261e5377e5f}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

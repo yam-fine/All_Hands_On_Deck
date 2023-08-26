@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{ce55a198-d530-48bf-95ea-3d51e50bdf4b}">
+		<property name="name">
+			<value>UP_TheLadder</value>
+		</property>
+		<relationship name="folder">
+			<destination>{abcc5e25-ad93-4a47-b940-a2dd3755da7b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{87de2032-629a-4866-b0d8-ec98ceeda451}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{87de2032-629a-4866-b0d8-ec98ceeda451}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>25</value>
+		</property>
+		<property name="seekSpeedDescending">
+			<value>7.5</value>
+		</property>
+	</object>
+</objects>
