@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{1a11b778-851a-4019-bff5-b273d9f59a00}">
+		<property name="name">
+			<value>Hall_Intensity</value>
+		</property>
+		<relationship name="folder">
+			<destination>{abcc5e25-ad93-4a47-b940-a2dd3755da7b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f1acfccd-86ef-408e-a24e-f4103c4bf66c}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f1acfccd-86ef-408e-a24e-f4103c4bf66c}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>25</value>
+		</property>
+	</object>
+</objects>

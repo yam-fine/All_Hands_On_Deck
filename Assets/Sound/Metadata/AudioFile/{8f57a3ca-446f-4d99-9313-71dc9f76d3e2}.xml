@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{8f57a3ca-446f-4d99-9313-71dc9f76d3e2}">
+		<property name="assetPath">
+			<value>sm_lt2_125_seagulls.3 Sea birds.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.39582766439909295</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0e4e18be-72a7-490f-b103-9b5537a10408}</destination>
+		</relationship>
+	</object>
+</objects>

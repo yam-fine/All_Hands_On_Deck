@@ -493,8 +493,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/Fmod/all hands on deck yam.fspro
-  sourceBankPath: Assets/Fmod/Build
+  sourceProjectPath: Assets/Sound/All hands new.fspro
+  sourceBankPath: Assets/Sound/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1

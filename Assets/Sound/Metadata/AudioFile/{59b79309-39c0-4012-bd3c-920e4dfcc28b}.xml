@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{59b79309-39c0-4012-bd3c-920e4dfcc28b}">
+		<property name="assetPath">
+			<value>All Hands HumanDrinkWater_S08HU.226 WATER.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.69140589569160993</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0e4e18be-72a7-490f-b103-9b5537a10408}</destination>
+		</relationship>
+	</object>
+</objects>

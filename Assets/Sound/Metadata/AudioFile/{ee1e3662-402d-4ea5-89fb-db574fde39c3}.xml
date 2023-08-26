@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{ee1e3662-402d-4ea5-89fb-db574fde39c3}">
+		<property name="assetPath">
+			<value>THEME! All Hands - Trimmed (3).wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.0060317460317458</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0e4e18be-72a7-490f-b103-9b5537a10408}</destination>
+		</relationship>
+	</object>
+</objects>

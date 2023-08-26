@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{20a07686-e323-4f4a-9c1f-3b1eb15f4921}">
+		<property name="assetPath">
+			<value>BRS_Birds_Seagulls_Lake_Ont_Busy.12 Sea birds.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.3031292517006803</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0e4e18be-72a7-490f-b103-9b5537a10408}</destination>
+		</relationship>
+	</object>
+</objects>

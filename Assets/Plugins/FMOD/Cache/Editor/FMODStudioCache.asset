@@ -1,6 +1,26 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8017847220600862322
+--- !u!114 &-9108201801429859698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638286726308273927
+  FileSizes:
+  - Name: Desktop
+    Value: 9673408
+  Exists: 1
+--- !u!114 &-8638329350486049931
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,24 +30,48 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/diaglogue room day 1/ay cap
+  m_Name: event:/FX/Bottle_Open_FX
   m_EditorClassIdentifier: 
-  Path: event:/diaglogue room day 1/ay cap
+  Path: event:/FX/Bottle_Open_FX
   Guid:
-    Data1: -836227475
-    Data2: 1149441438
-    Data3: 1616375962
-    Data4: 892340935
+    Data1: 703635664
+    Data2: 1194993383
+    Data3: -1264947829
+    Data4: 869614218
   Banks:
-  - {fileID: 2346862131008980566}
+  - {fileID: -9108201801429859698}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &-182676548335169476
+  Length: 386
+--- !u!114 &-8474021463061658247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/DECK_Ambience/SAIL_UP
+  m_EditorClassIdentifier: 
+  Name: SAIL_UP
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2790105438
+    data2: 1109229249
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-5852364916556974387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,24 +81,297 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/diaglogue room day 1/avast
+  m_Name: event:/FX/Bottle_Close_FX
   m_EditorClassIdentifier: 
-  Path: event:/diaglogue room day 1/avast
+  Path: event:/FX/Bottle_Close_FX
   Guid:
-    Data1: 467386911
-    Data2: 1078865416
-    Data3: -649368907
-    Data4: 1137270021
+    Data1: -131761370
+    Data2: 1161192643
+    Data3: -1730186075
+    Data4: -1469213982
   Banks:
-  - {fileID: 2346862131008980566}
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 320
+--- !u!114 &-5512072491640605093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Room_Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Room_Ambience
+  Guid:
+    Data1: 237598057
+    Data2: 1316455969
+    Data3: 1247450037
+    Data4: 359043279
+  Banks:
+  - {fileID: -9108201801429859698}
   IsStream: 1
   Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10016
+--- !u!114 &-3545074578382590322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Water_Drinking_FX
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Water_Drinking_FX
+  Guid:
+    Data1: 1004527348
+    Data2: 1076212227
+    Data3: -1945938018
+    Data4: -1493607975
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 718
+--- !u!114 &-2983198332359841221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Bottle_Down_FX
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Bottle_Down_FX
+  Guid:
+    Data1: 649905088
+    Data2: 1171978008
+    Data3: 1431552142
+    Data4: -214267704
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 110
+--- !u!114 &-2783569512645234146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/DECK_Ambience/Hall
+  m_EditorClassIdentifier: 
+  Name: Hall
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 669714256
+    data2: 3954021365
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - False
+  - True
+  Exists: 1
+--- !u!114 &-2446251938359874015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Hall_Intensity
+  m_EditorClassIdentifier: 
+  Name: Hall_Intensity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3940544840
+    data2: 3241307792
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-2197638380597951450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Bottle_Up_FX
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Bottle_Up_FX
+  Guid:
+    Data1: 1740541757
+    Data2: 1319013375
+    Data3: 44417163
+    Data4: 274417585
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 121
+--- !u!114 &-1878257491277743492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  Guid:
+    Data1: -861963448
+    Data2: 1235652290
+    Data3: -1657643622
+    Data4: -2138253356
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3597258418359881161}
+  - {fileID: -2446251938359874015}
+  - {fileID: 1595216635692804971}
+  - {fileID: 2042794208155741096}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 182661
+--- !u!114 &-1629252700879171736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Wheel_stiring_FX
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Wheel_stiring_FX
+  Guid:
+    Data1: -2031992551
+    Data2: 1273655536
+    Data3: -2113561703
+    Data4: 1389415719
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-151675240109345541
+--- !u!114 &-1193533102701224397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/DECK_Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/DECK_Ambience
+  Guid:
+    Data1: -1778367197
+    Data2: 1325192283
+    Data3: -1209034049
+    Data4: 1139546165
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -8474021463061658247}
+  - {fileID: 3304325358223873613}
+  - {fileID: -2783569512645234146}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &-310184122720767877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Ledder_Climb_FX
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Ledder_Climb_FX
+  Guid:
+    Data1: 779313462
+    Data2: 1307859364
+    Data3: -1993321344
+    Data4: -1178514684
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 882
+--- !u!114 &-54911517964219803
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,13 +383,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: Assets/Fmod/Build/Desktop/Master.strings.bank
+  Path: Assets/Sound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638270963970624786
+  lastModified: 638286726307319185
   FileSizes:
   - Name: Desktop
-    Value: 870
+    Value: 1568
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -87,20 +404,29 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -151675240109345541}
-  - {fileID: 2346862131008980566}
+  - {fileID: -54911517964219803}
+  - {fileID: -9108201801429859698}
   EditorEvents:
-  - {fileID: -182676548335169476}
-  - {fileID: -8017847220600862322}
-  - {fileID: 5378837800779356471}
+  - {fileID: -1629252700879171736}
+  - {fileID: 4334082167504879340}
+  - {fileID: -1193533102701224397}
+  - {fileID: -5852364916556974387}
+  - {fileID: 1769064787224090755}
+  - {fileID: -310184122720767877}
+  - {fileID: -2197638380597951450}
+  - {fileID: -1878257491277743492}
+  - {fileID: -5512072491640605093}
+  - {fileID: -2983198332359841221}
+  - {fileID: -8638329350486049931}
+  - {fileID: -3545074578382590322}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 2346862131008980566}
+  - {fileID: -9108201801429859698}
   StringsBanks:
-  - {fileID: -151675240109345541}
-  cacheTime: 638270963970624786
+  - {fileID: -54911517964219803}
+  cacheTime: 638286726308273927
   cacheVersion: 131603
---- !u!114 &2346862131008980566
+--- !u!114 &1595216635692804971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,18 +435,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Hall
   m_EditorClassIdentifier: 
-  Path: Assets/Fmod/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638270963970614811
-  FileSizes:
-  - Name: Desktop
-    Value: 240928
+  Name: Hall
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 669714256
+    data2: 3954021365
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - False
+  - True
   Exists: 1
---- !u!114 &5378837800779356471
+--- !u!114 &1769064787224090755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,18 +462,117 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/diaglogue room day 1/pfft
+  m_Name: event:/FX/Rope_Pull_FX
   m_EditorClassIdentifier: 
-  Path: event:/diaglogue room day 1/pfft
+  Path: event:/FX/Rope_Pull_FX
   Guid:
-    Data1: 786043069
-    Data2: 1278564788
-    Data3: -1922147403
-    Data4: -2113000708
+    Data1: 649606963
+    Data2: 1321135808
+    Data3: 348076192
+    Data4: -993826671
   Banks:
-  - {fileID: 2346862131008980566}
+  - {fileID: -9108201801429859698}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 625
+--- !u!114 &2042794208155741096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Deck
+  m_EditorClassIdentifier: 
+  Name: Deck
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 73579064
+    data2: 3480006147
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &3304325358223873613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/DECK_Ambience/Storm
+  m_EditorClassIdentifier: 
+  Name: Storm
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1462076091
+    data2: 2150719129
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &3597258418359881161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/UP_TheLadder
+  m_EditorClassIdentifier: 
+  Name: UP_TheLadder
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2580209370
+    data2: 3868753416
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &4334082167504879340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Steps_FX
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Steps_FX
+  Guid:
+    Data1: -185254372
+    Data2: 1287364172
+    Data3: -905041269
+    Data4: -197859695
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
