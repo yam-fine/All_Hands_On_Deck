@@ -5,7 +5,7 @@
 			<value>Bottle_Open_FX</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{4cbf6a03-eb18-490c-9bb0-a428b2d6fb31}</destination>
@@ -53,7 +53,7 @@
 			<destination>{b46f6c76-036e-4ce2-99aa-d9ba2e498046}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{087a6f69-b1d3-4064-af18-5f3f3351630a}</destination>
+			<destination>{79fbc38d-03a3-4070-9685-0e7119b94dc9}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{d34ee422-7532-4948-89c3-eee1aeb4e502}" />
@@ -122,6 +122,7 @@
 	<object class="MixerBusEffectChain" id="{01406428-af97-42b8-a1af-878d998bf5ee}">
 		<relationship name="effects">
 			<destination>{7cd79681-75f5-44b1-b505-f51f23fb1c59}</destination>
+			<destination>{d0a5abc1-226e-45e0-8901-ed11900159b5}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{88cec484-64f6-448e-a54e-8d6cd2779487}" />
@@ -141,6 +142,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{a6716838-3978-42e3-a8ac-510ee2376d9e}" />
 	<object class="MixerBusFader" id="{7cd79681-75f5-44b1-b505-f51f23fb1c59}" />
+	<object class="SpatialiserEffect" id="{d0a5abc1-226e-45e0-8901-ed11900159b5}" />
 	<object class="AutomationPoint" id="{212c5d1e-3a2c-4eaa-997a-c1a788a964a7}">
 		<property name="position">
 			<value>0</value>

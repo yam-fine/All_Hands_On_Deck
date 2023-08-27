@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{136e6f5e-5038-42cb-bdf1-94c21d182a6a}">
+		<property name="name">
+			<value>Second Day</value>
+		</property>
+		<relationship name="folder">
+			<destination>{abcc5e25-ad93-4a47-b940-a2dd3755da7b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7b0135c4-6e96-4ebe-8d1f-ae494d21f65c}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7b0135c4-6e96-4ebe-8d1f-ae494d21f65c}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>False</value>
+			<value>True</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

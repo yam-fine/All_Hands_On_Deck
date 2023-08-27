@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: Assets/Sound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638287410417287694
+  lastModified: 638287550246367590
   FileSizes:
   - Name: Desktop
-    Value: 9673408
+    Value: 10065600
   Exists: 1
 --- !u!114 &-8638329350486049931
 MonoBehaviour:
@@ -41,7 +41,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -9108201801429859698}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -92,7 +92,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -9108201801429859698}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -125,6 +125,32 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 10016
+--- !u!114 &-3873600764937050853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Second Day
+  m_EditorClassIdentifier: 
+  Name: Second Day
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2264691321
+    data2: 223485865
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - False
+  - True
+  Exists: 1
 --- !u!114 &-3545074578382590322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,7 +173,7 @@ MonoBehaviour:
   - {fileID: -9108201801429859698}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -173,7 +199,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -9108201801429859698}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -250,7 +276,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -9108201801429859698}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -284,6 +310,7 @@ MonoBehaviour:
   - {fileID: -2446251938359874015}
   - {fileID: 1595216635692804971}
   - {fileID: 2042794208155741096}
+  - {fileID: -3873600764937050853}
   MinDistance: 1
   MaxDistance: 20
   Length: 182661
@@ -308,12 +335,12 @@ MonoBehaviour:
   Banks:
   - {fileID: -9108201801429859698}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 375
 --- !u!114 &-1193533102701224397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,7 +370,34 @@ MonoBehaviour:
   - {fileID: -2783569512645234146}
   MinDistance: 1
   MaxDistance: 20
-  Length: 2000
+  Length: 4004
+--- !u!114 &-557363729008968583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Steps_FX/Reverb
+  m_EditorClassIdentifier: 
+  Name: Reverb
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 327447249
+    data2: 3896376929
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Room
+  - Deck
+  - Hall
+  Exists: 1
 --- !u!114 &-310184122720767877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,7 +419,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -9108201801429859698}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -386,10 +440,10 @@ MonoBehaviour:
   Path: Assets/Sound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638287410417302830
+  lastModified: 638287550245405018
   FileSizes:
   - Name: Desktop
-    Value: 1568
+    Value: 1804
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -419,13 +473,43 @@ MonoBehaviour:
   - {fileID: -2983198332359841221}
   - {fileID: -8638329350486049931}
   - {fileID: -3545074578382590322}
+  - {fileID: 1351466319076420846}
+  - {fileID: 7037559922141578677}
+  - {fileID: 7383421360442019411}
   EditorParameters: []
   MasterBanks:
   - {fileID: -9108201801429859698}
   StringsBanks:
   - {fileID: -54911517964219803}
-  cacheTime: 638287410417302830
+  cacheTime: 638287550246367590
   cacheVersion: 131603
+--- !u!114 &1351466319076420846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Hall
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Hall
+  Guid:
+    Data1: -1281887213
+    Data2: 1166926063
+    Data3: 1588485790
+    Data4: -2048783653
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &1595216635692804971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,7 +557,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -9108201801429859698}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -572,9 +656,64 @@ MonoBehaviour:
   Banks:
   - {fileID: -9108201801429859698}
   IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -557363729008968583}
   MinDistance: 1
   MaxDistance: 20
+  Length: 585
+--- !u!114 &7037559922141578677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Room
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Room
+  Guid:
+    Data1: 701331648
+    Data2: 1214522098
+    Data3: 2131464865
+    Data4: 1232436567
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &7383421360442019411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Deck
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Deck
+  Guid:
+    Data1: -80237363
+    Data2: 1159817121
+    Data3: 1001789860
+    Data4: 1002711993
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
   Length: 0

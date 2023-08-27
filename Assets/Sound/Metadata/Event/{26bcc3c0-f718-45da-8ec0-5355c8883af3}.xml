@@ -5,7 +5,7 @@
 			<value>Bottle_Down_FX</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{4cbf6a03-eb18-490c-9bb0-a428b2d6fb31}</destination>
@@ -55,7 +55,7 @@
 			<destination>{99d1a3f6-8e21-4d12-8d95-241fba5c4ee6}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{087a6f69-b1d3-4064-af18-5f3f3351630a}</destination>
+			<destination>{79fbc38d-03a3-4070-9685-0e7119b94dc9}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{b613ae1c-abf4-42b1-89a2-2bf1cf2ec0b0}" />
@@ -92,6 +92,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{d71ae0a9-1f40-4f4b-8c68-c4eec63b8ccd}">
+		<property name="volume">
+			<value>-11</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{58363126-d30c-40ff-8601-97af846356e8}</destination>
 		</relationship>
@@ -177,6 +180,7 @@
 	<object class="MixerBusEffectChain" id="{58363126-d30c-40ff-8601-97af846356e8}">
 		<relationship name="effects">
 			<destination>{dc395bc0-3de7-47d8-a8b7-af9754b7727d}</destination>
+			<destination>{d37342b1-b53b-41f5-b837-9bdca71546b3}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{7c544fd0-4176-4e13-afd7-43252ac426d9}" />
@@ -200,6 +204,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{1309d6b1-709d-4ff5-b297-04ccf9c70280}" />
 	<object class="MixerBusFader" id="{dc395bc0-3de7-47d8-a8b7-af9754b7727d}" />
+	<object class="SpatialiserEffect" id="{d37342b1-b53b-41f5-b837-9bdca71546b3}" />
 	<object class="MixerBusFader" id="{fd39bc08-e899-481e-bf31-e7465587195b}" />
 	<object class="MixerBusFader" id="{0deb23ef-d934-4723-8f6a-fd9347866962}" />
 	<object class="MixerBusFader" id="{86c60678-8bd0-4a02-9ce5-a67e06c0ef3b}" />

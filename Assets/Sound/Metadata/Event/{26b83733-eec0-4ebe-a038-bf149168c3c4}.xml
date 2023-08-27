@@ -5,7 +5,7 @@
 			<value>Rope_Pull_FX</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{4cbf6a03-eb18-490c-9bb0-a428b2d6fb31}</destination>
@@ -53,7 +53,7 @@
 			<destination>{4811271b-de9e-499d-a150-a2a5f3612074}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{087a6f69-b1d3-4064-af18-5f3f3351630a}</destination>
+			<destination>{79fbc38d-03a3-4070-9685-0e7119b94dc9}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{afe39509-32ef-4225-9bf4-325510ec0606}" />
@@ -146,9 +146,11 @@
 	<object class="MixerBusEffectChain" id="{978b00a4-7fc8-4be5-8251-9c1529a3c6ff}">
 		<relationship name="effects">
 			<destination>{ad1ded5b-6bfe-4806-8545-d17d08a5a6a3}</destination>
+			<destination>{0085aa3c-8aed-4fbe-ac19-07722f257be1}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{288e3001-2861-4844-807f-e402d1143284}" />
 	<object class="MixerBusFader" id="{7b243200-88d7-4b0c-bd0d-99d86c1ccaa1}" />
 	<object class="MixerBusFader" id="{ad1ded5b-6bfe-4806-8545-d17d08a5a6a3}" />
+	<object class="SpatialiserEffect" id="{0085aa3c-8aed-4fbe-ac19-07722f257be1}" />
 </objects>
