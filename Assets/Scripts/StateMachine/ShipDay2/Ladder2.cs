@@ -9,7 +9,13 @@ public class Ladder2 : IsState
     float stormWaveFreq = 2;
 
     public void OnEnter(StateController sc) {
-        throw new System.NotImplementedException();
+        InnerOnEnter((ShipDay2)sc);
+    }
+
+    void InnerOnEnter(ShipDay2 sc) {
+        foreach (GameObject obj in sc.ropeComps) {
+            obj.SetActive(true);
+        }
     }
 
     public void OnExit(StateController sc) {
@@ -21,6 +27,9 @@ public class Ladder2 : IsState
     }
 
     void InnerUpdateState(ShipDay2 sc) {
+        if (sc.hook_socket.hasSelection) {
+            sc.player.GetComponent<Rigidbody>().useGravity = false;
+        }
         if (sc.ld.playerReached && !playerClimbed) {
             playerClimbed = true;
 

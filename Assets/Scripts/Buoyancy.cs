@@ -14,7 +14,6 @@ public class Buoyancy : MonoBehaviour {
     }
 
     private void Update() {
-        Debug.Log(wheel.rotation.x);
         if (wheel.rotation.x < -.3f)
             rotateDir += -.1f;
         else if (wheel.rotation.x > .3f)

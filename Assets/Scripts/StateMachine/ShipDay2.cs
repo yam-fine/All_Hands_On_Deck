@@ -18,6 +18,8 @@ public class ShipDay2 : StateController {
     public FadeScreen fade;
     public GameObject whale;
     public Material waterMat;
+    public XRSocketInteractor hook_socket;
+    public List<GameObject> ropeComps;
 
     //public FollowThePath killerWhalePath;
     //public PirateManStateControl givingCPR;
