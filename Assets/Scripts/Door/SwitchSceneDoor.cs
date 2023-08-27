@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SwitchSceneDoor : Door
 {
+    public string currentSceneName;
+    public string nextSceneName;
+
     public override void Action() 
     {
-        SceneManager.LoadScene("DeckDay1");
+        GameObject.Find("AvatarPlayer").SetActive(false);
+        SceneManager.UnloadSceneAsync(currentSceneName);
+        SceneManager.LoadScene(nextSceneName);
     }
 }

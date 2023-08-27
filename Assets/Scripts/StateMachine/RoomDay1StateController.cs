@@ -17,6 +17,9 @@ public class RoomDay1StateController : StateController
     [HideInInspector] public Dialogue roamDialogue;
 
     public GameObject player;
+
+    public Transform getUpPosition;
+    
     public GameObject captain;
     public Bottle bottle;
 

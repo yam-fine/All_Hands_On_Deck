@@ -23,6 +23,7 @@ public class WaterPickup : IsState
         sc.actionMoveProvider.enabled = true;
         sc.actionTurnProvider.enabled = true;
         sc.avatarAnimator.SetBool("drankWater", true);
+        sc.player.GetComponent<Transform>().position = sc.getUpPosition.position;
     }
 
     void InnerUpdateState(RoomDay1StateController sc) {

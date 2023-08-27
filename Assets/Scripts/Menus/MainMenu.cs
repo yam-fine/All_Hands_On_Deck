@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
 
     public void StartGame(bool param) {
+        GameObject.Find("AvatarPlayer").SetActive(false);
         SceneManager.UnloadSceneAsync("MainMenu");
         SceneManager.LoadScene("RoomDay1");
     }

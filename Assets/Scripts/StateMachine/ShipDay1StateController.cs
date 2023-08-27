@@ -61,6 +61,7 @@ public class ShipDay1StateController : StateController
 
     IEnumerator LoadSceneIEnum() {
         yield return new WaitForSeconds(this.fade.fadeDur);
+        GameObject.Find("AvatarPlayer").SetActive(false);
         SceneManager.UnloadSceneAsync("DeckDay1");
         SceneManager.LoadScene("RoomDay2");
     }
