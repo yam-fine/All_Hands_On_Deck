@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cbac6e678443724c9bd2baf5d564c1d, type: 3}
   m_Name: Cloudy 1
   m_EditorClassIdentifier: 
-  showEditor: 0
+  showEditor: 1
   showEffectControls: 0
-  showCloudControls: 1
-  showFlatCloudControls: 0
+  showCloudControls: 0
+  showFlatCloudControls: 1
   showFogControls: 0
   showLightingControls: 0
   showAuroraControls: 0
@@ -60,17 +60,17 @@ MonoBehaviour:
     detailErosionIntensityLayer2: 0.3
     curlIntensityLayer2: 0.15
   flatCloudsOverride:
-    cirrusCloudsAlpha: 0.575
-    cirrusCloudsCoverage: 0.5
-    cirrusCloudsColorPower: 1.309
-    flatCloudsCoverage: 1.287
+    cirrusCloudsAlpha: 0.02
+    cirrusCloudsCoverage: 0.59
+    cirrusCloudsColorPower: 0.73
+    flatCloudsCoverage: 1.01
     flatCloudsDensity: 1
     flatCloudsLightIntensity: 1.014
-    flatCloudsAmbientIntensity: 1.05
-    flatCloudsAbsorbtion: 1.814
+    flatCloudsAmbientIntensity: 1.48
+    flatCloudsAbsorbtion: 1.61
   lightingOverride:
-    directLightIntensityModifier: 0.59
-    ambientIntensityModifier: 0.66
+    directLightIntensityModifier: 0.91
+    ambientIntensityModifier: 0.96
   fogOverride:
     fogDensity: 1
     fogHeightFalloff: 0.0091
