@@ -15,30 +15,30 @@ MonoBehaviour:
   showEditor: 1
   showEffectControls: 0
   showCloudControls: 1
-  showFlatCloudControls: 0
+  showFlatCloudControls: 1
   showFogControls: 0
   showLightingControls: 1
   showAuroraControls: 0
-  showEnvironmentControls: 0
+  showEnvironmentControls: 1
   showAudioControls: 0
   showAmbientAudioControls: 0
   showWeatherAudioControls: 0
   showLightningControls: 1
   cloudsOverride:
     showLayer1: 1
-    coverageLayer1: 0.2
+    coverageLayer1: 1
     dilateCoverageLayer1: 1
     dilateTypeLayer1: 1
     typeModifierLayer1: 0.86
     anvilBiasLayer1: 1
-    scatteringIntensityLayer1: 1
-    multiScatteringALayer1: 0.6
-    multiScatteringBLayer1: 0.07
-    multiScatteringCLayer1: 0.107
-    powderIntensityLayer1: 0.7
+    scatteringIntensityLayer1: 0
+    multiScatteringALayer1: 0
+    multiScatteringBLayer1: 0
+    multiScatteringCLayer1: 0
+    powderIntensityLayer1: 1
     silverLiningSpreadLayer1: 0.8
-    ligthAbsorbtionLayer1: 0.5
-    densityLayer1: 0.2
+    ligthAbsorbtionLayer1: 1.38
+    densityLayer1: 1
     baseErosionIntensityLayer1: 1
     detailErosionIntensityLayer1: 0.5
     curlIntensityLayer1: 0.2
@@ -69,8 +69,8 @@ MonoBehaviour:
     flatCloudsAmbientIntensity: 1
     flatCloudsAbsorbtion: 1
   lightingOverride:
-    directLightIntensityModifier: 0.1
-    ambientIntensityModifier: 0.2
+    directLightIntensityModifier: 0.05
+    ambientIntensityModifier: 0.15
   fogOverride:
     fogDensity: 0.08
     fogHeightFalloff: 0.0021
@@ -98,8 +98,8 @@ MonoBehaviour:
     lightningStorm: 1
     randomLightningDelay: 1
   environmentOverride:
-    temperatureWeatherMod: -10
-    wetnessTarget: 0
+    temperatureWeatherMod: -20
+    wetnessTarget: 0.85
     snowTarget: 1
     windDirectionX: 1
     windDirectionY: -1
