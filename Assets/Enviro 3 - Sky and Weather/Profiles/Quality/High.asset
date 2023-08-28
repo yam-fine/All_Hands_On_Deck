@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: High
   m_EditorClassIdentifier: 
   showEditor: 1
-  showVolumeClouds: 1
+  showVolumeClouds: 0
   showFog: 0
   showFlatClouds: 0
   showEffects: 0
@@ -29,7 +29,7 @@ MonoBehaviour:
     lodDistance: 0.7
   fogOverride:
     fog: 1
-    volumetrics: 1
+    volumetrics: 0
     quality: 2
     steps: 61
   flatCloudsOverride:

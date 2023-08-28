@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Foggy
   m_EditorClassIdentifier: 
   showEditor: 0
-  showEffectControls: 0
+  showEffectControls: 1
   showCloudControls: 0
-  showFlatCloudControls: 0
+  showFlatCloudControls: 1
   showFogControls: 0
-  showLightingControls: 0
+  showLightingControls: 1
   showAuroraControls: 0
   showEnvironmentControls: 0
   showAudioControls: 0
@@ -26,7 +26,7 @@ MonoBehaviour:
   showLightningControls: 0
   cloudsOverride:
     showLayer1: 1
-    coverageLayer1: 0.03
+    coverageLayer1: 1
     dilateCoverageLayer1: 0.127
     dilateTypeLayer1: 0.5
     typeModifierLayer1: 0.977
@@ -60,17 +60,17 @@ MonoBehaviour:
     detailErosionIntensityLayer2: 0.3
     curlIntensityLayer2: 0.05
   flatCloudsOverride:
-    cirrusCloudsAlpha: 0.5
-    cirrusCloudsCoverage: 0.5
-    cirrusCloudsColorPower: 1
-    flatCloudsCoverage: 1
+    cirrusCloudsAlpha: 0.23
+    cirrusCloudsCoverage: 0.8
+    cirrusCloudsColorPower: 2
+    flatCloudsCoverage: 1.56
     flatCloudsDensity: 1
-    flatCloudsLightIntensity: 1
-    flatCloudsAmbientIntensity: 1
-    flatCloudsAbsorbtion: 0.6
+    flatCloudsLightIntensity: 0.52
+    flatCloudsAmbientIntensity: 0.54
+    flatCloudsAbsorbtion: 1.87
   lightingOverride:
-    directLightIntensityModifier: 1
-    ambientIntensityModifier: 1
+    directLightIntensityModifier: 1.82
+    ambientIntensityModifier: 1.24
   fogOverride:
     fogDensity: 0.116
     fogHeightFalloff: 0.0005
@@ -85,8 +85,8 @@ MonoBehaviour:
   auroraOverride:
     auroraIntensity: 1
   effectsOverride:
-    rain1Emission: 0
-    rain2Emission: 0
+    rain1Emission: 0.84
+    rain2Emission: 1
     snow1Emission: 0
     snow2Emission: 0
     custom1Emission: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
     lightningStorm: 0
     randomLightningDelay: 1
   environmentOverride:
-    temperatureWeatherMod: 0
+    temperatureWeatherMod: 0.2
     wetnessTarget: 0
     snowTarget: 0
     windDirectionX: 1

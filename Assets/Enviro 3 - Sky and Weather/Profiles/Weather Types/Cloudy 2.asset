@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cbac6e678443724c9bd2baf5d564c1d, type: 3}
   m_Name: Cloudy 2
   m_EditorClassIdentifier: 
-  showEditor: 0
-  showEffectControls: 0
+  showEditor: 1
+  showEffectControls: 1
   showCloudControls: 0
   showFlatCloudControls: 0
-  showFogControls: 0
+  showFogControls: 1
   showLightingControls: 0
   showAuroraControls: 0
   showEnvironmentControls: 0
   showAudioControls: 0
   showAmbientAudioControls: 0
   showWeatherAudioControls: 0
-  showLightningControls: 0
+  showLightningControls: 1
   cloudsOverride:
     showLayer1: 1
     coverageLayer1: -0.167
@@ -61,20 +61,20 @@ MonoBehaviour:
     curlIntensityLayer2: 0.135
   flatCloudsOverride:
     cirrusCloudsAlpha: 0.5
-    cirrusCloudsCoverage: 0.5
-    cirrusCloudsColorPower: 1
-    flatCloudsCoverage: 1.189
+    cirrusCloudsCoverage: 0.87
+    cirrusCloudsColorPower: 1.67
+    flatCloudsCoverage: 1.72
     flatCloudsDensity: 1
-    flatCloudsLightIntensity: 0.478
-    flatCloudsAmbientIntensity: 0.969
-    flatCloudsAbsorbtion: 0.873
+    flatCloudsLightIntensity: 0.45
+    flatCloudsAmbientIntensity: 1.07
+    flatCloudsAbsorbtion: 1.23
   lightingOverride:
-    directLightIntensityModifier: 1
-    ambientIntensityModifier: 1
+    directLightIntensityModifier: 0.51
+    ambientIntensityModifier: 1.42
   fogOverride:
-    fogDensity: 0.007
+    fogDensity: 2869
     fogHeightFalloff: 0.0039
-    fogHeight: 0
+    fogHeight: 6041.3
     fogDensity2: 0.022
     fogHeightFalloff2: 0.0058
     fogHeight2: 0
@@ -109,12 +109,12 @@ MonoBehaviour:
       winter: 0
     weatherOverride: []
   lightningOverride:
-    lightningStorm: 0
-    randomLightningDelay: 1
+    lightningStorm: 1
+    randomLightningDelay: 10
   environmentOverride:
-    temperatureWeatherMod: 0
-    wetnessTarget: 0
-    snowTarget: 0
+    temperatureWeatherMod: -26.79
+    wetnessTarget: 52.77
+    snowTarget: 17.56
     windDirectionX: 1
     windDirectionY: -1
     windSpeed: 0.25
