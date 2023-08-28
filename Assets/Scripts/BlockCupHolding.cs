@@ -17,11 +17,23 @@ public class BlockCupHolding : MonoBehaviour
 
     public void OnBottleHold(SelectEnterEventArgs args)
     {
-        hand.interactionLayers = ~0;
+        AllowCapRemoval();
     }
 
     public void OnBottleRelease(SelectExitEventArgs args)
     {
+        ForbidCapRemoval();
+    }
+
+    public void AllowCapRemoval()
+    {
+        hand.interactionLayers = ~0;
+    }
+
+    public void ForbidCapRemoval()
+    {
         hand.interactionLayers &= ~_cupLayer;
     }
+
+
 }
