@@ -17,13 +17,13 @@ MonoBehaviour:
   active: 1
   Settings:
     simulate: 0
-    secSerial: 0
+    secSerial: 49
     minSerial: 17
     hourSerial: 7
     daySerial: 19
     monthSerial: 3
     yearSerial: 2021
-    timeOfDay: 7.283334
+    timeOfDay: 7.296945
     latitude: 24
     longitude: 67
     utcOffset: 5
