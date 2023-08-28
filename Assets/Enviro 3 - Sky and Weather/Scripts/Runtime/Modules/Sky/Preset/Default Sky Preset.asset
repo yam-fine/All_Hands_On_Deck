@@ -16,7 +16,7 @@ MonoBehaviour:
   showSaveLoad: 0
   active: 1
   Settings:
-    moonMode: 0
+    moonMode: 2
     frontColorGradient0:
       serializedVersion: 2
       key0: {r: 0, g: 0, b: 0, a: 1}
@@ -457,10 +457,10 @@ MonoBehaviour:
     sunTex: {fileID: 2800000, guid: c95bed5306e94f24ba5802d841607ac7, type: 3}
     moonTex: {fileID: 2800000, guid: c6fd9f694390e0245b6dca5812065950, type: 3}
     moonGlowTex: {fileID: 2800000, guid: 6838e0810da4e49488b5d9a6ee76eb07, type: 3}
-    distribution0: -0.071
-    distribution1: 0.067
-    distribution2: 0.381
-    distribution3: 0.779
+    distribution0: 0.578
+    distribution1: 0.092
+    distribution2: 0.249
+    distribution3: 0.503
     mieScatteringIntensityCurve:
       serializedVersion: 2
       m_Curve:
@@ -635,10 +635,10 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    intensity: 0.5
+    intensity: 1
     sunScale: 7
     moonScale: 7
-    moonPhase: -1.6322253
+    moonPhase: -1.632223
     skyExposureHDRP:
       serializedVersion: 2
       m_Curve:
@@ -681,7 +681,6 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    skyAmbientModeHDRP: 1
   preset: {fileID: 0}
   showSkyControls: 0
   showSkySunControls: 0

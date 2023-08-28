@@ -32,17 +32,17 @@ MonoBehaviour:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.42
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        time: 0.22816649
+        value: 0.42089844
+        inSlope: 1.0618638
+        outSlope: 1.0618638
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
+        inWeight: 0.29197738
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5815558
-        value: 1.4591806
+        time: 0.8192877
+        value: 1.4733293
         inSlope: 0.20075521
         outSlope: 0.20075521
         tangentMode: 0
@@ -595,7 +595,7 @@ MonoBehaviour:
     globalReflectionTimeSlicing: 1
     globalReflectionsUpdateOnGameTime: 1
     globalReflectionsUpdateOnPosition: 1
-    globalReflectionsIntensity: 1
+    globalReflectionsIntensity: 1.36
     globalReflectionsTimeTreshold: 0.025
     globalReflectionsPositionTreshold: 0.25
     globalReflectionsScale: 10000
@@ -611,7 +611,3 @@ MonoBehaviour:
   showDirectLightingControls: 0
   showAmbientLightingControls: 0
   showReflectionControls: 0
-  directionalLightHDRP: {fileID: 0}
-  additionalLightHDRP: {fileID: 0}
-  exposureHDRP: {fileID: 0}
-  indirectLightingHDRP: {fileID: 0}

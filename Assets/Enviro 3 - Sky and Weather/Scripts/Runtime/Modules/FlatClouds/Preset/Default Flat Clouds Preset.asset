@@ -18,8 +18,8 @@ MonoBehaviour:
   settings:
     useCirrusClouds: 1
     cirrusCloudsTex: {fileID: 2800000, guid: 75c66597a85001644b2de40147b8d196, type: 3}
-    cirrusCloudsAlpha: 0.575
-    cirrusCloudsColorPower: 1.309
+    cirrusCloudsAlpha: 0.5
+    cirrusCloudsColorPower: 1
     cirrusCloudsCoverage: 0.5
     cirrusCloudsColor:
       serializedVersion: 2
@@ -112,11 +112,11 @@ MonoBehaviour:
       m_Mode: 0
       m_NumColorKeys: 4
       m_NumAlphaKeys: 2
-    flatCloudsLightIntensity: 1.014
-    flatCloudsAmbientIntensity: 1.05
-    flatCloudsAbsorbtion: 1.814
+    flatCloudsLightIntensity: 0.478
+    flatCloudsAmbientIntensity: 0.969
+    flatCloudsAbsorbtion: 0.873
     flatCloudsHGPhase: 0.8
-    flatCloudsCoverage: 1.287
+    flatCloudsCoverage: 1.189
     flatCloudsDensity: 1
     flatCloudsAltitude: 1
     flatCloudsTonemapping: 0
