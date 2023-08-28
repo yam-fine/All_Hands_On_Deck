@@ -10,10 +10,10 @@ public class Climb : MonoBehaviour
     CharacterController cc;
     LocomotionSystem ls;
     public static ActionBasedController climbingHand;
+    public bool should_apply_gravity = true;
 
     private ActionBasedController previousHand;
     private Vector3 previousPos;
-    private Vector3 velocity;
 
     private void Start() {
         //rb = GetComponent<Rigidbody>();
@@ -50,7 +50,8 @@ public class Climb : MonoBehaviour
         }
         else {
             ls.enabled = true;
-            ApplyGravity();
+            if (should_apply_gravity)
+                ApplyGravity();
             previousHand = null;
             //cc.enabled = false;
         }

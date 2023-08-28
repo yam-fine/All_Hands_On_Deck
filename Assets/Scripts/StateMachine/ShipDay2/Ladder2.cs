@@ -13,13 +13,19 @@ public class Ladder2 : IsState
     }
 
     void InnerOnEnter(ShipDay2 sc) {
+        sc.hook_walls.SetActive(true);
         foreach (GameObject obj in sc.ropeComps) {
             obj.SetActive(true);
         }
     }
 
     public void OnExit(StateController sc) {
-        throw new System.NotImplementedException();
+        InnerOnExit((ShipDay2)sc);
+    }
+
+    void InnerOnExit(ShipDay2 sc) {
+        sc.player_climb.should_apply_gravity = true;
+        sc.hook_walls.SetActive(false);
     }
 
     public void UpdateState(StateController sc) {
@@ -28,7 +34,10 @@ public class Ladder2 : IsState
 
     void InnerUpdateState(ShipDay2 sc) {
         if (sc.hook_socket.hasSelection) {
-            sc.player.GetComponent<Rigidbody>().useGravity = false;
+            sc.player_climb.should_apply_gravity = false;
+        }
+        else {
+            sc.player_climb.should_apply_gravity = true;
         }
         if (sc.ld.playerReached && !playerClimbed) {
             playerClimbed = true;

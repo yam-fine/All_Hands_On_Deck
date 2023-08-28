@@ -19,6 +19,8 @@ public class ShipDay2 : StateController {
     public GameObject whale;
     public Material waterMat;
     public XRSocketInteractor hook_socket;
+    public Climb player_climb;
+    public GameObject hook_walls;
     public List<GameObject> ropeComps;
 
     //public FollowThePath killerWhalePath;

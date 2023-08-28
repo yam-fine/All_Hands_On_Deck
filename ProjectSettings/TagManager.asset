@@ -6,6 +6,7 @@ TagManager:
   tags:
   - lb_perchTarget
   - lb_groundTarget
+  - GrabbingPoint
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Ship
   - Bottle
   - Head
-  - 
+  - Hook Cage
   - 
   - 
   - 
