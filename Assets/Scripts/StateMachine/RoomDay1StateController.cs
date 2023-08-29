@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.XR;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using Enviro;
 
 public class RoomDay1StateController : StateController
 {
@@ -22,6 +23,8 @@ public class RoomDay1StateController : StateController
     
     public GameObject captain;
     public Bottle bottle;
+    public EnviroConfiguration config;
+    public EnviroManager enviro;
 
     private bool _playerDrank;
     public bool PlayerDrank { get { return _playerDrank; } }
@@ -42,6 +45,8 @@ public class RoomDay1StateController : StateController
         bottle.PlayerDrank -= OnPlayerDrank; // no need to detect anymore
     }
     private void Start() {
+        enviro.configuration = config;
+        enviro.Weather.ChangeWeather("Cloudy 1");
         waterMat.SetFloat("_WaveScale", 2);
         waterMat.SetFloat("_WaveFrequency", 1);
 

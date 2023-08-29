@@ -13,6 +13,9 @@ public class Ladder2 : IsState
     }
 
     void InnerOnEnter(ShipDay2 sc) {
+        sc.enviro.configuration = sc.configs[1];
+        sc.enviro.Weather.ChangeWeather("Foggy");
+
         sc.hook_walls.SetActive(true);
         foreach (GameObject obj in sc.ropeComps) {
             obj.SetActive(true);
@@ -24,6 +27,9 @@ public class Ladder2 : IsState
     }
 
     void InnerOnExit(ShipDay2 sc) {
+        sc.enviro.configuration = sc.configs[2];
+        sc.enviro.Weather.ChangeWeather("Cloudy 2");
+
         sc.player_climb.should_apply_gravity = true;
         sc.hook_walls.SetActive(false);
     }

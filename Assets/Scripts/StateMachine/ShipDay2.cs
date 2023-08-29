@@ -22,6 +22,7 @@ public class ShipDay2 : StateController {
     public Climb player_climb;
     public GameObject hook_walls;
     public List<GameObject> ropeComps;
+    public List<EnviroConfiguration> configs;
 
     //public FollowThePath killerWhalePath;
     //public PirateManStateControl givingCPR;
@@ -33,6 +34,8 @@ public class ShipDay2 : StateController {
 
     // Start is called before the first frame update
     void Start() {
+        enviro.configuration = configs[0];
+        enviro.Weather.ChangeWeather("Cloudy 1");
         ChangeState(ladder_climb);
     }
 

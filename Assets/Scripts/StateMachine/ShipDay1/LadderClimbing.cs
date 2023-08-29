@@ -9,11 +9,21 @@ public class LadderClimbing : IsState
     float stormWaveFreq = 2;
 
     public void OnEnter(StateController sc) {
-        // throw new System.NotImplementedException();
+        InnerOnEnter((ShipDay1StateController)sc);
+    }
+
+    void InnerOnEnter(ShipDay1StateController sc) {
+        sc.enviro.configuration = sc.configs[1];
+        sc.enviro.Weather.ChangeWeather("Foggy");
     }
 
     public void OnExit(StateController sc) {
-        // fade to black and teleport player to hull
+        InnerOnExit((ShipDay1StateController)sc);
+    }
+
+    void InnerOnExit(ShipDay1StateController sc) {
+        sc.enviro.configuration = sc.configs[2];
+        sc.enviro.Weather.ChangeWeather("Cloudy 2");
     }
 
     public void UpdateState(StateController sc) {
@@ -29,8 +39,9 @@ public class LadderClimbing : IsState
             sc.waterMat.SetFloat("_WaveFrequency", stormWaveFreq);
 
             //weather change
-            sc.enviro.Weather.ChangeWeather("Snow");
-            
+            //sc.enviro.configuration = sc.configs[2];
+            //sc.enviro.Weather.ChangeWeather("Cloudy 2");
+
             sc.actionMoveProvider.enabled = false;
 
             //teleport to hull

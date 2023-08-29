@@ -19,6 +19,7 @@ public class ShipDay1StateController : StateController
     public FadeScreen fade;
     public GameObject whale;
     public Material waterMat;
+    public List<EnviroConfiguration> configs;
 
     public FollowThePath killerWhalePath;
     public PirateManStateControl givingCPR;
@@ -34,6 +35,8 @@ public class ShipDay1StateController : StateController
     // Start is called before the first frame update
     void Start()
     {
+        enviro.configuration = configs[0];
+        enviro.Weather.ChangeWeather("Cloudy 1");
         ChangeState(ladder_climb);
     }
 
