@@ -12,7 +12,10 @@ public class BlockCupHolding : MonoBehaviour
     public void Start()
     {
         hand = GetComponent<XRDirectInteractor>();
-        hand.interactionLayers &= ~_cupLayer;
+        if(hand.interactionLayers.value != 0)
+        {
+            hand.interactionLayers &= ~_cupLayer;
+        }
     }
 
     public void OnBottleHold(SelectEnterEventArgs args)
