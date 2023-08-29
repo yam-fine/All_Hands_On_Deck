@@ -40,7 +40,7 @@ public class WheelTurn : MonoBehaviour
 
         }
         currentHnalde = args.interactableObject as XRGrabInteractable;
-        lastPosition = currentHnalde.transform.position;
+        lastPosition = transform.InverseTransformPoint(currentHnalde.transform.position);
     }
 
     private void OnRelease(SelectExitEventArgs args)
@@ -48,22 +48,22 @@ public class WheelTurn : MonoBehaviour
         if(currentHnalde == args.interactableObject as XRGrabInteractable)
         {
             currentHnalde = null;
-            transform.rotation = Quaternion.LookRotation(Ship.forward, Vector3.up);
+            //transform.rotation = Quaternion.LookRotation(Ship.forward, Vector3.up);
         }
         
     }
-
+    
     private void Update()
     {
         if(currentHnalde != null)
         {
-            var currentHandlePosition = currentHnalde.transform.position;
-            var toLastPostion = lastPosition - transform.position; // vector from last position to wheel center
-            var toCurrentPosition = currentHandlePosition - transform.position; // vector current position to wheel center 
+            var currentHandlePosition = transform.InverseTransformPoint(currentHnalde.transform.position);
+            var toLastPostion = lastPosition;// vector from last position to wheel center
+            var toCurrentPosition = currentHandlePosition; // vector current position to wheel center 
 
-            float angle = Vector3.SignedAngle(toLastPostion, toCurrentPosition, Vector3.right);
+            float angle = Vector3.SignedAngle(toLastPostion, toCurrentPosition, transform.right);
 
-            transform.Rotate(Vector3.right, angle, Space.World);
+            transform.Rotate(transform.right, angle);
          
             lastPosition = currentHandlePosition;
         }
