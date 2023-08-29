@@ -48,9 +48,9 @@ public class RoomDay1StateController : StateController
         GameObject dialogueObject = new GameObject("DialogueObject");
         roamDialogue = dialogueObject.AddComponent<Dialogue>();
         roamDialogue.dialogueEvents = new List<DialogueEvents>{
-            new DialogueEvents(AudioManager.Sounds.ay_cap, player),
-            new DialogueEvents(AudioManager.Sounds.avast, captain),
-            new DialogueEvents(AudioManager.Sounds.pfft, player)
+            //new DialogueEvents(AudioManager.Sounds.ay_cap, player),
+            //new DialogueEvents(AudioManager.Sounds.avast, captain),
+            //new DialogueEvents(AudioManager.Sounds.pfft, player)
         };
 
         ChangeState(waterPickup);

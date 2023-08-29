@@ -8,6 +8,7 @@ public class AvatarAnimationController : MonoBehaviour
 
     [SerializeField] private Animator animator;
 
+    public AudioManager am;
 
     private void OnEnable() {
         move.action.started += AnimateLegs;
@@ -32,11 +33,12 @@ public class AvatarAnimationController : MonoBehaviour
             animator.SetBool("isWalking", true);
             //animator.SetFloat("animSpeed", -1);
         }
+        am.PlaySound(AudioManager.Sounds.steps);
     }
 
     private void StopAnimateLegs(InputAction.CallbackContext context)
     {
         animator.SetBool("isWalking", false);
-        //animator.SetFloat("animSpeed", 0);
+        
     }
 }
