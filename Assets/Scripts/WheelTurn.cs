@@ -15,6 +15,7 @@ public class WheelTurn : MonoBehaviour
     public Transform Ship;
 
     [SerializeField] float speed = 50;
+    [SerializeField] private List<Transform> startingPos;
 
 
 
@@ -40,13 +41,19 @@ public class WheelTurn : MonoBehaviour
 
         }
         currentHnalde = args.interactableObject as XRGrabInteractable;
-        lastPosition = transform.InverseTransformPoint(currentHnalde.transform.position);
+        lastPosition = Ship.InverseTransformPoint(currentHnalde.transform.position);
     }
 
     private void OnRelease(SelectExitEventArgs args)
     {
-        if(currentHnalde == args.interactableObject as XRGrabInteractable)
+        var currentIntercator = args.interactableObject as XRGrabInteractable;
+        if (currentHnalde == currentIntercator)
         {
+            for (int i = 0; i < handles.Count; i++)
+            {
+                handles[i].transform.position = startingPos[i].position;
+            }
+            //currentHnalde.transform.position = startingPos[handles.IndexOf(currentHnalde)].position;
             currentHnalde = null;
             //transform.rotation = Quaternion.LookRotation(Ship.forward, Vector3.up);
         }
@@ -57,13 +64,13 @@ public class WheelTurn : MonoBehaviour
     {
         if(currentHnalde != null)
         {
-            var currentHandlePosition = transform.InverseTransformPoint(currentHnalde.transform.position);
-            var toLastPostion = lastPosition;// vector from last position to wheel center
-            var toCurrentPosition = currentHandlePosition; // vector current position to wheel center 
+            var currentHandlePosition = Ship.InverseTransformPoint(currentHnalde.transform.position);
+            var toLastPostion = lastPosition - Ship.InverseTransformPoint(transform.position); // vector from last position to wheel center
+            var toCurrentPosition = currentHandlePosition - Ship.InverseTransformPoint(transform.position); // vector current position to wheel center 
 
-            float angle = Vector3.SignedAngle(toLastPostion, toCurrentPosition, transform.right);
+            float angle = Vector3.SignedAngle(toLastPostion, toCurrentPosition, Vector3.right);
 
-            transform.Rotate(transform.right, angle);
+            transform.Rotate(Vector3.right, angle);
          
             lastPosition = currentHandlePosition;
         }
@@ -77,12 +84,25 @@ public class WheelTurn : MonoBehaviour
     private IEnumerator Return()
     {
         IsReturning = true;
-        while (Mathf.Abs(transform.rotation.x - Quaternion.identity.x) >= 0.1)
+
+        // Calculate the angle difference between the wheel's forward and the Ship's forward
+        float angleDiff = Vector3.Angle(transform.forward, Ship.forward);
+
+        // While the angle difference is larger than a small threshold, adjust the wheel's rotation
+        while (angleDiff > 0.1f)
         {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.identity, Time.deltaTime*speed);
-            Debug.Log(transform.rotation);
+            // Calculate the rotation needed to align the wheel's forward with the Ship's forward
+            Quaternion targetRotation = Quaternion.LookRotation(Ship.forward, Vector3.up); // Assuming the up vector is the world's up. Adjust if needed.
+
+            // Rotate the wheel towards the target rotation by a fixed step
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, speed);
+
+            // Recalculate the angle difference for the next loop iteration
+            angleDiff = Vector3.Angle(transform.forward, Ship.forward);
+
             yield return new WaitForEndOfFrame();
         }
+
         IsReturning = false;
     }
 }
