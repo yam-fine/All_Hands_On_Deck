@@ -41,7 +41,7 @@ public class WheelTurn : MonoBehaviour
 
         }
         currentHnalde = args.interactableObject as XRGrabInteractable;
-        lastPosition = Ship.InverseTransformPoint(currentHnalde.transform.position);
+        lastPosition = currentHnalde.transform.position;
     }
 
     private void OnRelease(SelectExitEventArgs args)
@@ -65,14 +65,14 @@ public class WheelTurn : MonoBehaviour
         if(currentHnalde != null)
         {
             var currentHandlePosition = Ship.InverseTransformPoint(currentHnalde.transform.position);
-            var toLastPostion = lastPosition - Ship.InverseTransformPoint(transform.position); // vector from last position to wheel center
+            var toLastPostion = Ship.InverseTransformPoint(lastPosition) - Ship.InverseTransformPoint(transform.position); // vector from last position to wheel center
             var toCurrentPosition = currentHandlePosition - Ship.InverseTransformPoint(transform.position); // vector current position to wheel center 
 
             float angle = Vector3.SignedAngle(toLastPostion, toCurrentPosition, Vector3.right);
 
             transform.Rotate(Vector3.right, angle);
          
-            lastPosition = currentHandlePosition;
+            lastPosition = Ship.TransformPoint(currentHandlePosition);
         }
 
         else if (!IsReturning)
