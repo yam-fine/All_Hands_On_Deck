@@ -4,7 +4,6 @@ public class Buoyancy : MonoBehaviour {
     [SerializeField] float swayAmount = 1f; // Parameter to control the amount of sway
     [SerializeField] float swayFrequency = 1f; // Parameter to control the frequency of the sway
     [SerializeField] Transform wheel;
-    [SerializeField] float rotationSpeed = 100;
 
     private float timeCounter;
     float rotateDir = 0;
@@ -14,9 +13,9 @@ public class Buoyancy : MonoBehaviour {
     }
 
     private void Update() {
-        if (wheel.rotation.x < -.3f)
+        if (wheel.localRotation.x < -.3f)
             rotateDir += -.1f;
-        else if (wheel.rotation.x > .3f)
+        else if (wheel.localRotation.x > .3f)
             rotateDir += .1f;
 
         // Calculate the sway angle using a sine wave based on time
