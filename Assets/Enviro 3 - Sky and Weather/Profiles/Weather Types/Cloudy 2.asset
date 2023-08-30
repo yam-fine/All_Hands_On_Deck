@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cbac6e678443724c9bd2baf5d564c1d, type: 3}
   m_Name: Cloudy 2
   m_EditorClassIdentifier: 
-  showEditor: 1
+  showEditor: 0
   showEffectControls: 1
   showCloudControls: 0
   showFlatCloudControls: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
   showAudioControls: 0
   showAmbientAudioControls: 0
   showWeatherAudioControls: 0
-  showLightningControls: 1
+  showLightningControls: 0
   cloudsOverride:
     showLayer1: 1
     coverageLayer1: -0.167
@@ -110,11 +110,11 @@ MonoBehaviour:
     weatherOverride: []
   lightningOverride:
     lightningStorm: 1
-    randomLightningDelay: 10
+    randomLightningDelay: 1
   environmentOverride:
-    temperatureWeatherMod: -26.79
-    wetnessTarget: 52.77
-    snowTarget: 17.56
+    temperatureWeatherMod: -20
+    wetnessTarget: 1
+    snowTarget: 1
     windDirectionX: 1
     windDirectionY: -1
     windSpeed: 0.25

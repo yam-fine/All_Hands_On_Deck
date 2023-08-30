@@ -85,8 +85,8 @@ MonoBehaviour:
   auroraOverride:
     auroraIntensity: 1
   effectsOverride:
-    rain1Emission: 0.84
-    rain2Emission: 1
+    rain1Emission: 0
+    rain2Emission: 0
     snow1Emission: 0
     snow2Emission: 0
     custom1Emission: 0

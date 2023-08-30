@@ -7,6 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class WheelTurn : MonoBehaviour
 {
     public List<XRGrabInteractable> handles;
+    public GameObject player;
     private XRBaseInteractor holdingHand;
     private XRGrabInteractable currentHnalde;
     private Vector3 lastPosition;
@@ -40,12 +41,14 @@ public class WheelTurn : MonoBehaviour
             IsReturning = false;
 
         }
+        player.transform.SetParent(Ship);
         currentHnalde = args.interactableObject as XRGrabInteractable;
         lastPosition = currentHnalde.transform.position;
     }
 
     private void OnRelease(SelectExitEventArgs args)
     {
+        player.transform.SetParent(null);
         var currentIntercator = args.interactableObject as XRGrabInteractable;
         if (currentHnalde == currentIntercator)
         {
@@ -73,6 +76,7 @@ public class WheelTurn : MonoBehaviour
             transform.Rotate(Vector3.right, angle);
          
             lastPosition = Ship.TransformPoint(currentHandlePosition);
+            player.transform.SetParent(Ship);
         }
 
         else if (!IsReturning)

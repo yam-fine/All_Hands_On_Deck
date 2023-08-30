@@ -144,6 +144,12 @@ public class lb_BirdController : MonoBehaviour {
 			featherEmitters[i].transform.parent = transform;
 			featherEmitters[i].SetActive (false);
 		}
+
+		foreach (GameObject curr_bird in myBirds) {
+			curr_bird.SetActive(true);
+			activeBirds++;
+			BirdFindTarget(curr_bird);
+		}
 	}
 
 	void OnEnable(){

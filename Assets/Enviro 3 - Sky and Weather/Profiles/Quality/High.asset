@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfcd10a1b99270a488a19072f6176530, type: 3}
   m_Name: High
   m_EditorClassIdentifier: 
-  showEditor: 1
+  showEditor: 0
   showVolumeClouds: 1
   showFog: 0
   showFlatClouds: 0
