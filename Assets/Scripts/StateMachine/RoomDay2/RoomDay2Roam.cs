@@ -5,7 +5,12 @@ using UnityEngine;
 public class RoomDay2Roam : IsState
 {
     public void OnEnter(StateController sc) {
-        throw new System.NotImplementedException();
+        // dialouge 
+        InnerOnEnter((RoomDay2SceneManager)sc);
+    }
+
+    void InnerOnEnter(RoomDay2SceneManager sc) {
+        sc.player.GetComponent<CharacterController>().enabled = false;
     }
 
     public void OnExit(StateController sc) {

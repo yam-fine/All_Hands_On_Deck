@@ -5,6 +5,7 @@ using UnityEngine;
 public class Ladder2 : IsState
 {
     bool playerClimbed = false;
+    bool got_hook = false;
     float stormWaveHeight = 5;
     float stormWaveFreq = 2;
 
@@ -16,7 +17,6 @@ public class Ladder2 : IsState
         sc.enviro.configuration = sc.configs[1];
         sc.enviro.Weather.ChangeWeather("Foggy");
 
-        sc.hook_walls.SetActive(true);
         foreach (GameObject obj in sc.ropeComps) {
             obj.SetActive(true);
         }
@@ -39,7 +39,15 @@ public class Ladder2 : IsState
     }
 
     void InnerUpdateState(ShipDay2 sc) {
+        if (sc.hook_pile.playerReached && !got_hook) {
+            got_hook = true;
+            sc.hook_walls.SetActive(true);
+            sc.hook.SetActive(true);
+            sc.rope.SetActive(true);
+        }
+
         if (sc.hook_socket.hasSelection) {
+            sc.hook_socket.GetComponentInChildren<MeshRenderer>().enabled = false;
             sc.player_climb.should_apply_gravity = false;
         }
         else {
