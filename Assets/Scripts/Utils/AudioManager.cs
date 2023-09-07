@@ -29,6 +29,16 @@ public class AudioManager : Singleton<AudioManager>
         pfft,
 
         steps,
+
+        bottle_up,
+
+        bottle_down,
+
+        bottle_open,
+
+        bottle_close,
+
+        water_drinking,
         
     }
 

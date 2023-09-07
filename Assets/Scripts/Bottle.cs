@@ -17,17 +17,24 @@ public class Bottle : MonoBehaviour
 
     public event Action PlayerDrank;
 
+    private AudioManager audioManager;
+
+
+    void Awake() {
+        audioManager = GameObject.Find("Avatar").GetComponent<AudioManager>();
+    }
 
     void Start()
     {
         _capRigidBody.isKinematic = true;
-        _bottleInteratable = GetComponent<XRGrabInteractable>();
+        _bottleInteratable = GetComponent<XRGrabInteractable>();   
     }
 
     void Update()
     {
-
+        
     }
+
     public bool IsOpen()
     {
         return _open;
@@ -45,6 +52,8 @@ public class Bottle : MonoBehaviour
 
     public void OnBottleHold(SelectEnterEventArgs args)
     {
+        audioManager.PlaySound(AudioManager.Sounds.bottle_up);
+
         if (args.interactor.name.Contains("Left"))
         {
             _bottleInteratable.attachTransform = _leftGrab;
@@ -57,20 +66,26 @@ public class Bottle : MonoBehaviour
 
     public void OnBottleRelease(SelectExitEventArgs args)
     {
+        audioManager.PlaySound(AudioManager.Sounds.bottle_down);
+
         if (IsOpen())
             return;
     }
 
     public void OnBottleOpen(SelectExitEventArgs args)
     {
-        Debug.Log("Open");
+        // Debug.Log("Open");
+        
+        audioManager.PlaySound(AudioManager.Sounds.bottle_open);
+
         cap.transform.SetParent(null, worldPositionStays: true);
         _capRigidBody.isKinematic = false;
         Open();
     }
     public void OnBottleClose(SelectEnterEventArgs args)
     {
-        Debug.Log("Close");
+        // Debug.Log("Close");
+        audioManager.PlaySound(AudioManager.Sounds.bottle_close);
         Close();
         cap.GetComponent<Rigidbody>().isKinematic = true;
         cap.transform.SetParent(transform, worldPositionStays: true);

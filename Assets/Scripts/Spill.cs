@@ -10,6 +10,14 @@ public class Spill : MonoBehaviour
     [SerializeField] private int angleToStartSpilling = 135;
 
     private List<ParticleCollisionEvent> CollisionEvents = new List<ParticleCollisionEvent>();
+
+    private AudioManager audioManager;
+    
+    
+    void Awake() {
+        audioManager = GameObject.Find("Avatar").GetComponent<AudioManager>();
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +27,11 @@ public class Spill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (_spill.isPlaying) {
+            audioManager.PlaySound(AudioManager.Sounds.water_drinking);
+        }
+        
         if (Vector3.Angle(Vector3.down, transform.forward) <= angleToStartSpilling && bottle.IsOpen())
         {
             _spill.Play();
