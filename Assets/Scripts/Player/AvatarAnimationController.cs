@@ -10,6 +10,9 @@ public class AvatarAnimationController : MonoBehaviour
 
     public AudioManager am;
 
+    // do not change nextUpdate to float, must be double
+    private double nextUpdate = 0.5;
+
     private void OnEnable() {
         move.action.started += AnimateLegs;
         move.action.canceled += StopAnimateLegs;
@@ -23,23 +26,20 @@ public class AvatarAnimationController : MonoBehaviour
     }
     
     void Update() {
-        if (move.action.ReadValue<Vector2>().y > 0) {
-            am.PlaySound(AudioManager.Sounds.steps);
-        }
+        if(Time.time>=nextUpdate){
+    		nextUpdate=Time.time+0.5;
+    		if (animator.GetBool("isWalking")) {
+                am.PlaySound(AudioManager.Sounds.steps);
+            }
+    	}
+        
     }
 
 
     private void AnimateLegs(InputAction.CallbackContext context)
     {
-        bool isMovingForward = move.action.ReadValue<Vector2>().y > 0;
-        if (isMovingForward) {
-            animator.SetBool("isWalking", true);
-            //animator.SetFloat("animSpeed", 1);
-        } else {
-            animator.SetBool("isWalking", true);
-            //animator.SetFloat("animSpeed", -1);
-        }
-        am.PlaySound(AudioManager.Sounds.steps);
+        // bool isMovingForward = move.action.ReadValue<Vector2>().y > 0;
+        animator.SetBool("isWalking", true);
     }
 
     private void StopAnimateLegs(InputAction.CallbackContext context)
