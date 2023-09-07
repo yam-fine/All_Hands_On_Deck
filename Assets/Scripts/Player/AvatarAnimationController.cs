@@ -21,6 +21,12 @@ public class AvatarAnimationController : MonoBehaviour
         move.action.canceled -= StopAnimateLegs;
 
     }
+    
+    void Update() {
+        if (move.action.ReadValue<Vector2>().y > 0) {
+            am.PlaySound(AudioManager.Sounds.steps);
+        }
+    }
 
 
     private void AnimateLegs(InputAction.CallbackContext context)

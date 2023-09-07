@@ -5,10 +5,11 @@ using UnityEngine;
 public class WaterPickup : IsState
 {
     public void OnEnter(StateController sc) {
-        // character sits on bed
+        InnerOnEnter((RoomDay1StateController)sc);
+    }
 
-        //temp
-        //sc.ChangeState(sc.room1Roam);
+    void InnerOnEnter(RoomDay1StateController sc) {
+        sc.waterDrinkDialogue.PlayDialogue(sc);
     }
 
     public void OnExit(StateController sc) {

@@ -17,10 +17,14 @@ public class AudioManager : Singleton<AudioManager>
         // Add name of events here such as :
         // FALL
         // TELEPORT etc etc
-        //ay_cap,
-        //avast,
-        //pfft,
-        steps
+        
+        i_just_had,
+        i_should,
+        ay_cap,
+        avast,
+        pfft,
+        steps,
+        
     }
 
     protected override void Awake()
@@ -74,9 +78,6 @@ public class AudioManager : Singleton<AudioManager>
     public EventInstance PlayOneShotAttach(Sounds sound, GameObject attach)
     {
         FMODUnity.RuntimeManager.PlayOneShotAttached(eventReferences[(int)sound], attach);
-        Debug.Log(_eventInstances[0]);
-        Debug.Log(_eventInstances[1]);
-        Debug.Log(_eventInstances[2]);
         return _eventInstances[(int)sound];
     }
 

@@ -493,7 +493,7 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/Sound/All hands 27.8.fspro
+  sourceProjectPath: Assets/Sound/All hands 2.9.fspro
   sourceBankPath: Assets/Sound/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5

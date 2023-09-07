@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9145464287936518371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/2 What
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/2 What
+  Guid:
+    Data1: 1722897994
+    Data2: 1301069448
+    Data3: 614980255
+    Data4: -1488478565
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1157
 --- !u!114 &-9108201801429859698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,39 +42,12 @@ MonoBehaviour:
   Path: Assets/Sound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638290027577363749
+  lastModified: 638296843863125676
   FileSizes:
   - Name: Desktop
-    Value: 10065600
+    Value: 12910048
   Exists: 1
---- !u!114 &-8638329350486049931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/Bottle_Open_FX
-  m_EditorClassIdentifier: 
-  Path: event:/FX/Bottle_Open_FX
-  Guid:
-    Data1: 703635664
-    Data2: 1194993383
-    Data3: -1264947829
-    Data4: 869614218
-  Banks:
-  - {fileID: -9108201801429859698}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 386
---- !u!114 &-8474021463061658247
+--- !u!114 &-8982889718406027093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,165 +57,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/DECK_Ambience/SAIL_UP
-  m_EditorClassIdentifier: 
-  Name: SAIL_UP
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2790105438
-    data2: 1109229249
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-5852364916556974387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/Bottle_Close_FX
-  m_EditorClassIdentifier: 
-  Path: event:/FX/Bottle_Close_FX
-  Guid:
-    Data1: -131761370
-    Data2: 1161192643
-    Data3: -1730186075
-    Data4: -1469213982
-  Banks:
-  - {fileID: -9108201801429859698}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 320
---- !u!114 &-5512072491640605093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/Room_Ambience
-  m_EditorClassIdentifier: 
-  Path: event:/Ambience/Room_Ambience
-  Guid:
-    Data1: 237598057
-    Data2: 1316455969
-    Data3: 1247450037
-    Data4: 359043279
-  Banks:
-  - {fileID: -9108201801429859698}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 10016
---- !u!114 &-3873600764937050853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/Second Day
-  m_EditorClassIdentifier: 
-  Name: Second Day
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2264691321
-    data2: 223485865
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - False
-  - True
-  Exists: 1
---- !u!114 &-3545074578382590322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/Water_Drinking_FX
-  m_EditorClassIdentifier: 
-  Path: event:/FX/Water_Drinking_FX
-  Guid:
-    Data1: 1004527348
-    Data2: 1076212227
-    Data3: -1945938018
-    Data4: -1493607975
-  Banks:
-  - {fileID: -9108201801429859698}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 718
---- !u!114 &-2983198332359841221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/Bottle_Down_FX
-  m_EditorClassIdentifier: 
-  Path: event:/FX/Bottle_Down_FX
-  Guid:
-    Data1: 649905088
-    Data2: 1171978008
-    Data3: 1431552142
-    Data4: -214267704
-  Banks:
-  - {fileID: -9108201801429859698}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 110
---- !u!114 &-2783569512645234146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/DECK_Ambience/Hall
+  m_Name: parameter:/Music/Hall
   m_EditorClassIdentifier: 
   Name: Hall
   StudioPath: 
@@ -231,7 +73,7 @@ MonoBehaviour:
   - False
   - True
   Exists: 1
---- !u!114 &-2446251938359874015
+--- !u!114 &-8736314028600221661
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,22 +82,160 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/Hall_Intensity
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/4 What in the hell
   m_EditorClassIdentifier: 
-  Name: Hall_Intensity
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3940544840
-    data2: 3241307792
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-2197638380597951450
+  Path: event:/Dialog/2nd DAY/4 What in the hell
+  Guid:
+    Data1: -1290373249
+    Data2: 1180056091
+    Data3: -2124883793
+    Data4: -1927433906
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5968
+--- !u!114 &-8699888587282602137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/8 Much Obliged
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/8 Much Obliged
+  Guid:
+    Data1: 49610173
+    Data2: 1309610523
+    Data3: 946275495
+    Data4: -872325601
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1421
+--- !u!114 &-8643280704614278192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/5 I'll leave ya
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/5 I'll leave ya
+  Guid:
+    Data1: -1944394074
+    Data2: 1276276006
+    Data3: -1518942534
+    Data4: 1493093508
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 14062
+--- !u!114 &-8514190063353093354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/22 Come to papa
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/22 Come to papa
+  Guid:
+    Data1: -543529341
+    Data2: 1175161935
+    Data3: -308118337
+    Data4: 1762163007
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4500
+--- !u!114 &-8323058712193008270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/19 Im not so sure
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/19 Im not so sure
+  Guid:
+    Data1: 2026592339
+    Data2: 1325947191
+    Data3: -571241835
+    Data4: 324364817
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2500
+--- !u!114 &-8156712656678387414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/6 Ay lieutenant
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/6 Ay lieutenant
+  Guid:
+    Data1: 519062419
+    Data2: 1329626620
+    Data3: 1058486917
+    Data4: 251031010
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6125
+--- !u!114 &-7878356118221183239
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,7 +262,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 121
---- !u!114 &-1878257491277743492
+--- !u!114 &-7400668219116348398
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,46 +272,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music
+  m_Name: event:/Dialog/2nd DAY/14 Lieutenant take this
   m_EditorClassIdentifier: 
-  Path: event:/Music
+  Path: event:/Dialog/2nd DAY/14 Lieutenant take this
   Guid:
-    Data1: -861963448
-    Data2: 1235652290
-    Data3: -1657643622
-    Data4: -2138253356
-  Banks:
-  - {fileID: -9108201801429859698}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 3597258418359881161}
-  - {fileID: -2446251938359874015}
-  - {fileID: 1595216635692804971}
-  - {fileID: 2042794208155741096}
-  - {fileID: -3873600764937050853}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 182661
---- !u!114 &-1629252700879171736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/Wheel_stiring_FX
-  m_EditorClassIdentifier: 
-  Path: event:/FX/Wheel_stiring_FX
-  Guid:
-    Data1: -2031992551
-    Data2: 1273655536
-    Data3: -2113561703
-    Data4: 1389415719
+    Data1: -2033011622
+    Data2: 1232391430
+    Data3: -1963355201
+    Data4: -1679278926
   Banks:
   - {fileID: -9108201801429859698}
   IsStream: 0
@@ -340,8 +288,8 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 375
---- !u!114 &-1193533102701224397
+  Length: 2861
+--- !u!114 &-7395456611922824019
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -351,54 +299,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambience/DECK_Ambience
+  m_Name: event:/Dialog/2nd DAY/9 Oy maggots
   m_EditorClassIdentifier: 
-  Path: event:/Ambience/DECK_Ambience
+  Path: event:/Dialog/2nd DAY/9 Oy maggots
   Guid:
-    Data1: -1778367197
-    Data2: 1325192283
-    Data3: -1209034049
-    Data4: 1139546165
+    Data1: -325981255
+    Data2: 1207579544
+    Data3: 252189830
+    Data4: 986055368
   Banks:
   - {fileID: -9108201801429859698}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -8474021463061658247}
-  - {fileID: 3304325358223873613}
-  - {fileID: -2783569512645234146}
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 4004
---- !u!114 &-557363729008968583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Steps_FX/Reverb
-  m_EditorClassIdentifier: 
-  Name: Reverb
-  StudioPath: 
-  Min: 0
-  Max: 2
-  Default: 0
-  ID:
-    data1: 327447249
-    data2: 3896376929
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Room
-  - Deck
-  - Hall
-  Exists: 1
---- !u!114 &-310184122720767877
+  Length: 9736
+--- !u!114 &-7353993838881751408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -408,14 +326,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/Ledder_Climb_FX
+  m_Name: event:/Dialog/2nd DAY/10 I HAVE to do
   m_EditorClassIdentifier: 
-  Path: event:/FX/Ledder_Climb_FX
+  Path: event:/Dialog/2nd DAY/10 I HAVE to do
   Guid:
-    Data1: 779313462
-    Data2: 1307859364
-    Data3: -1993321344
-    Data4: -1178514684
+    Data1: -1035118144
+    Data2: 1311765863
+    Data3: 1207471749
+    Data4: -745788014
   Banks:
   - {fileID: -9108201801429859698}
   IsStream: 0
@@ -424,66 +342,8 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 882
---- !u!114 &-54911517964219803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Sound/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638290027577363749
-  FileSizes:
-  - Name: Desktop
-    Value: 1804
-  Exists: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: -54911517964219803}
-  - {fileID: -9108201801429859698}
-  EditorEvents:
-  - {fileID: -1629252700879171736}
-  - {fileID: 4334082167504879340}
-  - {fileID: -1193533102701224397}
-  - {fileID: -5852364916556974387}
-  - {fileID: 1769064787224090755}
-  - {fileID: -310184122720767877}
-  - {fileID: -2197638380597951450}
-  - {fileID: -1878257491277743492}
-  - {fileID: -5512072491640605093}
-  - {fileID: -2983198332359841221}
-  - {fileID: -8638329350486049931}
-  - {fileID: -3545074578382590322}
-  - {fileID: 1351466319076420846}
-  - {fileID: 7037559922141578677}
-  - {fileID: 7383421360442019411}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: -9108201801429859698}
-  StringsBanks:
-  - {fileID: -54911517964219803}
-  cacheTime: 638290027577363749
-  cacheVersion: 131603
---- !u!114 &1351466319076420846
+  Length: 1156
+--- !u!114 &-7257612573945911471
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -493,67 +353,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/Hall
+  m_Name: event:/Dialog/1st DAY/16 Ay Sir!
   m_EditorClassIdentifier: 
-  Path: snapshot:/Hall
+  Path: event:/Dialog/1st DAY/16 Ay Sir!
   Guid:
-    Data1: -1281887213
-    Data2: 1166926063
-    Data3: 1588485790
-    Data4: -2048783653
-  Banks:
-  - {fileID: -9108201801429859698}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &1595216635692804971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/Hall
-  m_EditorClassIdentifier: 
-  Name: Hall
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 669714256
-    data2: 3954021365
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - False
-  - True
-  Exists: 1
---- !u!114 &1769064787224090755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/Rope_Pull_FX
-  m_EditorClassIdentifier: 
-  Path: event:/FX/Rope_Pull_FX
-  Guid:
-    Data1: 649606963
-    Data2: 1321135808
-    Data3: 348076192
-    Data4: -993826671
+    Data1: 563424567
+    Data2: 1113231608
+    Data3: 2112013715
+    Data4: -1853485015
   Banks:
   - {fileID: -9108201801429859698}
   IsStream: 0
@@ -562,80 +369,8 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 625
---- !u!114 &2042794208155741096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/Deck
-  m_EditorClassIdentifier: 
-  Name: Deck
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 73579064
-    data2: 3480006147
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &3304325358223873613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/DECK_Ambience/Storm
-  m_EditorClassIdentifier: 
-  Name: Storm
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 1462076091
-    data2: 2150719129
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &3597258418359881161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/UP_TheLadder
-  m_EditorClassIdentifier: 
-  Name: UP_TheLadder
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2580209370
-    data2: 3868753416
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &4334082167504879340
+  Length: 643
+--- !u!114 &-7081401170923090453
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -645,25 +380,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/FX/Steps_FX
+  m_Name: event:/Dialog/1st DAY/1 AH I just had
   m_EditorClassIdentifier: 
-  Path: event:/FX/Steps_FX
+  Path: event:/Dialog/1st DAY/1 AH I just had
   Guid:
-    Data1: -185254372
-    Data2: 1287364172
-    Data3: -905041269
-    Data4: -197859695
+    Data1: -484294392
+    Data2: 1197605220
+    Data3: -320701533
+    Data4: 1469507406
   Banks:
   - {fileID: -9108201801429859698}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -557363729008968583}
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 585
---- !u!114 &7037559922141578677
+  Length: 5585
+--- !u!114 &-7026868689827266918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -673,24 +407,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: snapshot:/Room
+  m_Name: event:/Dialog/1st DAY/19 Montague
   m_EditorClassIdentifier: 
-  Path: snapshot:/Room
+  Path: event:/Dialog/1st DAY/19 Montague
   Guid:
-    Data1: 701331648
-    Data2: 1214522098
-    Data3: 2131464865
-    Data4: 1232436567
+    Data1: -891411599
+    Data2: 1120409091
+    Data3: -1961117535
+    Data4: 1228486399
   Banks:
   - {fileID: -9108201801429859698}
   IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
+  Is3D: 1
+  IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &7383421360442019411
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2359
+--- !u!114 &-6769048790882172440
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -717,3 +451,1641 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-6478665839608346739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Bottle_Down_FX
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Bottle_Down_FX
+  Guid:
+    Data1: 649905088
+    Data2: 1171978008
+    Data3: 1431552142
+    Data4: -214267704
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 110
+--- !u!114 &-6440541550965937825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/15 Cap im not so sure
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/15 Cap im not so sure
+  Guid:
+    Data1: 1866111181
+    Data2: 1274392671
+    Data3: 1040887716
+    Data4: 596296639
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2489
+--- !u!114 &-6401652237297640740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/(24) Wave_FX
+  m_EditorClassIdentifier: 
+  Path: event:/FX/(24) Wave_FX
+  Guid:
+    Data1: 52279961
+    Data2: 1325678087
+    Data3: -169154891
+    Data4: -1247077999
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5875
+--- !u!114 &-6250307782253835287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/7 Ya 2
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/7 Ya 2
+  Guid:
+    Data1: -639371744
+    Data2: 1223002171
+    Data3: 61313942
+    Data4: 752518549
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4375
+--- !u!114 &-5920336366276557714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Bottle_Close_FX
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Bottle_Close_FX
+  Guid:
+    Data1: -131761370
+    Data2: 1161192643
+    Data3: -1730186075
+    Data4: -1469213982
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 320
+--- !u!114 &-5447181805260095291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Room_Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Room_Ambience
+  Guid:
+    Data1: 237598057
+    Data2: 1316455969
+    Data3: 1247450037
+    Data4: 359043279
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10016
+--- !u!114 &-4941031241162489069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/14 Ay Sir.
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/14 Ay Sir.
+  Guid:
+    Data1: 110902219
+    Data2: 1237259800
+    Data3: -1842480717
+    Data4: 1429696567
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 687
+--- !u!114 &-4035052526110664207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/12 Ay cap them black
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/12 Ay cap them black
+  Guid:
+    Data1: 513082757
+    Data2: 1177725986
+    Data3: -1109921870
+    Data4: -2014641169
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3446
+--- !u!114 &-3571821898930896871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/18 Ay Sir
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/18 Ay Sir
+  Guid:
+    Data1: 573700142
+    Data2: 1130044414
+    Data3: 411552171
+    Data4: -1485598775
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2968
+--- !u!114 &-3472653544528734671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/13 Right Maggots
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/13 Right Maggots
+  Guid:
+    Data1: -990027269
+    Data2: 1136809736
+    Data3: 2057459381
+    Data4: 1099028589
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11250
+--- !u!114 &-3422607650043968324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/9 ye sea rats are forever
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/9 ye sea rats are forever
+  Guid:
+    Data1: 516001479
+    Data2: 1115655525
+    Data3: 835287425
+    Data4: 1240146619
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5664
+--- !u!114 &-2970886166349092253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Second Day
+  m_EditorClassIdentifier: 
+  Name: Second Day
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2264691321
+    data2: 223485865
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - False
+  - True
+  Exists: 1
+--- !u!114 &-2775855337709821761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/18 Shut ye trap standing
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/18 Shut ye trap standing
+  Guid:
+    Data1: -900316111
+    Data2: 1144945936
+    Data3: 1025935549
+    Data4: 547832732
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7671
+--- !u!114 &-2741999937860837908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Water_Drinking_FX
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Water_Drinking_FX
+  Guid:
+    Data1: 1004527348
+    Data2: 1076212227
+    Data3: -1945938018
+    Data4: -1493607975
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 718
+--- !u!114 &-2613259056614084122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/DECK_Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/DECK_Ambience
+  Guid:
+    Data1: -1778367197
+    Data2: 1325192283
+    Data3: -1209034049
+    Data4: 1139546165
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4144762405950834093}
+  - {fileID: 7087578582722793416}
+  - {fileID: 1475784917356554499}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4004
+--- !u!114 &-2321587913339184578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/20 We are on the tail cap
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/20 We are on the tail cap
+  Guid:
+    Data1: 316661577
+    Data2: 1214975712
+    Data3: -1728638805
+    Data4: 291089560
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3335
+--- !u!114 &-1900493305585308280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Hall
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Hall
+  Guid:
+    Data1: -1281887213
+    Data2: 1166926063
+    Data3: 1588485790
+    Data4: -2048783653
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1722229658110993728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/17 I dont know cap
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/17 I dont know cap
+  Guid:
+    Data1: -1405231049
+    Data2: 1289846798
+    Data3: 1766125210
+    Data4: -394674745
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3229
+--- !u!114 &-1618623654089279610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/Room
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Room
+  Guid:
+    Data1: 701331648
+    Data2: 1214522098
+    Data3: 2131464865
+    Data4: 1232436567
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1559722383775902411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/11 Very well
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/11 Very well
+  Guid:
+    Data1: 1370714011
+    Data2: 1190427830
+    Data3: -759253879
+    Data4: -317312089
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3892
+--- !u!114 &-1078306292886028178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/7 Word around
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/7 Word around
+  Guid:
+    Data1: -192443350
+    Data2: 1285621488
+    Data3: -1962954317
+    Data4: 1669064431
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8750
+--- !u!114 &-745193618454900792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/21 George
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/21 George
+  Guid:
+    Data1: 10919954
+    Data2: 1341689211
+    Data3: -999550049
+    Data4: -1267458725
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 625
+--- !u!114 &-323027084284889014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Deck
+  m_EditorClassIdentifier: 
+  Name: Deck
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 73579064
+    data2: 3480006147
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-93331917791819940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/23 Will John
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/23 Will John
+  Guid:
+    Data1: -199160686
+    Data2: 1340005820
+    Data3: 1518412969
+    Data4: -329615934
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1847
+--- !u!114 &-54911517964219803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sound/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638296843861863544
+  FileSizes:
+  - Name: Desktop
+    Value: 4168
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -54911517964219803}
+  - {fileID: -9108201801429859698}
+  EditorEvents:
+  - {fileID: -7081401170923090453}
+  - {fileID: -745193618454900792}
+  - {fileID: -1900493305585308280}
+  - {fileID: 3781515505512885205}
+  - {fileID: 2495967186588730423}
+  - {fileID: -6250307782253835287}
+  - {fileID: -2613259056614084122}
+  - {fileID: 711564176271037649}
+  - {fileID: -5920336366276557714}
+  - {fileID: 6716209072428345092}
+  - {fileID: -1078306292886028178}
+  - {fileID: -3571821898930896871}
+  - {fileID: -2775855337709821761}
+  - {fileID: 8205233234292015129}
+  - {fileID: 8262808263871743557}
+  - {fileID: -7257612573945911471}
+  - {fileID: -1722229658110993728}
+  - {fileID: 5299449250213452284}
+  - {fileID: -7878356118221183239}
+  - {fileID: 9013339129331939038}
+  - {fileID: 5029809586110720013}
+  - {fileID: 2381870623068690339}
+  - {fileID: -2321587913339184578}
+  - {fileID: -9145464287936518371}
+  - {fileID: -8323058712193008270}
+  - {fileID: 517022080977185741}
+  - {fileID: 4236659251394586970}
+  - {fileID: 4657073595905851032}
+  - {fileID: -7400668219116348398}
+  - {fileID: 6996767798085413393}
+  - {fileID: -5447181805260095291}
+  - {fileID: -7026868689827266918}
+  - {fileID: 896247294034992615}
+  - {fileID: -8736314028600221661}
+  - {fileID: -8514190063353093354}
+  - {fileID: -4035052526110664207}
+  - {fileID: -93331917791819940}
+  - {fileID: -8156712656678387414}
+  - {fileID: 1482495135103253421}
+  - {fileID: 991657277988854058}
+  - {fileID: -6401652237297640740}
+  - {fileID: -1559722383775902411}
+  - {fileID: 5277176510525769045}
+  - {fileID: -8643280704614278192}
+  - {fileID: 7600846970674606184}
+  - {fileID: 1196371191555077382}
+  - {fileID: 6615069142655550030}
+  - {fileID: -7395456611922824019}
+  - {fileID: -8699888587282602137}
+  - {fileID: -7353993838881751408}
+  - {fileID: -1618623654089279610}
+  - {fileID: -6478665839608346739}
+  - {fileID: 8409401318747545828}
+  - {fileID: -3422607650043968324}
+  - {fileID: -4941031241162489069}
+  - {fileID: -6440541550965937825}
+  - {fileID: -6769048790882172440}
+  - {fileID: 7564755434787440105}
+  - {fileID: 1118825175863778489}
+  - {fileID: 466915866577060385}
+  - {fileID: 5542201001685746105}
+  - {fileID: -2741999937860837908}
+  - {fileID: -3472653544528734671}
+  - {fileID: 8170405933007206349}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -9108201801429859698}
+  StringsBanks:
+  - {fileID: -54911517964219803}
+  cacheTime: 638296843863125676
+  cacheVersion: 131603
+--- !u!114 &270923150496083587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Steps_FX/Reverb
+  m_EditorClassIdentifier: 
+  Name: Reverb
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 327447249
+    data2: 3896376929
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Room
+  - Deck
+  - Hall
+  Exists: 1
+--- !u!114 &466915866577060385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/5 Pfft
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/5 Pfft
+  Guid:
+    Data1: -1945068314
+    Data2: 1110957669
+    Data3: 1731159948
+    Data4: 608578362
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2275
+--- !u!114 &517022080977185741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/2 I should
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/2 I should
+  Guid:
+    Data1: 1329957716
+    Data2: 1247729672
+    Data3: -696005472
+    Data4: 90574472
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1437
+--- !u!114 &568875911751356654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Hall_Intensity
+  m_EditorClassIdentifier: 
+  Name: Hall_Intensity
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3940544840
+    data2: 3241307792
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &711564176271037649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/15 Headcount the Maggots in the hull
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/15 Headcount the Maggots in the hull
+  Guid:
+    Data1: 373119782
+    Data2: 1129970210
+    Data3: -647406964
+    Data4: 1092253840
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5093
+--- !u!114 &896247294034992615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/22 Ay Sir
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/22 Ay Sir
+  Guid:
+    Data1: -1615099020
+    Data2: 1129237460
+    Data3: 203201936
+    Data4: -1017698396
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1163
+--- !u!114 &991657277988854058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/10 But cap said
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/10 But cap said
+  Guid:
+    Data1: -1611375464
+    Data2: 1099429404
+    Data3: 1192503208
+    Data4: -1928872538
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3562
+--- !u!114 &1118825175863778489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Bottle_Open_FX
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Bottle_Open_FX
+  Guid:
+    Data1: 703635664
+    Data2: 1194993383
+    Data3: -1264947829
+    Data4: 869614218
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 386
+--- !u!114 &1196371191555077382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/25 That was not
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/25 That was not
+  Guid:
+    Data1: -1488630359
+    Data2: 1312106215
+    Data3: 932087170
+    Data4: 1433357617
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1625
+--- !u!114 &1231794664616470362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/UP_TheLadder
+  m_EditorClassIdentifier: 
+  Name: UP_TheLadder
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2580209370
+    data2: 3868753416
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &1475784917356554499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/DECK_Ambience/Hall
+  m_EditorClassIdentifier: 
+  Name: Hall
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 669714256
+    data2: 3954021365
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - False
+  - True
+  Exists: 1
+--- !u!114 &1482495135103253421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/20 Ay Sir
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/20 Ay Sir
+  Guid:
+    Data1: -1558077289
+    Data2: 1248748795
+    Data3: 1717021865
+    Data4: -143884238
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3433
+--- !u!114 &2381870623068690339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  Guid:
+    Data1: -861963448
+    Data2: 1235652290
+    Data3: -1657643622
+    Data4: -2138253356
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 1231794664616470362}
+  - {fileID: 568875911751356654}
+  - {fileID: -2970886166349092253}
+  - {fileID: -8982889718406027093}
+  - {fileID: -323027084284889014}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 182661
+--- !u!114 &2495967186588730423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Steps_FX
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Steps_FX
+  Guid:
+    Data1: -185254372
+    Data2: 1287364172
+    Data3: -905041269
+    Data4: -197859695
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 270923150496083587}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 585
+--- !u!114 &3781515505512885205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Wheel_stiring_FX
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Wheel_stiring_FX
+  Guid:
+    Data1: -2031992551
+    Data2: 1273655536
+    Data3: -2113561703
+    Data4: 1389415719
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 375
+--- !u!114 &4144762405950834093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/DECK_Ambience/SAIL_UP
+  m_EditorClassIdentifier: 
+  Name: SAIL_UP
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2790105438
+    data2: 1109229249
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &4236659251394586970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/1 Ah It's morning
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/1 Ah It's morning
+  Guid:
+    Data1: -2053967274
+    Data2: 1167827001
+    Data3: 1637265068
+    Data4: 998730169
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6681
+--- !u!114 &4657073595905851032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/4 AVAST
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/4 AVAST
+  Guid:
+    Data1: -1679929256
+    Data2: 1265840079
+    Data3: -803347558
+    Data4: 1850425164
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 13500
+--- !u!114 &5029809586110720013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/17 Benji
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/17 Benji
+  Guid:
+    Data1: 625300295
+    Data2: 1217772819
+    Data3: -1577079618
+    Data4: 348380698
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3031
+--- !u!114 &5277176510525769045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/6 Get it together
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/6 Get it together
+  Guid:
+    Data1: -838703966
+    Data2: 1198163987
+    Data3: -606392701
+    Data4: 1592557211
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8781
+--- !u!114 &5299449250213452284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Whale_Crash_end_FX
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Whale_Crash_end_FX
+  Guid:
+    Data1: 2075759164
+    Data2: 1133388660
+    Data3: 1156489658
+    Data4: 1633958343
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3500
+--- !u!114 &5542201001685746105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/3 Ah youre awake
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/3 Ah youre awake
+  Guid:
+    Data1: 1781149928
+    Data2: 1233355776
+    Data3: -1176058467
+    Data4: 747242251
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7674
+--- !u!114 &6615069142655550030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/8 Lieutenant can ye give
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/8 Lieutenant can ye give
+  Guid:
+    Data1: -1232781389
+    Data2: 1292736104
+    Data3: 1230229136
+    Data4: 1997309093
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6369
+--- !u!114 &6716209072428345092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/16 oh but I have never
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/16 oh but I have never
+  Guid:
+    Data1: 935948073
+    Data2: 1300329454
+    Data3: 1641336757
+    Data4: 1102995915
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 17470
+--- !u!114 &6996767798085413393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/26 Will John!!!
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/26 Will John!!!
+  Guid:
+    Data1: 975756900
+    Data2: 1228506834
+    Data3: 1585239974
+    Data4: 488819758
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2625
+--- !u!114 &7087578582722793416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/DECK_Ambience/Storm
+  m_EditorClassIdentifier: 
+  Name: Storm
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1462076091
+    data2: 2150719129
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7564755434787440105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/13 Just need to steer
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/13 Just need to steer
+  Guid:
+    Data1: 1731503310
+    Data2: 1268213733
+    Data3: 2007847300
+    Data4: 982558710
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1581
+--- !u!114 &7600846970674606184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/12 Barely..Now to steer
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/12 Barely..Now to steer
+  Guid:
+    Data1: -1292322393
+    Data2: 1097492688
+    Data3: 260060048
+    Data4: 371180845
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2663
+--- !u!114 &8170405933007206349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/11 Fine work
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/11 Fine work
+  Guid:
+    Data1: -1653053954
+    Data2: 1174080248
+    Data3: -1329366368
+    Data4: -744757817
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5281
+--- !u!114 &8205233234292015129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Rope_Pull_FX
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Rope_Pull_FX
+  Guid:
+    Data1: 649606963
+    Data2: 1321135808
+    Data3: 348076192
+    Data4: -993826671
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 625
+--- !u!114 &8262808263871743557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/Ledder_Climb_FX
+  m_EditorClassIdentifier: 
+  Path: event:/FX/Ledder_Climb_FX
+  Guid:
+    Data1: 779313462
+    Data2: 1307859364
+    Data3: -1993321344
+    Data4: -1178514684
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 882
+--- !u!114 &8409401318747545828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/2nd DAY/21 Hunting station
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/2nd DAY/21 Hunting station
+  Guid:
+    Data1: 470760645
+    Data2: 1265780446
+    Data3: 695063732
+    Data4: -782225486
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2031
+--- !u!114 &9013339129331939038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dialog/1st DAY/3 Ay Cap Its Morning
+  m_EditorClassIdentifier: 
+  Path: event:/Dialog/1st DAY/3 Ay Cap Its Morning
+  Guid:
+    Data1: 329376063
+    Data2: 1317396391
+    Data3: -559026006
+    Data4: -1522167004
+  Banks:
+  - {fileID: -9108201801429859698}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4250

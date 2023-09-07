@@ -15,6 +15,8 @@ public class RoomDay1StateController : StateController
     public Animator avatarAnimator;
     public Material waterMat;
 
+    [HideInInspector] public Dialogue waterDrinkDialogue;
+
     [HideInInspector] public Dialogue roamDialogue;
 
     public GameObject player;
@@ -51,11 +53,18 @@ public class RoomDay1StateController : StateController
         waterMat.SetFloat("_WaveFrequency", 1);
 
         GameObject dialogueObject = new GameObject("DialogueObject");
+
+        waterDrinkDialogue = dialogueObject.AddComponent<Dialogue>();
+        waterDrinkDialogue.dialogueEvents = new List<DialogueEvents>{
+            new DialogueEvents(AudioManager.Sounds.i_just_had, player),
+            new DialogueEvents(AudioManager.Sounds.i_should, captain),
+        };
+        
         roamDialogue = dialogueObject.AddComponent<Dialogue>();
         roamDialogue.dialogueEvents = new List<DialogueEvents>{
-            //new DialogueEvents(AudioManager.Sounds.ay_cap, player),
-            //new DialogueEvents(AudioManager.Sounds.avast, captain),
-            //new DialogueEvents(AudioManager.Sounds.pfft, player)
+            new DialogueEvents(AudioManager.Sounds.ay_cap, player),
+            new DialogueEvents(AudioManager.Sounds.avast, captain),
+            new DialogueEvents(AudioManager.Sounds.pfft, player)
         };
 
         ChangeState(waterPickup);
