@@ -19,10 +19,15 @@ public class AudioManager : Singleton<AudioManager>
         // TELEPORT etc etc
         
         i_just_had,
+        
         i_should,
+        
         ay_cap,
+        
         avast,
+        
         pfft,
+
         steps,
         
     }

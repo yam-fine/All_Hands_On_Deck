@@ -10,7 +10,7 @@ public class SwitchSceneDoor : Door
 
     public override void Action() 
     {
-        GameObject.Find("AvatarPlayer").SetActive(false);
+        Destroy(GameObject.Find("AvatarPlayer"));//.SetActive(false);
         SceneManager.UnloadSceneAsync(currentSceneName);
         SceneManager.LoadScene(nextSceneName);
     }
