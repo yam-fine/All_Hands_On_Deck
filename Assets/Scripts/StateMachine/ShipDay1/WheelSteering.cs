@@ -7,11 +7,11 @@ public class WheelSteering : IsState
     float rotationThreshold = 1;
 
     public void OnEnter(StateController sc) {
-        throw new System.NotImplementedException();
+        Debug.Log("WheelState");
     }
 
     public void OnExit(StateController sc) {
-        throw new System.NotImplementedException();
+        
     }
 
     public void UpdateState(StateController sc) {

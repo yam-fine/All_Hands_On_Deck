@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 public class ShipDay1StateController : StateController
 {
     public GameObject player;
+
+    public GameObject avatar;
+
     public GameObject ship;
     public EventReachedDetection ld;
     public EnviroManager enviro;
@@ -25,6 +28,8 @@ public class ShipDay1StateController : StateController
     public PirateManStateControl givingCPR;
     public TalkingWillStateControl takingCPR;
 
+    public NeedsHelpWillStateControl sailsNPC;
+
     public SailFurling sails = new SailFurling();
     public WheelSteering wheel_steering = new WheelSteering();
     public LadderClimbing ladder_climb = new LadderClimbing();
@@ -32,12 +37,37 @@ public class ShipDay1StateController : StateController
     public WhaleDayOne whaleState = new WhaleDayOne();
     public FinishDayOne finish = new FinishDayOne();
 
+    public AudioManager audioManager;
+
+    [HideInInspector] public Dialogue sailsDownDialogue;
+
+    [HideInInspector] public Dialogue sailsUpDialogue;
+
+    void Awake() {
+        audioManager = GameObject.Find("Avatar").GetComponent<AudioManager>();
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
         enviro.configuration = configs[0];
         enviro.Weather.ChangeWeather("Cloudy 1");
-        ChangeState(ladder_climb);
+        ChangeState(sails);
+
+        GameObject dialogueObject = new GameObject("DialogueObject");
+
+
+        sailsDownDialogue = dialogueObject.AddComponent<Dialogue>();
+        sailsDownDialogue.dialogueEvents = new List<DialogueEvents>{
+            new DialogueEvents(AudioManager.Sounds.ye_two, avatar),
+        };
+
+        sailsUpDialogue = dialogueObject.AddComponent<Dialogue>();
+        sailsUpDialogue.dialogueEvents = new List<DialogueEvents>{
+            new DialogueEvents(AudioManager.Sounds.much_obliged, GameObject.Find("Will (7)")),
+            new DialogueEvents(AudioManager.Sounds.ye_sea_rats, avatar), 
+        };
     }
 
     public void TeleportWithFade(System.Action<IsState> funcToExecute, IsState state) {

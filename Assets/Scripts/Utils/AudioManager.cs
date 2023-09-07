@@ -39,6 +39,15 @@ public class AudioManager : Singleton<AudioManager>
         bottle_close,
 
         water_drinking,
+
+
+        ay_leut,
+
+        ye_two,
+
+        much_obliged,
+
+        ye_sea_rats,
         
     }
 
