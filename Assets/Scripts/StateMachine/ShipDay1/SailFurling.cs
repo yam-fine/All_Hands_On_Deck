@@ -33,7 +33,7 @@ public class SailFurling : IsState
 
         // dialogue
         if(Time.time >= nextUpdate){
-    		nextUpdate = Mathf.FloorToInt(Time.time)+30;
+    		nextUpdate = Mathf.FloorToInt(Time.time) + 30; // play every 30 seconds
     		sc.audioManager.PlaySound(AudioManager.Sounds.ay_leut, GameObject.Find("Will (7)"));
     	}
 

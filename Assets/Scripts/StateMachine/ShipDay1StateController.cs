@@ -51,12 +51,8 @@ public class ShipDay1StateController : StateController
     // Start is called before the first frame update
     void Start()
     {
-        enviro.configuration = configs[0];
-        enviro.Weather.ChangeWeather("Cloudy 1");
-        ChangeState(sails);
 
         GameObject dialogueObject = new GameObject("DialogueObject");
-
 
         sailsDownDialogue = dialogueObject.AddComponent<Dialogue>();
         sailsDownDialogue.dialogueEvents = new List<DialogueEvents>{
@@ -65,9 +61,20 @@ public class ShipDay1StateController : StateController
 
         sailsUpDialogue = dialogueObject.AddComponent<Dialogue>();
         sailsUpDialogue.dialogueEvents = new List<DialogueEvents>{
-            new DialogueEvents(AudioManager.Sounds.much_obliged, GameObject.Find("Will (7)")),
+            new DialogueEvents(AudioManager.Sounds.much_obliged, avatar),
             new DialogueEvents(AudioManager.Sounds.ye_sea_rats, avatar), 
         };
+
+        
+
+        enviro.configuration = configs[0];
+        enviro.Weather.ChangeWeather("Cloudy 1");
+        ChangeState(sails);
+
+        
+
+
+        
     }
 
     public void TeleportWithFade(System.Action<IsState> funcToExecute, IsState state) {
