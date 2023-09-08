@@ -11,6 +11,10 @@ public class EnteringHullDayOne : IsState
     }
 
     void InnerOnEnter(ShipDay1StateController sc) {
+
+        foreach (GameObject go in sc.toDisapearOnHull) {
+            go.SetActive(false);
+        }
         //dialogue
         sc.beforeHullDialogue.PlayDialogue(sc, 2, true);
 

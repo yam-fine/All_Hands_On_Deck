@@ -69,6 +69,8 @@ public class ShipDay1StateController : StateController
     [HideInInspector] public Dialogue beforeHullDialogue;
 
     [HideInInspector] public Dialogue hullDialogue;
+
+    public GameObject[] toDisapearOnHull;
     
 
     void Awake() {
@@ -137,7 +139,7 @@ public class ShipDay1StateController : StateController
 
         enviro.configuration = configs[0];
         enviro.Weather.ChangeWeather("Cloudy 1");
-        ChangeState(beforeHull);
+        ChangeState(sails);
 
         
 

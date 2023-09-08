@@ -85,6 +85,8 @@ public class AudioManager : Singleton<AudioManager>
 
         will_john_scream,
 
+        whale_crash_end,
+
 
     }
 

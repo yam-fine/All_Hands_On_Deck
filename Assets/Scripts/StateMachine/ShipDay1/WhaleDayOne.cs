@@ -9,7 +9,6 @@ public class WhaleDayOne : IsState
     private ShipDay1StateController state;
 
     public void OnEnter(StateController sc) {
-        Debug.Log("WHALE");
         state = (ShipDay1StateController)sc;
         state.killerWhalePath.Attack();
     }
@@ -22,6 +21,7 @@ public class WhaleDayOne : IsState
     }
 
     void InnerUpdateState(ShipDay1StateController sc) {
+        sc.audioManager.PlaySound(AudioManager.Sounds.whale_crash_end);
         if(sc.whaleShipColided.shipReached) {
             sc.ChangeState(sc.finish);
         }
