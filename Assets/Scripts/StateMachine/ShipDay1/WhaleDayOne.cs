@@ -24,7 +24,7 @@ public class WhaleDayOne : IsState
         
         if(sc.whaleShipColided.shipReached) {
             sc.audioManager.PlaySound(AudioManager.Sounds.whale_crash_end);
-            sc.ChangeState(sc.finish);
+            sc.ChangeState(sc.cutscene);
         }
         
     }

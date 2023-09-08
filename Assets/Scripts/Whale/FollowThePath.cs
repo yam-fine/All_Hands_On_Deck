@@ -9,6 +9,12 @@ public class FollowThePath : MonoBehaviour {
     [SerializeField]
     private Transform[] colideWaypoints;
 
+    [SerializeField]
+    private bool isActive = true;
+
+    [SerializeField]
+    private bool shouldRotate = true;
+
     public bool shouldColide = false;
 
     // Walk speed that can be set in Inspector
@@ -25,12 +31,18 @@ public class FollowThePath : MonoBehaviour {
 	// Use this for initialization
 	private void Start () {
 
-        // Set position of Enemy as position of the first waypoint
-        transform.position = patrolWaypoints[waypointIndex].transform.position;
+        if (patrolWaypoints.Length > 0) {
+            // Set position of Enemy as position of the first waypoint
+            transform.position = patrolWaypoints[waypointIndex].transform.position;
+        }
 	}
 	
 	// Update is called once per frame
 	private void Update () {
+
+        if (!isActive) {
+            return;
+        }
 
         // Move Enemy
         if(shouldColide) {
@@ -59,7 +71,9 @@ public class FollowThePath : MonoBehaviour {
             _direction = Vector3.RotateTowards(transform.forward, -_direction, 0.1f*moveSpeed * Time.deltaTime, 0);
 
             //create the rotation we need to be in to look at the target
-            transform.rotation = Quaternion.LookRotation(_direction);
+            if (shouldRotate) {
+                transform.rotation = Quaternion.LookRotation(_direction);
+            }
 
             // If Enemy reaches position of waypoint he walked towards
             // then waypointIndex is increased by 1
@@ -78,7 +92,6 @@ public class FollowThePath : MonoBehaviour {
 
 
     public void Attack() {
-        Debug.Log("Attacking");
         shouldColide = true;
         moveSpeed*=2;
     }

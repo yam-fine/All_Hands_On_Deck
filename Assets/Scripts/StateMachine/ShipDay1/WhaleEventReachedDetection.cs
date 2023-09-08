@@ -11,7 +11,7 @@ public class WhaleEventReachedDetection : MonoBehaviour
     {
         // TODO: play relevant sound
         // TODO: fade out
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         shipReached = true;
     }
 

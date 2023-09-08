@@ -23,9 +23,12 @@ public class ShipDay1StateController : StateController
 
     public EventReachedDetection whale_desired_position;
 
-    
+    public EventReachedDetection cutscene_desired_position;
 
     public WhaleEventReachedDetection whaleShipColided;
+
+    
+
     public ActionBasedContinuousMoveProvider actionMoveProvider;
     public FadeScreen fade;
     public GameObject whale;
@@ -33,6 +36,9 @@ public class ShipDay1StateController : StateController
     public List<EnviroConfiguration> configs;
 
     public FollowThePath killerWhalePath;
+
+    public FollowThePath playerCutScenePath;
+
     public PirateManStateControl givingCPR;
     public TalkingWillStateControl takingCPR;
 
@@ -49,6 +55,8 @@ public class ShipDay1StateController : StateController
     public HullDayOne hull = new HullDayOne();
     
     public WhaleDayOne whaleState = new WhaleDayOne();
+
+    public CutsceneDayOne cutscene = new CutsceneDayOne();
     
     public FinishDayOne finish = new FinishDayOne();
 
