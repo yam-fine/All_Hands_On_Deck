@@ -18,6 +18,10 @@ public class WheelTurn : MonoBehaviour
     [SerializeField] float speed = 50;
     [SerializeField] private List<Transform> startingPos;
 
+    [SerializeField] private AudioManager audioManager;
+
+    [SerializeField] private GameObject wheel;
+
 
 
     private bool IsReturning;
@@ -63,6 +67,12 @@ public class WheelTurn : MonoBehaviour
         
     }
     
+    private void PlaySoundEffectIfNeeded() {
+        if (!audioManager.IsPlaying(AudioManager.Sounds.wheel_string_fx)) {
+            audioManager.PlaySound(AudioManager.Sounds.wheel_string_fx, wheel);
+        }
+    }
+
     private void Update()
     {
         if(currentHnalde != null)
@@ -74,6 +84,9 @@ public class WheelTurn : MonoBehaviour
             float angle = Vector3.SignedAngle(toLastPostion, toCurrentPosition, Vector3.right);
 
             transform.Rotate(Vector3.right, angle);
+
+            PlaySoundEffectIfNeeded();
+
          
             lastPosition = Ship.TransformPoint(currentHandlePosition);
             player.transform.SetParent(Ship);
@@ -100,6 +113,8 @@ public class WheelTurn : MonoBehaviour
 
             // Rotate the wheel towards the target rotation by a fixed step
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, speed);
+
+            PlaySoundEffectIfNeeded();
 
             // Recalculate the angle difference for the next loop iteration
             angleDiff = Vector3.Angle(transform.forward, Ship.forward);

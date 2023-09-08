@@ -71,6 +71,10 @@ public class ShipDay1StateController : StateController
     [HideInInspector] public Dialogue hullDialogue;
 
     public GameObject[] toDisapearOnHull;
+
+    public FMODUnity.StudioEventEmitter musicEmitter;
+
+    public FMODUnity.StudioEventEmitter ambienceEmitter;
     
 
     void Awake() {

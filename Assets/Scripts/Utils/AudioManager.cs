@@ -87,6 +87,8 @@ public class AudioManager : Singleton<AudioManager>
 
         whale_crash_end,
 
+        wheel_string_fx,
+
 
     }
 
