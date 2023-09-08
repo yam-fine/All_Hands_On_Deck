@@ -21,8 +21,9 @@ public class WhaleDayOne : IsState
     }
 
     void InnerUpdateState(ShipDay1StateController sc) {
-        sc.audioManager.PlaySound(AudioManager.Sounds.whale_crash_end);
+        
         if(sc.whaleShipColided.shipReached) {
+            sc.audioManager.PlaySound(AudioManager.Sounds.whale_crash_end);
             sc.ChangeState(sc.finish);
         }
         

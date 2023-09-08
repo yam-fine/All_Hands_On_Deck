@@ -31,9 +31,7 @@ public class LadderClimbing : IsState
         sc.enviro.configuration = sc.configs[2];
         sc.enviro.Weather.ChangeWeather("Cloudy 2");
 
-        
-
-        
+        sc.ambienceControl.StartStorm();        
     }
 
     public void UpdateState(StateController sc) {

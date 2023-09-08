@@ -9,11 +9,22 @@ public class FinishDayOne : IsState
     public void OnEnter(StateController sc) {
         sdsc = (ShipDay1StateController)sc;
         sdsc.fade.FadeOut();
+        sdsc.musicControl.Stop();
+        sdsc.ambienceControl.Stop();
         sdsc.LoadScene();
     }
 
-    public void OnExit(StateController sc) {
+
+    private void InnerOnExit(ShipDay1StateController sc) {
+        
     }
+
+    public void OnExit(StateController sc) {
+        InnerOnExit((ShipDay1StateController)sc);
+        
+    }
+
+    
 
     public void UpdateState(StateController sc) {
         InnerUpdateState((ShipDay1StateController)sc);
