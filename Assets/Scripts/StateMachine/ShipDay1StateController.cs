@@ -18,7 +18,13 @@ public class ShipDay1StateController : StateController
     public EnviroManager enviro;
     public Transform hull_teleport;
     public float desiredRotation = 2;
+
+    public EventReachedDetection hull_desired_position;
+
     public EventReachedDetection whale_desired_position;
+
+    
+
     public WhaleEventReachedDetection whaleShipColided;
     public ActionBasedContinuousMoveProvider actionMoveProvider;
     public FadeScreen fade;
@@ -33,10 +39,17 @@ public class ShipDay1StateController : StateController
     public NeedsHelpWillStateControl sailsNPC;
 
     public SailFurling sails = new SailFurling();
+    
     public WheelSteering wheel_steering = new WheelSteering();
+    
     public LadderClimbing ladder_climb = new LadderClimbing();
+    
+    public EnteringHullDayOne beforeHull = new EnteringHullDayOne();
+
     public HullDayOne hull = new HullDayOne();
+    
     public WhaleDayOne whaleState = new WhaleDayOne();
+    
     public FinishDayOne finish = new FinishDayOne();
 
     public AudioManager audioManager;
@@ -52,6 +65,10 @@ public class ShipDay1StateController : StateController
     [HideInInspector] public Dialogue climbLadderDialogue;
 
     [HideInInspector] public Dialogue climbLadderEndDialogue;
+
+    [HideInInspector] public Dialogue beforeHullDialogue;
+
+    [HideInInspector] public Dialogue hullDialogue;
     
 
     void Awake() {
@@ -89,14 +106,38 @@ public class ShipDay1StateController : StateController
 
         climbLadderEndDialogue = dialogueObject.AddComponent<Dialogue>();
         climbLadderEndDialogue.dialogueEvents = new List<DialogueEvents>{
-            new DialogueEvents(AudioManager.Sounds.them_black_clouds, captain),
+            new DialogueEvents(AudioManager.Sounds.them_black_clouds, avatar),
+        };
+
+
+        beforeHullDialogue = dialogueObject.AddComponent<Dialogue>();
+        beforeHullDialogue.dialogueEvents = new List<DialogueEvents>{
+            new DialogueEvents(AudioManager.Sounds.right_maggots, captain),
+            new DialogueEvents(AudioManager.Sounds.ay_sir_right_maggots, avatar),
+            new DialogueEvents(AudioManager.Sounds.headcount_the_maggots, captain),
+            new DialogueEvents(AudioManager.Sounds.ay_sir_headcount, avatar),
+        };
+
+
+        hullDialogue = dialogueObject.AddComponent<Dialogue>();
+        hullDialogue.dialogueEvents = new List<DialogueEvents>{
+            new DialogueEvents(AudioManager.Sounds.benji, avatar),
+            new DialogueEvents(AudioManager.Sounds.ay_benji, GameObject.Find("Pirate (3)")),
+            new DialogueEvents(AudioManager.Sounds.montague, avatar),
+            new DialogueEvents(AudioManager.Sounds.ay_montague, GameObject.Find("John (3)")),
+            new DialogueEvents(AudioManager.Sounds.george, avatar),
+            new DialogueEvents(AudioManager.Sounds.ay_george, GameObject.Find("Will (4)")),
+            new DialogueEvents(AudioManager.Sounds.will_john, avatar),
+            new DialogueEvents(AudioManager.Sounds.big_wave, avatar),
+            new DialogueEvents(AudioManager.Sounds.that_was_not, GameObject.Find("Will (4)")),
+            new DialogueEvents(AudioManager.Sounds.will_john_scream, avatar),
         };
 
         
 
         enviro.configuration = configs[0];
         enviro.Weather.ChangeWeather("Cloudy 1");
-        ChangeState(sails);
+        ChangeState(beforeHull);
 
         
 

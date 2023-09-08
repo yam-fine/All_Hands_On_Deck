@@ -56,7 +56,36 @@ public class AudioManager : Singleton<AudioManager>
         fine_work,
 
         them_black_clouds,
+
+        right_maggots,
+
+        ay_sir_right_maggots,
+
+        headcount_the_maggots,
         
+        ay_sir_headcount,
+
+        benji,
+
+        ay_benji,
+
+        montague,
+
+        ay_montague,
+
+        george,
+
+        ay_george,
+
+        will_john,
+
+        big_wave,
+
+        that_was_not,
+
+        will_john_scream,
+
+
     }
 
     protected override void Awake()

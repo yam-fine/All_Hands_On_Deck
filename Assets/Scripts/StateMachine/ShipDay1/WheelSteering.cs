@@ -6,10 +6,10 @@ public class WheelSteering : IsState
 {
     float rotationThreshold = 1;
 
-    private int nextUpdate = 15;
+    private int nextUpdate;
 
     public void OnEnter(StateController sc) {
-
+        nextUpdate = (int)(Time.time + 15f);
         InnerEnterState((ShipDay1StateController)sc);
         
     }
@@ -32,11 +32,11 @@ public class WheelSteering : IsState
         // Dialogue
         if(Time.time >= nextUpdate){
     		nextUpdate = Mathf.FloorToInt(Time.time) + 15; // play every 30 seconds
-    		sc.wheelSteerDialogue.PlayDialogue(sc);
+    		sc.wheelSteerDialogue.PlayDialogue(sc, 15, true);
     	}
         
 
-        Debug.Log("ship rot: " + sc.ship.transform.localRotation.eulerAngles.y + " || " + "desired rot: " + sc.desiredRotation);
+        // Debug.Log("ship rot: " + sc.ship.transform.localRotation.eulerAngles.y + " || " + "desired rot: " + sc.desiredRotation);
         if (Mathf.Abs(sc.ship.transform.localRotation.eulerAngles.y - sc.desiredRotation) <= rotationThreshold) {
             sc.ChangeState(sc.ladder_climb);
         }

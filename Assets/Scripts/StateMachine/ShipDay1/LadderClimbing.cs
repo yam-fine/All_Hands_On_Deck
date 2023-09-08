@@ -31,8 +31,7 @@ public class LadderClimbing : IsState
         sc.enviro.configuration = sc.configs[2];
         sc.enviro.Weather.ChangeWeather("Cloudy 2");
 
-        // Dialogue
-        sc.climbLadderEndDialogue.PlayDialogue(sc);
+        
 
         
     }
@@ -56,7 +55,9 @@ public class LadderClimbing : IsState
             sc.actionMoveProvider.enabled = false;
 
             //teleport to hull
-            sc.TeleportWithFade(sc.ChangeState, sc.hull);
+            // Dialogue
+            sc.climbLadderEndDialogue.PlayDialogue(sc);
+            sc.TeleportWithFade(sc.ChangeState, sc.beforeHull);
         }
     }
 }

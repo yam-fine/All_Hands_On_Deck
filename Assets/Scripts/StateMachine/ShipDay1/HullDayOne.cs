@@ -7,15 +7,18 @@ public class HullDayOne : IsState
     bool event_reached = false;
 
     public void OnEnter(StateController sc) {
-        Debug.Log("HULL");
         InnerOnEnter((ShipDay1StateController)sc);
     }
 
     void InnerOnEnter(ShipDay1StateController sc) {
-        //dialogue
-        sc.actionMoveProvider.enabled = true;
         sc.givingCPR.StartCPR();
         sc.takingCPR.StartGettingCPR();
+
+        //dialogue
+        sc.hullDialogue.PlayDialogue(sc, 2, true);
+
+
+        
     }
 
     public void OnExit(StateController sc) {
