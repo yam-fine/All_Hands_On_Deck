@@ -16,10 +16,6 @@ public class Ladder2 : IsState
     void InnerOnEnter(ShipDay2 sc) {
         sc.enviro.configuration = sc.configs[1];
         sc.enviro.Weather.ChangeWeather("Foggy");
-
-        foreach (GameObject obj in sc.ropeComps) {
-            obj.SetActive(true);
-        }
     }
 
     public void OnExit(StateController sc) {
@@ -32,6 +28,7 @@ public class Ladder2 : IsState
 
         sc.player_climb.should_apply_gravity = true;
         sc.hook_walls.SetActive(false);
+        sc.hookExplanation.gameObject.SetActive(false);
     }
 
     public void UpdateState(StateController sc) {
@@ -40,6 +37,8 @@ public class Ladder2 : IsState
 
     void InnerUpdateState(ShipDay2 sc) {
         if (sc.hook_pile.playerReached && !got_hook) {
+            Debug.Log("hook");
+            sc.hookExplanation.gameObject.SetActive(true);
             got_hook = true;
             sc.hook_walls.SetActive(true);
             sc.hook.SetActive(true);
@@ -65,6 +64,8 @@ public class Ladder2 : IsState
 
             sc.actionMoveProvider.enabled = false;
 
+            // change state
+            sc.ChangeState(sc.final);
             //teleport to hull
             //sc.TeleportWithFade(sc.ChangeState, sc.hull);
         }
