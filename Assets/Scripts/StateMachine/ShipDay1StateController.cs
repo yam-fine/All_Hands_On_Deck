@@ -72,7 +72,7 @@ public class ShipDay1StateController : StateController
 
     public GameObject[] toDisapearOnHull;
 
-    public FMODUnity.StudioEventEmitter musicEmitter;
+    public MusicControlDeckDay1 musicControl;
 
     public FMODUnity.StudioEventEmitter ambienceEmitter;
     

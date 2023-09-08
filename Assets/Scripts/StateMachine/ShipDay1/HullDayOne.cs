@@ -17,6 +17,10 @@ public class HullDayOne : IsState
         //dialogue
         sc.hullDialogue.PlayDialogue(sc, 2, true);
 
+        // sound effects
+
+        //sc.
+
 
         
     }
