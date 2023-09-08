@@ -40,6 +40,8 @@ public class ShipDay2 : StateController {
     void Start() {
         enviro.configuration = configs[0];
         enviro.Weather.ChangeWeather("Cloudy 1");
+        waterMat.SetFloat("_WaveScale", 2);
+        waterMat.SetFloat("_WaveFrequency", 1);
         ChangeState(ladder_climb);
     }
 

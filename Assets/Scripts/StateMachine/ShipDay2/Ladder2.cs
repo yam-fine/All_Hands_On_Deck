@@ -29,6 +29,8 @@ public class Ladder2 : IsState
         sc.player_climb.should_apply_gravity = true;
         sc.hook_walls.SetActive(false);
         sc.hookExplanation.gameObject.SetActive(false);
+        sc.hook.SetActive(false);
+        sc.rope.SetActive(false);
     }
 
     public void UpdateState(StateController sc) {
