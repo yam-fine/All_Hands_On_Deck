@@ -7,6 +7,8 @@ public class SailFurling : IsState
 
     private int nextUpdate = 0;
 
+    private bool pulled = false;
+
 
     public void OnEnter(StateController sc) {
         InnerEnterState((ShipDay1StateController)sc);
@@ -15,7 +17,7 @@ public class SailFurling : IsState
 
     public void InnerExitState(ShipDay1StateController sc) {
         sc.sailsNPC.StopWaving();
-        sc.sailsUpDialogue.PlayDialogue(sc);
+        sc.sailsUpDialogue.PlayDialogue(sc, 3);
     }
 
     public void OnExit(StateController sc) {
@@ -37,6 +39,11 @@ public class SailFurling : IsState
     		sc.audioManager.PlaySound(AudioManager.Sounds.ay_leut, GameObject.Find("Will (7)"));
     	}
 
+        if(sc.ropePullingInteractor.IsPulling() && !pulled) {
+            pulled = true;
+            sc.sailsDownDialogue.PlayDialogue(sc, 2);
+        }
+
         if (RopePullingInteractor.stop) {
             sc.ChangeState(sc.wheel_steering);
         }
@@ -44,6 +51,6 @@ public class SailFurling : IsState
 
 
     void InnerEnterState(ShipDay1StateController sc) {
-        sc.sailsDownDialogue.PlayDialogue(sc);
+        
     }
 }

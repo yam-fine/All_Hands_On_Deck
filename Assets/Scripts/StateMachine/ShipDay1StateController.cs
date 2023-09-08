@@ -39,6 +39,8 @@ public class ShipDay1StateController : StateController
 
     public AudioManager audioManager;
 
+    public RopePullingInteractor ropePullingInteractor;
+
     [HideInInspector] public Dialogue sailsDownDialogue;
 
     [HideInInspector] public Dialogue sailsUpDialogue;

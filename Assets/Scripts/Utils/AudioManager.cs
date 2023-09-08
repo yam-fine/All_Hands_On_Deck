@@ -48,6 +48,8 @@ public class AudioManager : Singleton<AudioManager>
         much_obliged,
 
         ye_sea_rats,
+
+        rope_pull_fx,
         
     }
 

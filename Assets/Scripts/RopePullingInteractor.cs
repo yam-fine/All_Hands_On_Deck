@@ -29,6 +29,8 @@ public class RopePullingInteractor : MonoBehaviour
     [SerializeField] private Animator sailAnimator;
     [SerializeField] private float sailOpenPoint;
 
+    public AudioManager audioManager;
+
     public void AddGrabingPoint(XRGrabInteractable grabbingPoint, Vector3 startingPosition)
     {
         grabbingPoints.Add(grabbingPoint);
@@ -171,6 +173,9 @@ public class RopePullingInteractor : MonoBehaviour
     // Called when a grabbing point is grabbed
     private void OnGrabbingPointGrabbed(SelectEnterEventArgs args)
     {
+
+        audioManager.PlaySound(AudioManager.Sounds.rope_pull_fx);
+
         activeGrabbingPoint = args.interactableObject as XRGrabInteractable;
         if (isReturning)
         {
@@ -188,4 +193,6 @@ public class RopePullingInteractor : MonoBehaviour
             activeGrabbingPoint = null;
         }
     }
+
+    public bool IsPulling() { return activeGrabbingPoint != null; }
 }
