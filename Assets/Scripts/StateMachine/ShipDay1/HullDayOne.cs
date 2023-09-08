@@ -19,13 +19,18 @@ public class HullDayOne : IsState
 
         // sound effects
 
-        //sc.
+        sc.musicControl.SetHallParam(true);
 
 
         
     }
 
+    public void InnerExitState(ShipDay1StateController sc) {
+        sc.musicControl.SetHallParam(false);
+    }
+
     public void OnExit(StateController sc) {
+        InnerExitState((ShipDay1StateController)sc);
     }
 
     public void UpdateState(StateController sc) {

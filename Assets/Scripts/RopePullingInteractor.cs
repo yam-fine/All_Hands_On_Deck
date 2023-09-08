@@ -174,7 +174,8 @@ public class RopePullingInteractor : MonoBehaviour
     private void OnGrabbingPointGrabbed(SelectEnterEventArgs args)
     {
 
-        audioManager.PlaySound(AudioManager.Sounds.rope_pull_fx);
+        if (audioManager) {audioManager.PlaySound(AudioManager.Sounds.rope_pull_fx);}
+        
 
         activeGrabbingPoint = args.interactableObject as XRGrabInteractable;
         if (isReturning)

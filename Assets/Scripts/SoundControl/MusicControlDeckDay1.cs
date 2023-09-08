@@ -19,14 +19,16 @@ public class MusicControlDeckDay1 : MonoBehaviour
     void Start() {
         musicEmitter = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
         musicEmitter.start();
+        musicEmitter.setParameterByName("Deck",  1f); 
     }
 
     void Update() {
         musicEmitter.setParameterByName("UP_TheLadder",  (float)(1 - (Mathf.Abs(player.position.y - target.position.y) / 20.5f) )); 
     }
 
-    void SetHallParam(bool isHall) {
-        //musicEmitter.setParameterByName("Hall",  isHall); 
+    public void SetHallParam(bool isHall) {
+        if (isHall) {musicEmitter.setParameterByName("Hall",  1f); } else {musicEmitter.setParameterByName("Hall",  0f); }  
+        
     }
 
     

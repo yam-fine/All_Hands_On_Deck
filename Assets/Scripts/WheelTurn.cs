@@ -68,8 +68,10 @@ public class WheelTurn : MonoBehaviour
     }
     
     private void PlaySoundEffectIfNeeded() {
-        if (!audioManager.IsPlaying(AudioManager.Sounds.wheel_string_fx)) {
-            audioManager.PlaySound(AudioManager.Sounds.wheel_string_fx, wheel);
+        if (audioManager) {
+            if (!audioManager.IsPlaying(AudioManager.Sounds.wheel_string_fx)) {
+                audioManager.PlaySound(AudioManager.Sounds.wheel_string_fx, wheel);
+            }
         }
     }
 
