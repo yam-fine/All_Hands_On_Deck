@@ -50,6 +50,12 @@ public class AudioManager : Singleton<AudioManager>
         ye_sea_rats,
 
         rope_pull_fx,
+
+        but_cap_said,
+
+        fine_work,
+
+        them_black_clouds,
         
     }
 

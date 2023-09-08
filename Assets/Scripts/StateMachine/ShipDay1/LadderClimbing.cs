@@ -13,8 +13,14 @@ public class LadderClimbing : IsState
     }
 
     void InnerOnEnter(ShipDay1StateController sc) {
+        // Weather
         sc.enviro.configuration = sc.configs[1];
         sc.enviro.Weather.ChangeWeather("Foggy");
+
+
+        // Dialogue
+        sc.climbLadderDialogue.PlayDialogue(sc);
+
     }
 
     public void OnExit(StateController sc) {
@@ -24,6 +30,11 @@ public class LadderClimbing : IsState
     void InnerOnExit(ShipDay1StateController sc) {
         sc.enviro.configuration = sc.configs[2];
         sc.enviro.Weather.ChangeWeather("Cloudy 2");
+
+        // Dialogue
+        sc.climbLadderEndDialogue.PlayDialogue(sc);
+
+        
     }
 
     public void UpdateState(StateController sc) {

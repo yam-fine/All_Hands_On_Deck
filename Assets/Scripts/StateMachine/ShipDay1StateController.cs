@@ -11,11 +11,13 @@ public class ShipDay1StateController : StateController
 
     public GameObject avatar;
 
+    public GameObject captain;
+
     public GameObject ship;
     public EventReachedDetection ld;
     public EnviroManager enviro;
     public Transform hull_teleport;
-    public float desiredRotation = 25;
+    public float desiredRotation = 2;
     public EventReachedDetection whale_desired_position;
     public WhaleEventReachedDetection whaleShipColided;
     public ActionBasedContinuousMoveProvider actionMoveProvider;
@@ -45,6 +47,13 @@ public class ShipDay1StateController : StateController
 
     [HideInInspector] public Dialogue sailsUpDialogue;
 
+    [HideInInspector] public Dialogue wheelSteerDialogue;
+
+    [HideInInspector] public Dialogue climbLadderDialogue;
+
+    [HideInInspector] public Dialogue climbLadderEndDialogue;
+    
+
     void Awake() {
         audioManager = GameObject.Find("Avatar").GetComponent<AudioManager>();
     }
@@ -65,6 +74,22 @@ public class ShipDay1StateController : StateController
         sailsUpDialogue.dialogueEvents = new List<DialogueEvents>{
             new DialogueEvents(AudioManager.Sounds.much_obliged, avatar),
             new DialogueEvents(AudioManager.Sounds.ye_sea_rats, avatar), 
+        };
+
+
+        wheelSteerDialogue = dialogueObject.AddComponent<Dialogue>();
+        wheelSteerDialogue.dialogueEvents = new List<DialogueEvents>{
+            new DialogueEvents(AudioManager.Sounds.but_cap_said, avatar),
+        };
+
+        climbLadderDialogue = dialogueObject.AddComponent<Dialogue>();
+        climbLadderDialogue.dialogueEvents = new List<DialogueEvents>{
+            new DialogueEvents(AudioManager.Sounds.fine_work, captain),
+        };
+
+        climbLadderEndDialogue = dialogueObject.AddComponent<Dialogue>();
+        climbLadderEndDialogue.dialogueEvents = new List<DialogueEvents>{
+            new DialogueEvents(AudioManager.Sounds.them_black_clouds, captain),
         };
 
         

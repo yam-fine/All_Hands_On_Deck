@@ -15,8 +15,8 @@ public struct DialogueEvents {
 public class Dialogue : MonoBehaviour {
     public List<DialogueEvents> dialogueEvents;
 
-    public void PlayDialogue(StateController sc, int dialogueDelay = 0) {
-        StartCoroutine(Plan(sc, dialogueDelay));
+    public void PlayDialogue(StateController sc, int dialogueDelay = 0, bool applyDelayAtStart = false) {
+        StartCoroutine(Plan(sc, dialogueDelay, applyDelayAtStart));
     }
 
     public void PlayRandom(StateController sc, float delta) {
@@ -27,8 +27,12 @@ public class Dialogue : MonoBehaviour {
         StopAllCoroutines();
     }
 
-    IEnumerator Plan(StateController sc, int dialogueDelay) {
+    IEnumerator Plan(StateController sc, int dialogueDelay, bool applyDelayAtStart) {
         AudioManager am = AudioManager.Instance;
+
+        if (applyDelayAtStart) {
+            yield return new WaitForSeconds(dialogueDelay);
+        }
 
         foreach (DialogueEvents line in dialogueEvents) {
             am.PlaySound(line.sound, line.source);
