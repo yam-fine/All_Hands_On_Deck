@@ -74,7 +74,7 @@ public class ShipDay1StateController : StateController
 
     public MusicControlDeckDay1 musicControl;
 
-    public FMODUnity.StudioEventEmitter ambienceEmitter;
+    public AmbienceControlDeckDay1 ambienceControl;
     
 
     void Awake() {

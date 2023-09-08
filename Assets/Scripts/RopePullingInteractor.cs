@@ -196,4 +196,6 @@ public class RopePullingInteractor : MonoBehaviour
     }
 
     public bool IsPulling() { return activeGrabbingPoint != null; }
+
+    public float GetSailStatus() {return sailAnimator.GetFloat("SailOpenAmount");}
 }

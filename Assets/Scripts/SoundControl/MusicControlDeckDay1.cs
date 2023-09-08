@@ -14,8 +14,9 @@ public class MusicControlDeckDay1 : MonoBehaviour
 
     public Transform target;
 
-    private bool isStorm;
+    public bool hall;
 
+    
     void Start() {
         musicEmitter = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
         musicEmitter.start();
@@ -24,13 +25,21 @@ public class MusicControlDeckDay1 : MonoBehaviour
 
     void Update() {
         musicEmitter.setParameterByName("UP_TheLadder",  (float)(1 - (Mathf.Abs(player.position.y - target.position.y) / 20.5f) )); 
+
+        if (hall) {
+            float intensity;
+            musicEmitter.getParameterByName("Hall_Intensity", out intensity);
+            musicEmitter.setParameterByName("Hall_Intensity",  intensity + Time.deltaTime * 0.03f);
+        }
     }
 
     public void SetHallParam(bool isHall) {
-        if (isHall) {musicEmitter.setParameterByName("Hall",  1f); } else {musicEmitter.setParameterByName("Hall",  0f); }  
-        
+        if (isHall) {musicEmitter.setParameterByName("Hall",  1f); hall = true; } else {musicEmitter.setParameterByName("Hall",  0f); }
     }
 
+    public void Stop() {
+        musicEmitter.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
     
 
     
