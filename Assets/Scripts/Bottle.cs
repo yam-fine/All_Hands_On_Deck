@@ -52,7 +52,9 @@ public class Bottle : MonoBehaviour
 
     public void OnBottleHold(SelectEnterEventArgs args)
     {
-        audioManager.PlaySound(AudioManager.Sounds.bottle_up);
+
+        if (audioManager) {audioManager.PlaySound(AudioManager.Sounds.bottle_up);}
+        
 
         if (args.interactor.name.Contains("Left"))
         {
@@ -66,7 +68,7 @@ public class Bottle : MonoBehaviour
 
     public void OnBottleRelease(SelectExitEventArgs args)
     {
-        audioManager.PlaySound(AudioManager.Sounds.bottle_down);
+        if (audioManager) {audioManager.PlaySound(AudioManager.Sounds.bottle_down);}
 
         if (IsOpen())
             return;
@@ -76,7 +78,7 @@ public class Bottle : MonoBehaviour
     {
         // Debug.Log("Open");
         
-        audioManager.PlaySound(AudioManager.Sounds.bottle_open);
+        if (audioManager) {audioManager.PlaySound(AudioManager.Sounds.bottle_open);}
 
         cap.transform.SetParent(null, worldPositionStays: true);
         _capRigidBody.isKinematic = false;
@@ -84,8 +86,7 @@ public class Bottle : MonoBehaviour
     }
     public void OnBottleClose(SelectEnterEventArgs args)
     {
-        // Debug.Log("Close");
-        audioManager.PlaySound(AudioManager.Sounds.bottle_close);
+        if (audioManager) {audioManager.PlaySound(AudioManager.Sounds.bottle_close);}
         Close();
         cap.GetComponent<Rigidbody>().isKinematic = true;
         cap.transform.SetParent(transform, worldPositionStays: true);

@@ -24,6 +24,10 @@ public class RoomDay1StateController : StateController
     public GameObject avatar;
 
     public Transform getUpPosition;
+
+    public Transform xrOriginInitPos;
+
+    public Transform xrOrigin;
     
     public GameObject captain;
     public Bottle bottle;
@@ -70,5 +74,7 @@ public class RoomDay1StateController : StateController
         };
 
         ChangeState(waterPickup);
+
+        xrOrigin.position = xrOriginInitPos.position;
     }
 }

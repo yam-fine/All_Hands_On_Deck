@@ -9,12 +9,12 @@ public class Room1Roam : IsState {
     }
 
     void InnerOnEnter(RoomDay1StateController sc) {
-        sc.roamDialogue.PlayDialogue(sc);
-        sc.player.GetComponent<CharacterController>().enabled = false;
+        sc.roamDialogue.PlayDialogue(sc, 2, true);
+        //sc.player.GetComponent<CharacterController>().enabled = false;
     }
 
     public void OnExit(StateController sc) {
-        throw new System.NotImplementedException();
+        // throw new System.NotImplementedException();
     }
 
     public void UpdateState(StateController sc) {

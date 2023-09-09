@@ -9,7 +9,7 @@ public class WaterPickup : IsState
     }
 
     void InnerOnEnter(RoomDay1StateController sc) {
-        sc.waterDrinkDialogue.PlayDialogue(sc);
+        sc.waterDrinkDialogue.PlayDialogue(sc, 2, true);
     }
 
     public void OnExit(StateController sc) {
