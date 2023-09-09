@@ -55,7 +55,7 @@ public class Ladder2 : IsState
             isHooked = true;
         }
 
-        if (isHooked && sc.groundCheck.IsGrounded("ladder_point", 1)) {
+        if (isHooked && sc.groundCheck.IsGrounded("ladder_point", 10, sc.ladderGroundLayer)) {
             sc.player_climb.should_apply_gravity = true;
         }
 
