@@ -10,11 +10,11 @@ public class Final : IsState {
     }
 
     void InnerOnEnter(ShipDay2StateController sc) {
-        sc.fade.FadeOut();
+
     }
 
     public void OnExit(StateController sc) {
-        throw new System.NotImplementedException();
+        
     }
 
     public void UpdateState(StateController sc) {
@@ -22,12 +22,12 @@ public class Final : IsState {
     }
 
     private void InnerUpdate(ShipDay2StateController sc) {
-        while (timer < sc.fade.fadeDur) {
-            timer += Time.deltaTime;
-            return;
-        }
-        sc.player.transform.position = sc.teleportAfterLadder.position;
-        sc.player.transform.rotation = sc.teleportAfterLadder.rotation;
-        sc.fade.FadeIn();
+        // while (timer < sc.fade.fadeDur) {
+        //     timer += Time.deltaTime;
+        //     return;
+        // }
+        // // sc.player.transform.position = sc.teleportAfterLadder.position;
+        // // sc.player.transform.rotation = sc.teleportAfterLadder.rotation;
+        // sc.fade.FadeIn();
     }
 }

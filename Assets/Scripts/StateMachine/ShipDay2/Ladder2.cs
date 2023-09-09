@@ -19,6 +19,10 @@ public class Ladder2 : IsState
         sc.enviro.Weather.ChangeWeather("Foggy");
 
         sc.hookExplanation.gameObject.SetActive(true);
+
+        sc.climbLadderDialogue.PlayDialogue(sc, 3);
+
+        sc.capAnimator.SetBool("IsPointing", true);
     }
 
     public void OnExit(StateController sc) {
@@ -35,6 +39,10 @@ public class Ladder2 : IsState
         sc.hook.SetActive(false);
         sc.rope.SetActive(false);
         sc.player.transform.parent = null;
+
+        sc.capAnimator.SetBool("IsPointing", false);
+
+        sc.climbLadderEndDialogue.PlayDialogue(sc, 3);
     }
 
     public void UpdateState(StateController sc) {
@@ -74,9 +82,9 @@ public class Ladder2 : IsState
             sc.actionMoveProvider.enabled = false;
 
             // change state
-            sc.ChangeState(sc.final);
-            //teleport to hull
-            //sc.TeleportWithFade(sc.ChangeState, sc.hull);
+            // sc.ChangeState(sc.finish);
+            
+            sc.TeleportWithFade(sc.ChangeState, sc.whaleState);
         }
     }
 }

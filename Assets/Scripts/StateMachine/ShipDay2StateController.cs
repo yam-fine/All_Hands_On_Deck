@@ -9,7 +9,11 @@ public class ShipDay2StateController : StateController {
 
     public GameObject player;
 
+    public GameObject xrorigin;
+
     public GameObject avatar;
+
+    public WhaleEventReachedDetection whaleShipColided;
     
     public GameObject ship;
 
@@ -36,6 +40,8 @@ public class ShipDay2StateController : StateController {
     public XRSocketInteractor hook_socket;
     
     public Climb player_climb;
+
+    public FollowThePath killerWhalePath;
     
     public GameObject hook_walls;
     
@@ -70,7 +76,7 @@ public class ShipDay2StateController : StateController {
 
     public CutsceneDayTwo cutscene = new CutsceneDayTwo();
 
-    public Final final = new Final();
+    public Final finish = new Final();
 
 
     [HideInInspector] public Dialogue sailsDownDialogue;
@@ -83,15 +89,21 @@ public class ShipDay2StateController : StateController {
 
     [HideInInspector] public Dialogue climbLadderEndDialogue;
 
-    [HideInInspector] public Dialogue beforeHullDialogue;
+    [HideInInspector] public Dialogue whaleDialogue;
 
-    [HideInInspector] public Dialogue hullDialogue;
+    [HideInInspector] public Dialogue finishDialogue;
 
     public MusicControlDeckDay1 musicControl;
 
     public AmbienceControlDeckDay1 ambienceControl;
 
     public RopePullingInteractor ropePullingInteractor;
+
+    public Animator capAnimator;
+
+    public EventReachedDetection cutscene_desired_position;
+
+    public FollowThePath captainCutScenePath;
 
     // Start is called before the first frame update
     void Start() {
@@ -120,36 +132,80 @@ public class ShipDay2StateController : StateController {
             new DialogueEvents(AudioManager.Sounds.barely_now_to_steer, avatar),
         };
 
+        climbLadderDialogue = dialogueObject.AddComponent<Dialogue>();
+        climbLadderDialogue.dialogueEvents = new List<DialogueEvents>{
+            new DialogueEvents(AudioManager.Sounds.lieut_take_this, captain),
+            new DialogueEvents(AudioManager.Sounds.cap_im_not_sure, avatar),
+            new DialogueEvents(AudioManager.Sounds.oh_but_i_have_never, captain),
+            new DialogueEvents(AudioManager.Sounds.i_dont_know_cap, avatar),
+            new DialogueEvents(AudioManager.Sounds.shut_ye_trap, captain),
+            new DialogueEvents(AudioManager.Sounds.im_not_so_sure, avatar),
+        };
+
+        climbLadderEndDialogue = dialogueObject.AddComponent<Dialogue>();
+        climbLadderEndDialogue.dialogueEvents = new List<DialogueEvents>{
+            new DialogueEvents(AudioManager.Sounds.we_are_on_tail_cap, xrorigin),
+            new DialogueEvents(AudioManager.Sounds.hunting_station, captain),
+        };
+
+        whaleDialogue = dialogueObject.AddComponent<Dialogue>();
+        whaleDialogue.dialogueEvents = new List<DialogueEvents>{
+            new DialogueEvents(AudioManager.Sounds.come_to_papa, captain),
+        };
+
+
+        finishDialogue = dialogueObject.AddComponent<Dialogue>();
+        finishDialogue.dialogueEvents = new List<DialogueEvents>{
+            new DialogueEvents(AudioManager.Sounds.i_just_had, avatar),
+        };
         
 
-        ChangeState(sails);
+        // ChangeState(sails);
+        ChangeState(ladder_climb);
     }
 
     public void TeleportWithFade(System.Action<IsState> funcToExecute, IsState state) {
         StartCoroutine(TeleportAndFadeCoroutine(funcToExecute, state));
     }
 
+    public void FadeFinish() {
+        StartCoroutine(FadeFinishCoroutine());
+    }
+
     private IEnumerator TeleportAndFadeCoroutine(System.Action<IsState> funcToExecute, IsState state) {
-        // Fade in
-        // fade.FadeIn();
+        
+        yield return new WaitForSeconds(5);
+
+        // Fade out
+        fade.FadeOut();
         yield return new WaitForSeconds(fade.fadeDur);
 
         // Teleport the player
-        player.transform.position = hull_teleport.position;
+        xrorigin.transform.position = hull_teleport.position;
+
         if (funcToExecute != null)
             funcToExecute.Invoke(state);
 
+        // Fade in
+        fade.FadeIn();
+
+        actionMoveProvider.enabled = true;
+
+    }
+
+
+    private IEnumerator FadeFinishCoroutine() {
+
         // Fade out
-        // fade.FadeOut();
+        fade.FadeOut();
+        yield return new WaitForSeconds(fade.fadeDur);
+
+        finishDialogue.PlayDialogue(this);
+
+        yield return new WaitForSeconds(5);
+
+        Application.Quit();
+
     }
 
-    public void LoadScene() {
-        StartCoroutine(LoadSceneIEnum());
-    }
-
-    IEnumerator LoadSceneIEnum() {
-        yield return new WaitForSeconds(this.fade.fadeDur);
-        SceneManager.UnloadSceneAsync("DeckDay1");
-        SceneManager.LoadScene("RoomDay2");
-    }
 }
