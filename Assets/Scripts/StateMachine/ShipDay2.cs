@@ -28,6 +28,7 @@ public class ShipDay2 : StateController {
     public List<EnviroConfiguration> configs;
     public Transform teleportAfterLadder;
     public GroundCheckLadder groundCheck;
+    public LayerMask ladderGroundLayer;
 
     public Sail2 sails = new Sail2();
     public Steer2 wheel_steering = new Steer2();
