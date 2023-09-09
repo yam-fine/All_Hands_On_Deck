@@ -10,14 +10,15 @@ public class RoomDay2Roam : IsState
     }
 
     void InnerOnEnter(RoomDay2SceneManager sc) {
-        sc.player.GetComponent<CharacterController>().enabled = false;
+        sc.xrorigin.GetComponent<CharacterController>().enabled = false;
+        sc.roamDialogue.PlayDialogue(sc, 2, true);
     }
 
     public void OnExit(StateController sc) {
-        throw new System.NotImplementedException();
+
     }
 
     public void UpdateState(StateController sc) {
-        throw new System.NotImplementedException();
+
     }
 }

@@ -13,11 +13,27 @@ public class RoomDay2SceneManager : StateController
     public ActionBasedContinuousTurnProvider actionTurnProvider;
     public Material waterMat;
     public GameObject player;
+
+    public GameObject xrorigin;
+
     public GameObject captain;
+
+    public GameObject avatar;
+
+    public Transform getUpPosition;
+
     public Bottle bottle;
     public Animator avatarAnimator;
     public EnviroConfiguration config;
     public EnviroManager enviro;
+
+    public AudioManager audioManager;
+
+    [HideInInspector] public Dialogue waterDrinkDialogue;
+
+    [HideInInspector] public Dialogue roamDialogue;
+
+
 
     private bool _playerDrank;
     public bool PlayerDrank { get { return _playerDrank; } }
@@ -29,6 +45,26 @@ public class RoomDay2SceneManager : StateController
         enviro.Weather.ChangeWeather("Cloudy 1");
         waterMat.SetFloat("_WaveScale", 2);
         waterMat.SetFloat("_WaveFrequency", 1);
+
+
+        // init dialogue
+        GameObject dialogueObject = new GameObject("DialogueObject");
+
+        waterDrinkDialogue = dialogueObject.AddComponent<Dialogue>();
+        waterDrinkDialogue.dialogueEvents = new List<DialogueEvents>{
+            new DialogueEvents(AudioManager.Sounds.ah_its_morning_day2, avatar),
+            new DialogueEvents(AudioManager.Sounds.what, avatar),
+            new DialogueEvents(AudioManager.Sounds.ah_your_awake, captain),
+            new DialogueEvents(AudioManager.Sounds.what_in_the_hell, avatar),
+            new DialogueEvents(AudioManager.Sounds.il_leave_ya, avatar),
+        };
+        
+        roamDialogue = dialogueObject.AddComponent<Dialogue>();
+        roamDialogue.dialogueEvents = new List<DialogueEvents>{
+            new DialogueEvents(AudioManager.Sounds.get_it_together, avatar),
+            new DialogueEvents(AudioManager.Sounds.word_around, GameObject.Find("ImaginaryCrewMate")),
+        };
+
 
         ChangeState(waterPickup);
     }

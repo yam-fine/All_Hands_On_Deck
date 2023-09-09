@@ -91,6 +91,50 @@ public class AudioManager : Singleton<AudioManager>
 
         ladder_climb_fx,
 
+        ah_its_morning_day2,
+
+        what,
+
+        ah_your_awake,
+
+        what_in_the_hell,
+
+        il_leave_ya,
+
+        get_it_together,
+
+        word_around,
+
+        lieut_can_ye_give,
+
+        oy_maggots,
+
+        i_have_to_do_it,
+
+        very_well,
+
+        barely_now_to_steer,
+
+        just_need_to_steer,
+
+        lieut_take_this,
+
+        cap_im_not_sure,
+
+        oh_but_i_have_never,
+
+        i_dont_know_cap,
+
+        shut_ye_trap,
+
+        im_not_so_sure,
+
+        we_are_on_tail_cap,
+
+        hunting_station,
+
+        come_to_papa
+
 
     }
 
