@@ -152,11 +152,7 @@ public class ShipDay1StateController : StateController
 
         enviro.configuration = configs[0];
         enviro.Weather.ChangeWeather("Cloudy 1");
-        ChangeState(ladder_climb);
-
-        
-
-
+        ChangeState(sails);
         
     }
 
