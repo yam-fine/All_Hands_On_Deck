@@ -54,7 +54,6 @@ public class LadderClimbing : IsState
 
             //teleport to hull
             // Dialogue
-            sc.climbLadderEndDialogue.PlayDialogue(sc);
             sc.TeleportWithFade(sc.ChangeState, sc.beforeHull);
         }
     }

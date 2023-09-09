@@ -18,6 +18,7 @@ public class ShipDay1StateController : StateController
     public EnviroManager enviro;
     public Transform hull_teleport;
     public float desiredRotation = 2;
+    public Transform afterLadderPosition;
 
     public EventReachedDetection hull_desired_position;
 
@@ -151,7 +152,7 @@ public class ShipDay1StateController : StateController
 
         enviro.configuration = configs[0];
         enviro.Weather.ChangeWeather("Cloudy 1");
-        ChangeState(sails);
+        ChangeState(ladder_climb);
 
         
 
@@ -165,16 +166,18 @@ public class ShipDay1StateController : StateController
 
     private IEnumerator TeleportAndFadeCoroutine(System.Action<IsState> funcToExecute, IsState state) {
         // Fade in
-        // fade.FadeIn();
+        yield return new WaitForSeconds(5);
+        climbLadderEndDialogue.PlayDialogue(this);
+        fade.FadeOut();
         yield return new WaitForSeconds(fade.fadeDur);
 
         // Teleport the player
-        player.transform.position = hull_teleport.position;
+        player.transform.position = afterLadderPosition.position;
         if (funcToExecute != null)
             funcToExecute.Invoke(state);
 
         // Fade out
-        // fade.FadeOut();
+        fade.FadeIn();
     }
 
     public void LoadScene() {
