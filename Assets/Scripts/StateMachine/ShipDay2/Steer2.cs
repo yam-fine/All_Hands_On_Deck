@@ -6,20 +6,27 @@ public class Steer2 : IsState
 {
     float rotationThreshold = 1;
 
-    public void OnEnter(StateController sc) {
-        throw new System.NotImplementedException();
+
+    private void InnerEnterState(ShipDay2StateController sc) {
+        sc.wheelSteerDialogue.PlayDialogue(sc, 5, true);
     }
 
+    public void OnEnter(StateController sc) {
+        InnerEnterState((ShipDay2StateController)sc);
+    }
+
+    
+
     public void OnExit(StateController sc) {
-        throw new System.NotImplementedException();
+        // throw new System.NotImplementedException();
     }
 
     public void UpdateState(StateController sc) {
-        InnerUpdateState((ShipDay2)sc);
+        InnerUpdateState((ShipDay2StateController)sc);
     }
 
-    void InnerUpdateState(ShipDay2 sc) {
-        if (Mathf.Abs(sc.ship.transform.rotation.y - sc.desiredRotation) <= rotationThreshold) {
+    void InnerUpdateState(ShipDay2StateController sc) {
+        if (Mathf.Abs(sc.ship.transform.localRotation.eulerAngles.y - sc.desiredRotation) <= rotationThreshold) {
             sc.ChangeState(sc.ladder_climb);
         }
     }

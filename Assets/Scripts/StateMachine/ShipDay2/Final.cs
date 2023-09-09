@@ -6,10 +6,10 @@ public class Final : IsState {
 
     float timer = 0;
     public void OnEnter(StateController sc) {
-        InnerOnEnter((ShipDay2)sc);
+        InnerOnEnter((ShipDay2StateController)sc);
     }
 
-    void InnerOnEnter(ShipDay2 sc) {
+    void InnerOnEnter(ShipDay2StateController sc) {
         sc.fade.FadeOut();
     }
 
@@ -18,10 +18,10 @@ public class Final : IsState {
     }
 
     public void UpdateState(StateController sc) {
-        InnerUpdate((ShipDay2)sc);
+        InnerUpdate((ShipDay2StateController)sc);
     }
 
-    private void InnerUpdate(ShipDay2 sc) {
+    private void InnerUpdate(ShipDay2StateController sc) {
         while (timer < sc.fade.fadeDur) {
             timer += Time.deltaTime;
             return;

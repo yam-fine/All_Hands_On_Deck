@@ -11,19 +11,21 @@ public class Ladder2 : IsState
     bool isHooked = false;
 
     public void OnEnter(StateController sc) {
-        InnerOnEnter((ShipDay2)sc);
+        InnerOnEnter((ShipDay2StateController)sc);
     }
 
-    void InnerOnEnter(ShipDay2 sc) {
+    void InnerOnEnter(ShipDay2StateController sc) {
         sc.enviro.configuration = sc.configs[1];
         sc.enviro.Weather.ChangeWeather("Foggy");
+
+        sc.hookExplanation.gameObject.SetActive(true);
     }
 
     public void OnExit(StateController sc) {
-        InnerOnExit((ShipDay2)sc);
+        InnerOnExit((ShipDay2StateController)sc);
     }
 
-    void InnerOnExit(ShipDay2 sc) {
+    void InnerOnExit(ShipDay2StateController sc) {
         sc.enviro.configuration = sc.configs[2];
         sc.enviro.Weather.ChangeWeather("Cloudy 2");
 
@@ -36,10 +38,10 @@ public class Ladder2 : IsState
     }
 
     public void UpdateState(StateController sc) {
-        InnerUpdateState((ShipDay2)sc);
+        InnerUpdateState((ShipDay2StateController)sc);
     }
 
-    void InnerUpdateState(ShipDay2 sc) {
+    void InnerUpdateState(ShipDay2StateController sc) {
         if (!got_hook && sc.hook_pile.playerReached) {
             sc.hookExplanation.gameObject.SetActive(true);
             got_hook = true;

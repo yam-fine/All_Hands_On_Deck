@@ -10,7 +10,7 @@ public class MusicControlDeckDay1 : MonoBehaviour
 
     private FMOD.Studio.EventInstance musicEmitter;
 
-    public Transform player;
+    public Transform avatar;
 
     public Transform target;
 
@@ -19,11 +19,10 @@ public class MusicControlDeckDay1 : MonoBehaviour
     
     void Start() {
         musicEmitter = fmodEmitter.EventInstance;
-        musicEmitter.setParameterByName("Deck",  1f); 
     }
 
     void Update() {
-        musicEmitter.setParameterByName("UP_TheLadder",  (float)(1 - (Mathf.Abs(player.position.y - target.position.y) / 20.5f) )); 
+        musicEmitter.setParameterByName("UP_TheLadder",  (float)(1 - (Mathf.Abs(avatar.position.y - target.position.y) / 20.5f) )); 
 
         if (hall) {
             float intensity;

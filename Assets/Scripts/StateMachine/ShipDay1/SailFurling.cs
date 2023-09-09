@@ -44,6 +44,10 @@ public class SailFurling : IsState
             sc.sailsDownDialogue.PlayDialogue(sc, 2);
         }
 
+        if (pulled) {
+            sc.sailsDownDialogue.StopDialogue();
+        }
+
         if (RopePullingInteractor.stop) {
             sc.ChangeState(sc.wheel_steering);
         }
