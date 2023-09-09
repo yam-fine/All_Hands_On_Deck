@@ -5,12 +5,21 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ClimbInteractor : XRBaseInteractable
 {
-    [System.Obsolete]
+
+    private AudioManager audioManager;
+
+    private void Start() {
+        audioManager = GameObject.Find("Avatar").GetComponent<AudioManager>();    
+    }
+
+    [System.Obsolete]    
     protected override void OnSelectEntered(SelectEnterEventArgs args) {
+
         XRBaseInteractor interactor = args.interactor;
         base.OnSelectEntered(args);
         if (interactor is XRDirectInteractor) {
             Climb.climbingHand = interactor.GetComponent<ActionBasedController>();
+            if (audioManager) {audioManager.PlaySound(AudioManager.Sounds.ladder_climb_fx);}
         }
     }
 

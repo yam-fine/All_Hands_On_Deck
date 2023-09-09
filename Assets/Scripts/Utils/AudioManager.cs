@@ -89,6 +89,8 @@ public class AudioManager : Singleton<AudioManager>
 
         wheel_string_fx,
 
+        ladder_climb_fx,
+
 
     }
 

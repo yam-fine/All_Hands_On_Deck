@@ -23,7 +23,7 @@ public class WhaleDayOne : IsState
     void InnerUpdateState(ShipDay1StateController sc) {
         
         if(sc.whaleShipColided.shipReached) {
-            sc.audioManager.PlaySound(AudioManager.Sounds.whale_crash_end);
+            sc.audioManager.PlaySound(AudioManager.Sounds.big_wave, GameObject.Find("Waypoint (2)-cs"));
             sc.ChangeState(sc.cutscene);
         }
         
