@@ -8,6 +8,7 @@ public class Ladder2 : IsState
     bool got_hook = false;
     float stormWaveHeight = 5;
     float stormWaveFreq = 2;
+    bool isHooked = false;
 
     public void OnEnter(StateController sc) {
         InnerOnEnter((ShipDay2)sc);
@@ -31,6 +32,7 @@ public class Ladder2 : IsState
         sc.hookExplanation.gameObject.SetActive(false);
         sc.hook.SetActive(false);
         sc.rope.SetActive(false);
+        sc.player.transform.parent = null;
     }
 
     public void UpdateState(StateController sc) {
@@ -38,22 +40,25 @@ public class Ladder2 : IsState
     }
 
     void InnerUpdateState(ShipDay2 sc) {
-        if (sc.hook_pile.playerReached && !got_hook) {
-            Debug.Log("hook");
+        if (!got_hook && sc.hook_pile.playerReached) {
             sc.hookExplanation.gameObject.SetActive(true);
             got_hook = true;
             sc.hook_walls.SetActive(true);
             sc.hook.SetActive(true);
             sc.rope.SetActive(true);
+            sc.player.transform.parent = sc.ship.transform;
         }
 
-        if (sc.hook_socket.hasSelection) {
+        if (!isHooked && sc.hook_socket.hasSelection) {
             sc.hook_socket.GetComponentInChildren<MeshRenderer>().enabled = false;
             sc.player_climb.should_apply_gravity = false;
+            isHooked = true;
         }
-        else {
+
+        if (isHooked && sc.groundCheck.IsGrounded("ladder_point", 1)) {
             sc.player_climb.should_apply_gravity = true;
         }
+
         if (sc.ld.playerReached && !playerClimbed) {
             playerClimbed = true;
 
