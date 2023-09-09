@@ -6,7 +6,7 @@ using UnityEngine.XR;
 public class MusicControlDeckDay1 : MonoBehaviour
 {
 
-    public FMODUnity.EventReference fmodEvent;
+    public FMODUnity.StudioEventEmitter fmodEmitter;
 
     private FMOD.Studio.EventInstance musicEmitter;
 
@@ -18,8 +18,7 @@ public class MusicControlDeckDay1 : MonoBehaviour
 
     
     void Start() {
-        musicEmitter = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
-        musicEmitter.start();
+        musicEmitter = fmodEmitter.EventInstance;
         musicEmitter.setParameterByName("Deck",  1f); 
     }
 

@@ -6,7 +6,7 @@ using UnityEngine.XR;
 public class AmbienceControlDeckDay1 : MonoBehaviour
 {
 
-    public FMODUnity.EventReference fmodEvent;
+    public FMODUnity.StudioEventEmitter fmodEmitter;
 
     public RopePullingInteractor rope;
 
@@ -15,8 +15,9 @@ public class AmbienceControlDeckDay1 : MonoBehaviour
     private bool isStorm = false;
     
     void Start() {
-        ambienceEmitter = FMODUnity.RuntimeManager.CreateInstance(fmodEvent);
-        ambienceEmitter.start();
+        // I used fmod sound emitter and not AudioManager because of a bug in AudioManager - when playing a sound, it plays it from the current location of the avatar. If the sound is long enough (for instance - rain), the player will hear it getting weaker as they move in the scene.
+        // I used fmod event emitter and not EventInstance due to a bug, not hearing some sounds when headset is off. IDK why it happens.
+        ambienceEmitter = fmodEmitter.EventInstance;
     }
 
     void Update() {
