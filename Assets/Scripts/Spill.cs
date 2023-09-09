@@ -29,7 +29,7 @@ public class Spill : MonoBehaviour
     {
 
         if (_spill.isPlaying) {
-            if (audioManager) {audioManager.PlayOneShot(AudioManager.Sounds.water_drinking);}
+            if (audioManager) {audioManager.PlaySound(AudioManager.Sounds.water_drinking);}
         }
         
         if (Vector3.Angle(Vector3.down, transform.forward) <= angleToStartSpilling && bottle.IsOpen())
