@@ -27,9 +27,7 @@ public class ShipDay2 : StateController {
     public List<GameObject> ropeComps;
     public List<EnviroConfiguration> configs;
     public Transform teleportAfterLadder;
-    //public FollowThePath killerWhalePath;
-    //public PirateManStateControl givingCPR;
-    //public TalkingWillStateControl takingCPR;
+    public GroundCheckLadder groundCheck;
 
     public Sail2 sails = new Sail2();
     public Steer2 wheel_steering = new Steer2();

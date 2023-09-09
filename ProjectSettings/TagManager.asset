@@ -7,6 +7,7 @@ TagManager:
   - lb_perchTarget
   - lb_groundTarget
   - GrabbingPoint
+  - ladder_point
   layers:
   - Default
   - TransparentFX
