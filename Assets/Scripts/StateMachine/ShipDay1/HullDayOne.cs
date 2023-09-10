@@ -17,6 +17,8 @@ public class HullDayOne : IsState
         //dialogue
         sc.hullDialogue.PlayDialogue(sc, 2, true);
 
+        sc.whale_desired_position_go.SetActive(true);
+
         // sound effects
 
 
@@ -43,6 +45,7 @@ public class HullDayOne : IsState
 
     void InnerUpdateState(ShipDay1StateController sc) {
         if (sc.whale_desired_position.playerReached && !event_reached) {
+            Debug.Log("WHALE");
             event_reached = true;
             sc.ChangeState(sc.whaleState);
         }

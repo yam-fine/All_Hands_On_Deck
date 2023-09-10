@@ -9,6 +9,8 @@ public class ShipDay1StateController : StateController
 {
     public GameObject player;
 
+    public GameObject xrorigin;
+
     public GameObject avatar;
 
     public GameObject captain;
@@ -23,6 +25,8 @@ public class ShipDay1StateController : StateController
     public EventReachedDetection hull_desired_position;
 
     public EventReachedDetection whale_desired_position;
+
+    public GameObject whale_desired_position_go;
 
     public EventReachedDetection cutscene_desired_position;
 
@@ -168,7 +172,7 @@ public class ShipDay1StateController : StateController
         yield return new WaitForSeconds(fade.fadeDur);
 
         // Teleport the player
-        player.transform.position = afterLadderPosition.position;
+        xrorigin.transform.position = afterLadderPosition.position;
         if (funcToExecute != null)
             funcToExecute.Invoke(state);
 

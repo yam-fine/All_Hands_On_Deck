@@ -10,7 +10,7 @@ public class Room1Roam : IsState {
 
     void InnerOnEnter(RoomDay1StateController sc) {
         sc.roamDialogue.PlayDialogue(sc, 2, true);
-        //sc.player.GetComponent<CharacterController>().enabled = false;
+        sc.xrOrigin.GetComponent<CharacterController>().enabled = false;
     }
 
     public void OnExit(StateController sc) {

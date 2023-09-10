@@ -12,6 +12,8 @@ public class Spill : MonoBehaviour
     private List<ParticleCollisionEvent> CollisionEvents = new List<ParticleCollisionEvent>();
 
     private AudioManager audioManager;
+
+    private bool playing = false;
     
     
     void Awake() {
@@ -28,16 +30,18 @@ public class Spill : MonoBehaviour
     void Update()
     {
 
-        if (_spill.isPlaying) {
-            if (audioManager) {audioManager.PlaySound(AudioManager.Sounds.water_drinking);}
+        if (audioManager && playing && !audioManager.IsPlaying(AudioManager.Sounds.water_drinking)) {
+            audioManager.PlaySound(AudioManager.Sounds.water_drinking);
         }
         
         if (Vector3.Angle(Vector3.down, transform.forward) <= angleToStartSpilling && bottle.IsOpen())
         {
+            playing = true;
             _spill.Play();
         }
         else
         {
+            playing = false;;
             _spill.Stop();
         }
     }
