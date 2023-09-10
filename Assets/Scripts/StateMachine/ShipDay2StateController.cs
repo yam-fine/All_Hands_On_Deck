@@ -161,7 +161,7 @@ public class ShipDay2StateController : StateController {
         
 
         // ChangeState(sails);
-        ChangeState(ladder_climb);
+        ChangeState(sails);
     }
 
     public void TeleportWithFade(System.Action<IsState> funcToExecute, IsState state) {

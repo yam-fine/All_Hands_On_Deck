@@ -1626,6 +1626,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4108604632488162214, guid: 9de5ad037e0fd314ea43a9fb04b9f451, type: 3}
+      propertyPath: am
+      value: 
+      objectReference: {fileID: 1492206531}
     - target: {fileID: 4108604633766232474, guid: 9de5ad037e0fd314ea43a9fb04b9f451, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -2272,6 +2276,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1492206520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5360538506485220922, guid: 9de5ad037e0fd314ea43a9fb04b9f451, type: 3}
+  m_PrefabInstance: {fileID: 1123237800}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1492206531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492206520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdba856d01643ef45a4c7f4289800068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventReferences: []
 --- !u!1 &1553840637 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4108604633963281503, guid: 9de5ad037e0fd314ea43a9fb04b9f451, type: 3}
@@ -2458,6 +2480,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826003374}
   m_CullTransparentMesh: 1
+--- !u!1 &1957708894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4108604633766232478, guid: 9de5ad037e0fd314ea43a9fb04b9f451, type: 3}
+  m_PrefabInstance: {fileID: 1123237800}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1957708903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957708894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -861963448
+      Data2: 1235652290
+      Data3: -1657643622
+      Data4: -2138253356
+    Path: event:/Music
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1969707387
 PrefabInstance:
   m_ObjectHideFlags: 0
