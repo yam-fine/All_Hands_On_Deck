@@ -200,7 +200,7 @@ public class ShipDay2StateController : StateController {
         fade.FadeOut();
         yield return new WaitForSeconds(fade.fadeDur);
 
-        finishDialogue.PlayDialogue(this);
+        finishDialogue.PlayDialogue(this, 4, true);
 
         yield return new WaitForSeconds(5);
 

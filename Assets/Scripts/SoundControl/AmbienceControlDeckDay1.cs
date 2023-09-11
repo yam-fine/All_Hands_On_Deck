@@ -45,6 +45,10 @@ public class AmbienceControlDeckDay1 : MonoBehaviour
     public void SetHallParam(bool isHall) {
         if (isHall) {ambienceEmitter.setParameterByName("Hall",  1f);} else {ambienceEmitter.setParameterByName("Hall",  0f);}
     }
+
+    public void StartRainAtLadder() {
+        ambienceEmitter.setParameterByName("Storm", 0.3f);
+    }
     
 
     

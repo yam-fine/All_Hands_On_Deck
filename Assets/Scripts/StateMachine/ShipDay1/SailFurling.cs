@@ -55,6 +55,6 @@ public class SailFurling : IsState
 
 
     void InnerEnterState(ShipDay1StateController sc) {
-        
+        sc.ambienceControl.StartRainAtLadder();
     }
 }
